@@ -1,6 +1,10 @@
 .splashContainer {
     width: 600px;
     height: 200px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+    margin-top: 210px;
 }
 .splashHeading {
     font-size: 45px;
@@ -13,22 +17,37 @@
 .splashJoin {
     font-size: 30px;
     font-weight: 500;
+    margin-top: -5px;
 }
+
 .splashButtons {
+    margin-top: 70px;
+    margin-left: 150px;
 }
+
 .splashLogin1, .splashSignup {
-    height: 40px;
+    height: 50px;
     width: 150px;
     border: none;
-    border-radius: 20px;
+    border-radius: 30px;
     color: white;
     font-size: 18px;
     font-weight: bold;
 }
 .splashLogin1 {
+    margin-right: 20px;
     background-color: var(--lightestGray);
 }
-
+.splashLogin1:hover {
+    transition: all 0.4s ease 0s;
+    cursor: pointer;
+    background-color: var(--lighterGray);
+}
 .splashSignup {
     background-color: var(--purpleTheme);
+}
+.splashSignup:hover {
+    transitioN: all 0.4s ease 0s;
+    cursor: pointer;
+    background-color: var(--purpleHover);
 }

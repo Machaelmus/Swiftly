@@ -1,13 +1,22 @@
+body {
+    background-image: url('./swiftlySplash.jpg');
+    background-repeat: no-repeat;
+    height: 90vh;
+    background-color: blue;
+    background-size: 100%;
+}
+
 .splashContainer {
     width: 600px;
     height: 200px;
     display: flex;
     flex-direction: column;
     margin-left: 150px;
-    margin-top: 210px;
+    margin-top: 213px;
 }
 .splashHeading {
     font-size: 45px;
+    color: white;
 }
 
 .splashPurpleWord {
@@ -18,6 +27,7 @@
     font-size: 30px;
     font-weight: 500;
     margin-top: -5px;
+    color: var(--lighterGray);
 }
 
 .splashButtons {
@@ -36,12 +46,12 @@
 }
 .splashLogin1 {
     margin-right: 20px;
-    background-color: var(--lightestGray);
+    background-color: var(--lighterGray);
 }
 .splashLogin1:hover {
     transition: all 0.4s ease 0s;
     cursor: pointer;
-    background-color: var(--lighterGray);
+    background-color: var(--mediumGray);
 }
 .splashSignup {
     background-color: var(--purpleTheme);

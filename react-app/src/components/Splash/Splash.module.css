@@ -1,18 +1,30 @@
 .splashContainer {
-
+    background-color: purple;
+    width: 600px;
+    height: 200px;
 }
 .splashHeading {
-
+    font-size: 45px;
+    /* margin-bottom: -20px;  */
 }
 .splashJoin {
-
+    font-size: 30px;
+    font-weight: 500;
 }
 .splashButtons {
-
+}
+.splashLogin1, .splashSignup {
+    height: 40px;
+    width: 150px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
 }
 .splashLogin1 {
-
+    background-color: var(--lightestGray);
 }
 .splashSignup {
-
+    background-color: var(--purpleTheme);
 }

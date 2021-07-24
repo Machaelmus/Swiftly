@@ -39,6 +39,7 @@ const NavBar = () => {
               <li className={styles.navSplashHome}>
                 <NavLink className={styles.navSplashHomeLink} to='/' exact={true} activeClassName='active'>
                   {/* Image of the cheetah goes here */}
+                  <p>Hi</p>
                 </NavLink>
               </li>
               <li className={styles.navSplashLogin}>

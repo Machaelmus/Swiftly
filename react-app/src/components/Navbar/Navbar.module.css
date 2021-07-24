@@ -1,21 +1,29 @@
 .navSplashContainer {
-    
+    display: flex;
 }
 .navSplashUl {
-    
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
 }
 .navSplashHome {
-    
+
 }
 .navSplashHomeLink {
-    
+
 }
 .navSplashLogin {
-    
+    margin-right: 20px;
 }
 .navSplashLoginLink {
-    
+
 }
 .navSplashLoginButton {
-    
+    height: 40px;
+    width: 150px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 20px;
 }

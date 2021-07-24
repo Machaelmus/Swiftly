@@ -37,10 +37,10 @@ const NavBar = () => {
         <nav className={styles.navSplashContainer}>
             <ul className={styles.navSplashUl}>
               <li className={styles.navSplashHome}>
-                <NavLink className={styles.navSplashHomeLink} to='/' exact={true} activeClassName='active'>
-                  {/* Image of the cheetah goes here */}
-                  <p>Hi</p>
-                </NavLink>
+                  <div className={styles.logoAndText}>
+                    <div className={styles.cheetah}></div>
+                    <h1 className={styles.swiftText}>Swiftly</h1>
+                  </div>
               </li>
               <li className={styles.navSplashLogin}>
                 <NavLink className={styles.navSplashLoginLink} to='/login' exact={true} activeClassName='active'>

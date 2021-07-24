@@ -5,8 +5,8 @@ const Splash = () => {
     return (
         <>
             <div className={styles.splashContainer}>
-                <h1>The power to connect with <span>anyone</span> in the world</h1>
-                <p>Join today</p>
+                <h1 className={styles.splashHeading}>The power to connect with <span className={styles.splashPurpleWord}>anyone</span> in the world</h1>
+                <p className={styles.splashJoin}>Join today</p>
             </div>
             <div className={styles.splashButtons}>
                 <button className={styles.splashLogin1}>Log in</button>

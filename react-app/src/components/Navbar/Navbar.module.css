@@ -3,6 +3,7 @@
 .navSplashContainer {
     display: flex;
 }
+
 .cheetah {
     background-image: url('./SwiftlyLogo.png');
     margin-top: -15px;
@@ -11,11 +12,14 @@
     background-size: 100%;
     background-repeat: no-repeat;
 }
+
 .swiftText {
     margin-top: 5px;
     margin-left: 20px;
     font-size: 30px;
+    color: white; 
 }
+
 .logoAndText {
     display: flex;
 }
@@ -24,18 +28,11 @@
     width: 100vw;
     justify-content: space-between;
 }
-.navSplashHome {
 
-}
-.navSplashHomeLink {
-
-}
 .navSplashLogin {
     margin-right: 20px;
 }
-.navSplashLoginLink {
 
-}
 .navSplashLoginButton {
     margin-top: 10px;
     margin-right: 10px;
@@ -47,4 +44,10 @@
     font-size: 18px;
     border-radius: 20px;
     background-color: var(--lightestGray);
+}
+
+.navSplashLoginButton:hover {
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+    background-color: var(--lighterGray);
 }

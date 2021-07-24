@@ -1,0 +1,53 @@
+@import url('../../index.css');
+
+.navSplashContainer {
+    display: flex;
+}
+
+.cheetah {
+    background-image: url('./SwiftlyLogo.png');
+    margin-top: 15px;
+    height: 90px;
+    width: 150px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.swiftText {
+    margin-top: 27px;
+    margin-left: 20px;
+    font-size: 40px;
+    color: white;
+}
+
+.logoAndText {
+    display: flex;
+}
+.navSplashUl {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+}
+
+.navSplashLogin {
+    margin-right: 20px;
+}
+
+.navSplashLoginButton {
+    margin-top: 30px;
+    margin-right: 30px;
+    height: 40px;
+    width: 150px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: var(--lighterGray);
+}
+
+.navSplashLoginButton:hover {
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+    background-color: var(--mediumGray);
+}

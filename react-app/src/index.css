@@ -1,2 +1,6 @@
 /* TODO Add site wide styles */
 @import url('./variables.css');
+* {
+    list-style: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

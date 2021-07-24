@@ -5,19 +5,19 @@
 }
 .cheetah {
     background-image: url('./SwiftlyLogo.png');
+    margin-top: -15px;
     height: 90px;
     width: 150px;
     background-size: 100%;
     background-repeat: no-repeat;
 }
 .swiftText {
-    margin-top: 30px;
+    margin-top: 5px;
     margin-left: 20px;
-
+    font-size: 30px;
 }
 .logoAndText {
     display: flex;
-    /* justify-content: space-around; */
 }
 .navSplashUl {
     display: flex;
@@ -37,6 +37,8 @@
 
 }
 .navSplashLoginButton {
+    margin-top: 10px;
+    margin-right: 10px;
     height: 40px;
     width: 150px;
     border: none;

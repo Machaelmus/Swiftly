@@ -1,12 +1,15 @@
 .splashContainer {
-    background-color: purple;
     width: 600px;
     height: 200px;
 }
 .splashHeading {
     font-size: 45px;
-    /* margin-bottom: -20px;  */
 }
+
+.splashPurpleWord {
+    color: var(--purpleTheme);
+}
+
 .splashJoin {
     font-size: 30px;
     font-weight: 500;
@@ -25,6 +28,7 @@
 .splashLogin1 {
     background-color: var(--lightestGray);
 }
+
 .splashSignup {
     background-color: var(--purpleTheme);
 }

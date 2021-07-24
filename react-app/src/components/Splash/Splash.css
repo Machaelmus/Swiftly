@@ -1,8 +1,12 @@
-body {
+.backgroundImage {
     background-image: url('./swiftlySplash.jpg');
     background-repeat: no-repeat;
-    height: 90vh;
-    background-color: blue;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -178178781;
     background-size: 100%;
 }
 
@@ -12,7 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-left: 150px;
-    margin-top: 190px;
+    margin-top: 327px;
 }
 .splashHeading {
     font-size: 45px;

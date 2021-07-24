@@ -9,7 +9,7 @@ import UsersList from './components/UserProfile/UsersList';
 import User from './components/UserProfile/User';
 import { authenticate } from './store/session';
 import Splash from './components/Splash/Splash';
-
+import Home from './components/Home/Home';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -45,8 +45,8 @@ function App() {
         <ProtectedRoute path='/users/:userId' exact={true} >
           <User />
         </ProtectedRoute>
-        <ProtectedRoute path='/' exact={true} >
-          <h1>My Home Page</h1>
+        <ProtectedRoute path='/home' exact={true} >
+          <Home/>
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>

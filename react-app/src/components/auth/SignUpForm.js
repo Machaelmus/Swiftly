@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { Redirect, Link } from 'react-router-dom';
-import { signUp } from '../../store/session';
+import { signUp, login } from '../../store/session';
 import styles from './Signup.module.css';
 
 const SignUpForm = () => {
@@ -23,6 +23,14 @@ const SignUpForm = () => {
     }
   };
 
+  const demoLogin = async (e) => {
+    e.preventDefault()
+    const demoUser = await dispatch(login('demo@aa.io', 'password'));
+    if(demoUser) {
+      setErrors(demoUser);
+    }
+  }
+
   const updateUsername = (e) => {
     setUsername(e.target.value);
   };
@@ -40,7 +48,7 @@ const SignUpForm = () => {
   };
 
   if (user) {
-    return <Redirect to='/' />;
+    return <Redirect to='/home' />;
   }
 
   return (
@@ -67,6 +75,8 @@ const SignUpForm = () => {
             <input className={styles.signupConfirm} placeholder="Confirm password" type='password' name='repeat_password' onChange={updateRepeatPassword} value={repeatPassword} required={true} />
           </div>
           <button className={styles.signupSubmit} type='submit'>Sign Up</button>
+          <br/>
+          <button className={styles.signupSubmit} onClick={demoLogin} type='submit'>Demo User</button>
           <br/>
           <Link className={styles.dontHaveAccount} to="/login">Already have an account? <span className={styles.noAccountLink}>Log in</span></Link>
         </form>

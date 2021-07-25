@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import { login } from '../../store/session';
 import styles from './Login.module.css';
 
@@ -48,6 +48,8 @@ const LoginForm = () => {
             <input className={styles.loginPassword} name='password' type='password' placeholder='Password' value={password} onChange={updatePassword} />
           </div>
           <button className={styles.loginSubmit} type='submit'>Login</button>
+          <br/>
+          <Link to="/signup">Don't have an account yet? <span>Sign up</span></Link>
         </form>
       </div>
     </div>

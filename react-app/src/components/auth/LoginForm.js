@@ -19,6 +19,14 @@ const LoginForm = () => {
     }
   };
 
+  const demoLogin = async (e) => {
+    e.preventDefault()
+    const demoUser = await dispatch(login('demo@aa.io', 'password'));
+    if(demoUser) {
+      setErrors(demoUser);
+    }
+  }
+
   const updateEmail = (e) => {
     setEmail(e.target.value);
   };
@@ -28,7 +36,7 @@ const LoginForm = () => {
   };
 
   if (user) {
-    return <Redirect to='/' />;
+    return <Redirect to='/home' />;
   }
 
   return (
@@ -53,6 +61,8 @@ const LoginForm = () => {
             <input className={styles.loginPassword} name='password' type='password' placeholder='Password' value={password} onChange={updatePassword} />
           </div>
           <button className={styles.loginSubmit} type='submit'>Login</button>
+          <br/>
+          <button className={styles.loginSubmit} onClick={demoLogin}>Demo User</button>
           <br/>
           <Link className={styles.dontHaveAccount} to="/signup">Don't have an account yet? <span className={styles.noAccountLink}>Sign up</span></Link>
         </form>

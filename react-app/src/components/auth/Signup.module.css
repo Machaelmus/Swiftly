@@ -1,4 +1,4 @@
-.loginPageBackground {
+.signupBackgroundColor {
     position: absolute;
     top: 0;
     height: 100vh;
@@ -8,16 +8,16 @@
     background-color: rgb(34, 34, 34);
 }
 
-.loginContainer {
+.signupContainer {
     padding: 30px;
     border: none;
     border-radius: 20px;
     background-color: white;
-    width: 300px;
+    width: 400px;
     justify-content: center;
-    height: 350px;
+    height: 500px;
     text-align: center;
-    margin-top: 250px;
+    margin-top: 200px;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -25,12 +25,7 @@
     margin-right: auto;
 }
 
-.heading1 {
-    margin-bottom: -10px;
-    margin-top: -20px;
-}
-
-.loginErrorsContainer {
+.signupErrors {
     display: flex;
     flex-direction: column;
     line-height: 30px;
@@ -40,7 +35,9 @@
     color: white;
 }
 
-.loginEmail, .loginPassword {
+.signupUsername, .signupEmail,
+.signupPassword,
+.signupConfirm {
     height: 40px;
     width: 250px;
     margin-bottom: 20px;
@@ -48,18 +45,15 @@
     background-color: rgb(235, 235, 235);
 }
 
-.loginEmail:focus, .loginPassword:focus {
+.signupUsername:focus, .signupEmail:focus,
+.signupPassword:focus,
+.signupConfirm:focus {
     outline: 2px solid;
     outline-color: var(--purpleHover);
 }
 
-::placeholder {
-    text-indent: 5px;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-.loginSubmit {
+.signupSubmit {
+    margin-top: 10px;
     height: 40px;
     width: 150px;
     color: white;
@@ -71,7 +65,7 @@
     margin-bottom: 15px;
 }
 
-.loginSubmit:hover {
+.signupSubmit:hover {
     transition: all 0.4s;
     background-color: var(--purpleHover);
     cursor: pointer;
@@ -84,6 +78,7 @@
 a:visited {
     color: black;
 }
+
 .noAccountLink {
     font-weight: bold;
     color: var(--purpleTheme);

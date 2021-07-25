@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Splash.css';
 
 const Splash = () => {
@@ -10,8 +11,12 @@ const Splash = () => {
                 <p className="splashJoin">Join today</p>
             </div>
             <div className="splashButtons">
-                <button className="splashLogin1">Log in</button>
-                <button className="splashSignup">Sign up</button>
+                <Link to="/login">
+                    <button className="splashLogin1">Log in</button>
+                </Link>
+                <Link to="/signup">
+                    <button className="splashSignup">Sign up</button>
+                </Link>
             </div>
         </div>
         </>

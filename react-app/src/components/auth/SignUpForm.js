@@ -68,7 +68,7 @@ const SignUpForm = () => {
           </div>
           <button className={styles.signupSubmit} type='submit'>Sign Up</button>
           <br/>
-          <Link className={styles.dontHaveAccount} to="/signup">Don't have an account yet? <span className={styles.noAccountLink}>Sign up</span></Link>
+          <Link className={styles.dontHaveAccount} to="/login">Already have an account? <span className={styles.noAccountLink}>Log in</span></Link>
         </form>
       </div>
     </div>

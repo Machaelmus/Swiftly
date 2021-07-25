@@ -15,9 +15,9 @@
     background-color: white;
     width: 300px;
     justify-content: center;
-    height: 300px;
+    height: 350px;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 250px;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -25,22 +25,74 @@
     margin-right: auto;
 }
 
-.loginForm {
+.heading1 {
+    margin-bottom: -10px;
+    margin-top: -20px; 
+}
+
+.heading2 {
 
 }
 
 .loginErrorsContainer {
-
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+    position: absolute;
+    left: 660px;
+    font-weight: bold;
+    color: white;
 }
 
-.loginEmail {
-
+.loginEmail, .loginPassword {
+    height: 40px;
+    width: 250px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: rgb(235, 235, 235);
 }
 
-.loginPassword {
+.loginEmail:focus, .loginPassword:focus {
+    outline: 2px solid;
+    outline-color: var(--purpleHover);
+}
 
+::placeholder {
+    text-indent: 5px;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .loginSubmit {
+    height: 40px;
+    width: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--purpleTheme);
+    margin-bottom: 15px;
+}
 
+.loginSubmit:hover {
+    transition: all 0.4s;
+    background-color: var(--purpleHover);
+    cursor: pointer;
+}
+
+.dontHaveAccount {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+.noAccountLink {
+    font-weight: bold;
+    color: var(--purpleTheme);
+}
+
+.noAccountLink:hover {
+    color: var(--purpleHover);
 }

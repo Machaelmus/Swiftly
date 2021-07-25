@@ -34,11 +34,16 @@ const LoginForm = () => {
   return (
     <div className={styles.loginPageBackground}>
       <div className={styles.loginContainer}>
-        <h1>Log in</h1>
+        <h1 className={styles.heading1}>Welcome back</h1>
+        <h2 className={styles.heading2}>Log in</h2>
         <form className={styles.loginForm} onSubmit={onLogin}>
           <div className={styles.loginErrorsContainer}>
             {errors.map((error, ind) => (
-              <div key={ind}>{error}</div>
+              <div>
+                <div key={ind}>{error}
+                  {console.log(errors)}
+                </div>
+              </div>
             ))}
           </div>
           <div>
@@ -49,7 +54,7 @@ const LoginForm = () => {
           </div>
           <button className={styles.loginSubmit} type='submit'>Login</button>
           <br/>
-          <Link to="/signup">Don't have an account yet? <span>Sign up</span></Link>
+          <Link className={styles.dontHaveAccount} to="/signup">Don't have an account yet? <span className={styles.noAccountLink}>Sign up</span></Link>
         </form>
       </div>
     </div>

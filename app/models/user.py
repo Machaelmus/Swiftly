@@ -26,6 +26,19 @@ class User(db.Model, UserMixin):
     def check_password(self, password):
         return check_password_hash(self.password, password)
 
+    # Creates relationship between Likes, User and Posts where it returns the posts the user liked
+        # userPostLikes = db.relationship('Like', backref=db.backref('posts'))
+    # Creates relationship between user and likes to replies
+        # userReplyLikes = db.relationship('ReplyLikes', backref=db.backref('replies'))
+
+    # ========================================================================
+
+    # Creates relationship between user and replies
+    userReplies = db.relationship('Reply', back_populates='replyAuthor')
+    # Creates relationship between users and posts
+    userPosts = db.relationship('Post', back_populates='postAuthor')
+
+
     def to_dict(self):
         return {
             'id': self.id,

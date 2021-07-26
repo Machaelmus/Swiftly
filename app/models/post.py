@@ -2,11 +2,13 @@ from .db import db
 
 class Post(db.Model):
     __tablename__ = 'posts'
-
+    
     id = db.Column(db.Integer, primary_key=True)
-    userId = db.Column(db.Integer, nullable=False)
+    userId = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     post = db.Column(db.Text, nullable=False)
     timeOfPost = db.Column(db.Date, nullable=False)
+
+
 
     def to_dict(self):
         return {

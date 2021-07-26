@@ -8,7 +8,19 @@ class Reply(db.Model):
     postId = db.Column(db.Integer, db.ForeignKey('posts.id') , nullable=False)
     reply = db.Column(db.Text, nullable=False)
     timeOfReply = db.Column(db.Date, nullable=False)
-    
+
+    # Creates relationship between replies and posts
+    replyToPost = db.relationship('Post', back_populates='postReplies')
+    # Creates relationship between replies and users to determine the author
+    replyAuthor = db.relationship('User', back_populates='userReplies')
+
+    # ========================================================================
+
+    # Creates relationship between replies and reply likes to detemine how many likes on the reply
+        # replyLikes = db.relationship('ReplyLikes', backref=db.backref('replies'))
+
+
+
     def to_dict(self):
         return {
             'id': self.id,

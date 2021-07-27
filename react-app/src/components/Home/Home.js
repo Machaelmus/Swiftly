@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux'
 // import { createOnePost } from '../../store/posts';
-import { getAllPosts } from '../../store/posts';
+import {getAllPosts} from '../../store/posts';
 import CreatePost from '../CreatePostForm/CreatePost';
 import styles from './Home.module.css';
 import PostContainer from '../PostContainer';
@@ -14,27 +14,28 @@ const Home = () => {
     useEffect(() => {
         dispatch(getAllPosts())
     }, [dispatch]);
+    
 
     return (
         <>
         {/* CONTAINER */}
-        <div class={styles.homeContainer}>
+        <div className={styles.homeContainer}>
             {/* NAVIGATION */}
-            <div class={styles.navigation}></div>
+            <div className={styles.navigation}></div>
             {/* FEED */}
-            <div class={styles.feed}>
+            <div className={styles.feed}>
                 <CreatePost/>
                 <div className={styles.bigDiv}>
                     {posts.map((post) => (
-                        <div>
-                        <PostContainer className={styles.postContainerContainer} post={post} key={post.id}/>
-                        <EditPostForm post={post}/>
+                        <div key={post.id}>
+                            <PostContainer className={styles.postContainerContainer} post={post} key={post.id}/>
+                            <EditPostForm post={post}/>
                         </div>
                     ))}
                 </div>
             </div>
             {/* EXTRA */}
-            <div class={styles.extra}></div>
+            <div className={styles.extra}></div>
         </div>
         </>
     )

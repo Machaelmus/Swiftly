@@ -2,3 +2,12 @@
     margin-top: 20px;
     margin-bottom: 40px;
 }
+.editCancelButton {
+    /* float: right; */
+}
+
+.editTextArea {
+    resize: none;
+    height: 150px;
+    width: 270px;
+}

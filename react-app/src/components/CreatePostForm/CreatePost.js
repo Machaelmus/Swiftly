@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { createOnePost } from '../../store/posts';
 import styles from './CreatePost.module.css';
@@ -29,7 +29,7 @@ const CreatePost = () => {
     return (
         <div className={styles.createPostDiv}>
             <form onSubmit={createForm} className={styles.createPostForm}>
-                <textarea onChange={(e) => setPostText(e.target.value)} className={styles.createPostInput} placeholder={`What\'s on your mind, ${sessionUser.username}?`}></textarea>
+                <textarea onChange={(e) => setPostText(e.target.value)} className={styles.createPostInput} placeholder={`Whats on your mind, ${sessionUser.username}?`}></textarea>
                 <br/>
                 <button type="submit" className={styles.createPostSubmit}>Post</button>
             </form>

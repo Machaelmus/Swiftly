@@ -68,14 +68,14 @@ const EditPostForm = ({post}) => {
                 isOpen={open}
                 onRequestClose={closeModalOnClick}
                 >
-                    <button className={styles.editCancelButton} onClick={closeModalOnClick}>Cancel</button>
+                    <button className={styles.eachPostDeleteButton} onClick={deletePostFunc}>Delete post</button>
                     <br/>
                     <form onSubmit={editFormInfo}>
                         <h2>Edit Post</h2>
                         <textarea className={styles.editTextArea} onChange={(e) => setEditText(e.target.value)}></textarea>
                         <br/>
-                        <button className={styles.eachPostEditButton} onClick={editFormInfo}>Edit Post</button>
-                        <button className={styles.eachPostDeleteButton} onClick={deletePostFunc}>Delete</button>
+                        <button className={styles.eachPostEditButton} onClick={editFormInfo}>Done</button>
+                        <button className={styles.editCancelButton} onClick={closeModalOnClick}>Cancel</button>
                     </form>
                 </Modal>
             </div>

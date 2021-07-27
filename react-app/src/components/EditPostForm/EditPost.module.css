@@ -12,15 +12,52 @@
     width: 270px;
 }
 
-.eachPostEditButton, .eachPostDeleteButton {
-    background-color: white;
-    color: black;
-    font-weight: bold;
-    border: none;
-    font-size: 15px;
+.eachPostEditButton {
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 18px;
 }
-.eachPostDeleteButton:hover, .eachPostEditButton:hover {
+.editCancelButton {
+    font-size: 18px;
+}
+.eachPostDeleteButton {
+    margin-top: 25px;
+}
+.eachPostEditButton {
+    height: 35px;
+    width: 100px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--purpleTheme);
+    color: white;
+    font-weight: bold;
+}
+
+.eachPostDeleteButton {
+    border: none; 
+    color:  #000000ab;
+    background-color: white;
+    font-size: 18px;
+    font-weight: bold;
+    width: 150px;
+    height: 35px;
+    border-radius: 20px;
+}
+
+.editCancelButton {
+    height: 35px;
+    width: 100px;
+    border: 2px solid var(--purpleTheme);
+    border-radius: 20px;
+    font-weight: bold;
     color: var(--purpleTheme);
+    background-color: white;
+}
+
+.eachPostDeleteButton:hover, .eachPostEditButton:hover, .editCancelButton:hover {
+    color: white;
+    transition: all 0.4s ease;
+    background-color: var(--purpleTheme);
     cursor: pointer;
 }
 .firstEditButton {

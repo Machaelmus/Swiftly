@@ -1,5 +1,7 @@
 const GET_POSTS = 'posts/GET_POSTS';
 const CREATE_POST = 'posts/CREATE_POST';
+const DELETE_POST = 'posts/DELETE_POST';
+const EDIT_POST = 'posts/EDIT_POST';
 
 const getPosts = (posts) => ({
     type: GET_POSTS,
@@ -9,6 +11,16 @@ const getPosts = (posts) => ({
 const createPost = (post) => ({
     type: CREATE_POST,
     post,
+});
+
+const editPost = (post) => ({
+    type: EDIT_POST,
+    post
+});
+
+const deletePost = (post) => ({
+    type: DELETE_POST,
+    post
 });
 
 export const getAllPosts = () => async (dispatch) => {
@@ -37,6 +49,31 @@ export const createOnePost = (club) => async (dispatch) => {
     }
 }
 
+export const editOnePost = (id, post) => async (dispatch) => {
+    const response = await fetch(`/api/posts/${id}`, {
+        method: 'PUT',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(post)
+    })
+    if(response.ok) {
+        const updatedPost = await response.json();
+        dispatch(editPost(updatedPost))
+        return updatedPost;
+    }
+}
+
+export const deleteOnePost = (id) => async (dispatch) => {
+    const response = await fetch(`/api/posts/${id}`, {
+        method: 'DELETE',
+        headers: {'Content-Type': 'application/json'}
+    });
+    if(response.ok) {
+        const deletedPost = await response.json()
+        console.log('BHFDUIKBFHUDSBHUFSDBUYFBDJKSA',deletedPost)
+        dispatch(deletePost(deletedPost))
+    }
+}
+
 const initialState = {};
 
 const postsReducer = (state = initialState, action) => {
@@ -47,11 +84,16 @@ const postsReducer = (state = initialState, action) => {
                 allPosts[post.id] = post;
             })
             return allPosts;
+        case EDIT_POST:
         case CREATE_POST:
             return {
                 ...state,
                 [action.post.id]: action.post
             }
+        case DELETE_POST:
+            const postToDelete = {...state};
+            delete postToDelete[action.post.id];
+            return postToDelete;
         default:
             return state;
     }

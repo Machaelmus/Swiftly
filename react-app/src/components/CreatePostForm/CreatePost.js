@@ -31,7 +31,7 @@ const CreatePost = () => {
             <form onSubmit={createForm} className={styles.createPostForm}>
                 <textarea onChange={(e) => setPostText(e.target.value)} className={styles.createPostInput} placeholder={`What\'s on your mind, ${sessionUser.username}?`}></textarea>
                 <br/>
-                <button className={styles.createPostSubmit}>Post</button>
+                <button type="submit" className={styles.createPostSubmit}>Post</button>
             </form>
         </div>
     )

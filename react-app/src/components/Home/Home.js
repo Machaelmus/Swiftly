@@ -1,10 +1,22 @@
-import React from 'react';
-
+import React, {useEffect} from 'react';
+import {useSelector, useDispatch} from 'react-redux'
+import { getAllPosts } from '../../store/posts';
 
 const Home = () => {
+    const dispatch = useDispatch();
+    const posts = useSelector(state => Object.values(state.posts));
+
+    useEffect(() => {
+        dispatch(getAllPosts())
+    }, [dispatch]);
+
     return (
         <>
-            <h1>Welcome</h1>
+            {posts.map((post) => (
+                <div>
+                    <h2>{post.post}</h2>
+                </div>
+            ))}
         </>
     )
 }

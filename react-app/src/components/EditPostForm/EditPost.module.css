@@ -11,3 +11,26 @@
     height: 150px;
     width: 270px;
 }
+
+.eachPostEditButton, .eachPostDeleteButton {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border: none;
+    font-size: 15px;
+}
+.eachPostDeleteButton:hover, .eachPostEditButton:hover {
+    color: var(--purpleTheme);
+    cursor: pointer;
+}
+.firstEditButton {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border: none;
+}
+
+.firstEditButton:hover {
+    cursor: pointer;
+    color: var(--purpleTheme);
+}

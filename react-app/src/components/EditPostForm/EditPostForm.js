@@ -62,7 +62,7 @@ const EditPostForm = ({post}) => {
     return (
         <>
             <div className={styles.bigChungusContainer}>
-                <button onClick={openModalOnClick}>Edit Post</button>
+                <button className={styles.firstEditButton} onClick={openModalOnClick}>Edit Post</button>
                 <Modal
                 style={editModalStyles}
                 isOpen={open}
@@ -74,7 +74,7 @@ const EditPostForm = ({post}) => {
                         <h2>Edit Post</h2>
                         <textarea className={styles.editTextArea} onChange={(e) => setEditText(e.target.value)}></textarea>
                         <br/>
-                        <button onClick={editFormInfo}>Edit Post</button>
+                        <button className={styles.eachPostEditButton} onClick={editFormInfo}>Edit Post</button>
                         <button className={styles.eachPostDeleteButton} onClick={deletePostFunc}>Delete</button>
                     </form>
                 </Modal>

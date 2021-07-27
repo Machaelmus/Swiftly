@@ -34,7 +34,7 @@
 }
 
 .eachPostDeleteButton {
-    border: none; 
+    border: none;
     color:  #000000ab;
     background-color: white;
     font-size: 18px;
@@ -54,11 +54,19 @@
     background-color: white;
 }
 
-.eachPostDeleteButton:hover, .eachPostEditButton:hover, .editCancelButton:hover {
+.editCancelButton:hover {
     color: white;
     transition: all 0.4s ease;
     background-color: var(--purpleTheme);
     cursor: pointer;
+}
+.eachPostEditButton:hover {
+    cursor: pointer;
+    background-color: var(--purpleHover);
+}
+.eachPostDeleteButton:hover {
+    cursor: pointer;
+    color: black;
 }
 .firstEditButton {
     background-color: white;

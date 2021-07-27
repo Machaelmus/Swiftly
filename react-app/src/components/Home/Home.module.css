@@ -1,0 +1,13 @@
+.bigDiv {
+    background-color: whitesmoke;
+    position: absolute;
+    top: 80px;
+    z-index: -12829829;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.postDiv {
+    /* background-color: blue; */
+}

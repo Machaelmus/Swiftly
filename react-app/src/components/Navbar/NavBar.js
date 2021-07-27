@@ -11,19 +11,10 @@ const NavBar = () => {
         return (
           <nav className={styles.navContainer}>
             <ul className={styles.navUl}>
+              <div className={styles.navLogo}></div>
               <li className={styles.navHome}>
                 <NavLink to='/' exact={true} activeClassName='active'>
                   Home
-                </NavLink>
-              </li>
-              <li className={styles.navLogin}>
-                <NavLink to='/login' exact={true} activeClassName='active'>
-                  Login
-                </NavLink>
-              </li>
-              <li className={styles.navSignup}>
-                <NavLink to='/sign-up' exact={true} activeClassName='active'>
-                  Sign Up
                 </NavLink>
               </li>
               <li className={styles.navLogout}>

@@ -49,6 +49,19 @@ export const createOnePost = (club) => async (dispatch) => {
     }
 }
 
+export const editOnePost = (id, post) => async (dispatch) => {
+    const response = await fetch(`/api/posts/${id}`, {
+        method: 'PUT',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(post)
+    })
+    if(response.ok) {
+        const updatedPost = await response.json();
+        dispatch(editPost(updatedPost))
+        return updatedPost;
+    }
+}
+
 export const deleteOnePost = (id) => async (dispatch) => {
     const response = await fetch(`/api/posts/${id}`, {
         method: 'DELETE',

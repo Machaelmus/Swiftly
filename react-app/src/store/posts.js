@@ -1,9 +1,14 @@
 const GET_POSTS = 'posts/GET_POSTS';
-
+const CREATE_POST = 'posts/CREATE_POST';
 
 const getPosts = (posts) => ({
     type: GET_POSTS,
-    posts
+    posts,
+});
+
+const createPost = (post) => ({
+    type: CREATE_POST,
+    post,
 });
 
 export const getAllPosts = () => async (dispatch) => {
@@ -12,6 +17,23 @@ export const getAllPosts = () => async (dispatch) => {
     if(response.ok) {
         const allPosts = await response.json();
         dispatch(getPosts(allPosts));
+    }
+}
+
+export const createOnePost = (club) => async (dispatch) => {
+    const response = await fetch('/api/posts', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(club)
+    });
+
+    if(response.ok) {
+        const createdPost = await response.json()
+        // if(createdPost.errors) {
+        //     return createdPost;
+        // }
+        dispatch(createPost(createdPost))
+        return createdPost;
     }
 }
 
@@ -25,6 +47,11 @@ const postsReducer = (state = initialState, action) => {
                 allPosts[post.id] = post;
             })
             return allPosts;
+        case CREATE_POST:
+            return {
+                ...state,
+                [action.post.id]: action.post
+            }
         default:
             return state;
     }

@@ -17,15 +17,25 @@ const Home = () => {
 
     return (
         <>
-            <CreatePost/>
-            <div className={styles.bigDiv}>
-                {posts.map((post) => (
-                    <div>
-                    <PostContainer className={styles.postContainerContainer} post={post} key={post.id}/>
-                    <EditPostForm post={post}/>
-                    </div>
-                ))}
+        {/* CONTAINER */}
+        <div class={styles.homeContainer}>
+            {/* NAVIGATION */}
+            <div class={styles.navigation}></div>
+            {/* FEED */}
+            <div class={styles.feed}>
+                <CreatePost/>
+                <div className={styles.bigDiv}>
+                    {posts.map((post) => (
+                        <div>
+                        <PostContainer className={styles.postContainerContainer} post={post} key={post.id}/>
+                        <EditPostForm post={post}/>
+                        </div>
+                    ))}
+                </div>
             </div>
+            {/* EXTRA */}
+            <div class={styles.extra}></div>
+        </div>
         </>
     )
 }

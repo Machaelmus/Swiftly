@@ -15,9 +15,9 @@ const PostContainer = ({post}) => {
     return (
         <>
             <div className={styles.postDiv}>
-                <p>{post.timeOfPost}</p>
-                <h2>{post.post}</h2>
-                <button onClick={deletePostFunc}>Delete</button>
+                <p className={styles.eachPostTime}>{post.timeOfPost}</p>
+                <h2 className={styles.eachPostPost}>{post.post}</h2>
+                <button className={styles.eachPostDeleteButton} onClick={deletePostFunc}>Delete</button>
             </div>
         </>
     )

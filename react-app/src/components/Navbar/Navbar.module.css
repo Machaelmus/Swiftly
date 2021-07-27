@@ -3,6 +3,30 @@
 .navSplashContainer {
     display: flex;
 }
+.navContainer {
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.164);
+    height: 80px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+/* .navLogo { */
+    /* background-image: url('./SwiftlyLogo.png');
+    margin-bottom: 10px;
+    height: 70px;
+    width: 120px;
+    margin-right: 40px;
+    margin-top: -10px;
+    background-size: 100%;
+    background-repeat: no-repeat; */
+/* } */
+
+.navUl {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
 
 .cheetah {
     background-image: url('./SwiftlyLogo.png');

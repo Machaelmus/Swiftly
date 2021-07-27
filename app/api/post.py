@@ -3,6 +3,7 @@ from app.models import db
 from app.models.post import Post
 from flask_login import current_user
 from app.forms.post_form import CreatePostForm
+from app.forms.edit_post_form import EditPostForm
 from datetime import date
 
 
@@ -28,3 +29,25 @@ def createPost():
         db.session.add(post)
         db.session.commit()
         return post.to_dict()
+
+
+@post_routes.route('/api/posts/<int:id>', methods=['PUT'])
+def editPost(id):
+    form = EditPostForm()
+    form['csrf_token'].data = request.cookies['csrf_token']
+    if form.validate_on_submit():
+        postToEdit = Post.query.filter(id == Post.id).one()
+        postToEdit.userId = current_user.id,
+        postToEdit.post = form.post.data,
+        postToEdit.timeOfPost = date.today()
+        db.session.commit()
+        return postToEdit.to_dict()
+
+
+@post_routes.route('/api/posts/<int:id>', methods=['DELETE'])
+def deletePost(id):
+    postToDelete = Post.query.get(id)
+    print('===========BACKEND ROUTE===========>', postToDelete)
+    db.session.delete(postToDelete)
+    db.session.commit()
+    return postToDelete.to_dict()

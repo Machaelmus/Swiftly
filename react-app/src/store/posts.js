@@ -1,5 +1,6 @@
 const GET_POSTS = 'posts/GET_POSTS';
 const CREATE_POST = 'posts/CREATE_POST';
+const DELETE_POST = 'posts/DELETE_POST';
 
 const getPosts = (posts) => ({
     type: GET_POSTS,
@@ -10,6 +11,11 @@ const createPost = (post) => ({
     type: CREATE_POST,
     post,
 });
+
+const deletePost = (post) => ({
+    type: DELETE_POST,
+    post
+})
 
 export const getAllPosts = () => async (dispatch) => {
     const response = await fetch('/api/posts');
@@ -37,6 +43,18 @@ export const createOnePost = (club) => async (dispatch) => {
     }
 }
 
+export const deleteOnePost = (id) => async (dispatch) => {
+    const response = await fetch(`/api/posts/${id}`, {
+        method: 'DELETE',
+        headers: {'Content-Type': 'application/json'}
+    });
+    if(response.ok) {
+        const deletedPost = await response.json()
+        console.log('BHFDUIKBFHUDSBHUFSDBUYFBDJKSA',deletedPost)
+        dispatch(deletePost(deletedPost))
+    }
+}
+
 const initialState = {};
 
 const postsReducer = (state = initialState, action) => {
@@ -52,6 +70,10 @@ const postsReducer = (state = initialState, action) => {
                 ...state,
                 [action.post.id]: action.post
             }
+        case DELETE_POST:
+            const postToDelete = {...state};
+            delete postToDelete[action.post.id];
+            return postToDelete;
         default:
             return state;
     }

@@ -3,12 +3,12 @@
 .navSplashContainer {
     display: flex;
 }
-.navContainer {
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.164);
+ .navContainer {
+    background-color:darkslateblue;
     height: 80px;
     position: fixed;
+    width: 100vw; ;
     top: 0;
-    right: 0;
     left: 0;
 }
 /* .navLogo { */
@@ -23,9 +23,13 @@
 /* } */
 
 .navUl {
-    align-items: center;
-    justify-content: center;
     display: flex;
+    flex-direction: row;
+    margin: 0;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80px;
+    padding: 0;
 }
 
 .cheetah {

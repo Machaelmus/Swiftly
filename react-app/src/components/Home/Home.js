@@ -21,7 +21,7 @@ const Home = () => {
             <div className={styles.bigDiv}>
                 {posts.map((post) => (
                     <div>
-                    <PostContainer post={post} key={post.id}/>
+                    <PostContainer className={styles.postContainerContainer} post={post} key={post.id}/>
                     <EditPostForm post={post}/>
                     </div>
                 ))}

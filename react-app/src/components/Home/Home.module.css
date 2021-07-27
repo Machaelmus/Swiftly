@@ -1,12 +1,14 @@
 .bigDiv {
-    background-color: whitesmoke;
-    display: flex;
-    flex-direction: column;
+
 }
 
 .postDiv {
     display: flex;
-    /* margin-top: 100px;
-    background-color: blue; */
-    /* width: 100vw;  */
+    flex-direction: column;
+    width: 400px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.281);
+    /* border-top-left-radius: 20px;
+    border-top-right-radius: 20px; */
 }

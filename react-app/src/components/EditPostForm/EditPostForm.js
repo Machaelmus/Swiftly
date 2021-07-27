@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { editOnePost } from '../../store/posts';
-
+import styles from './EditPost.module.css'
 const EditPostForm = ({post}) => {
     const dispatch = useDispatch()
     const [editText, setEditText] = useState('');
@@ -20,7 +20,7 @@ const EditPostForm = ({post}) => {
 
     return (
         <>
-            <div>
+            <div className={styles.bigChungusContainer}>
                 <form onSubmit={editFormInfo}>
                     <h2>Edit Post</h2>
                     <textarea onChange={(e) => setEditText(e.target.value)}></textarea>

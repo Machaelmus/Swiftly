@@ -13,7 +13,7 @@ const NavBar = () => {
             <ul className={styles.navUl}>
               <div className={styles.navLogo}></div>
               <li className={styles.navHome}>
-                <NavLink to='/' exact={true} activeClassName='active'>
+                <NavLink to='/home' exact={true} activeClassName='active'>
                   Home
                 </NavLink>
               </li>

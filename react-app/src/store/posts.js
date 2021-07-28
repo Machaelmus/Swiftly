@@ -9,9 +9,9 @@ const getPosts = (posts) => ({
     posts,
 });
 
-const getOnePost = (post) => ({
+const getOnePost = (payload) => ({
     type: GET_ONE_POST,
-    post,
+    payload,
 });
 
 const createPost = (post) => ({
@@ -43,6 +43,7 @@ export const getIndividualPost = (id) => async (dispatch) => {
 
     if(response.ok) {
         const singlePost = await response.json();
+        console.log('INSIDE THE THUNK', singlePost);
         dispatch(getOnePost(singlePost))
     }
 }
@@ -101,8 +102,8 @@ const postsReducer = (state = initialState, action) => {
             return allPosts;
         case GET_ONE_POST:
             const onePost = {...state};
-            onePost[action.post.id] = action.post;
-            return onePost; 
+            onePost[action.payload.post.id] = action.payload;
+            return onePost;
         case EDIT_POST:
         case CREATE_POST:
             return {

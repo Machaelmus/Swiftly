@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { editOnePost, deleteOnePost } from '../../store/posts';
+import {Link} from 'react-router-dom';
 import Modal from 'react-modal';
 import styles from '../Home/Home.module.css';
 
@@ -112,7 +113,9 @@ const PostContainer = ({post}) => {
                 </div>
             )}
                 <p className={styles.eachPostTime}>{post.timeOfPost}</p>
-                <h2 className={styles.eachPostPost}>{post.post}</h2>
+                <Link to={`/posts/${post.id}`}>
+                    <h2 className={styles.eachPostPost}>{post.post}</h2>
+                </Link>
             </div>
         </>
     )

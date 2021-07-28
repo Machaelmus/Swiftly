@@ -1,16 +1,16 @@
-import React, {useEffect} from 'react';
-import {useSelector, useDispatch} from 'react-redux'
+import React from 'react';
+import { useDispatch} from 'react-redux'
 // import { useParams } from 'react-router-dom';
-import { deleteOnePost } from '../store/posts';
+// import { deleteOnePost } from '../store/posts';
 import styles from './Home/Home.module.css';
 
 const PostContainer = ({post}) => {
     const dispatch = useDispatch();
     console.log('INSIDE THE COMPONENT', post)
 
-    const deletePostFunc = () => {
-        dispatch(deleteOnePost(post.id))
-    }
+    // const deletePostFunc = () => {
+    //     dispatch(deleteOnePost(post.id))
+    // }
 
     return (
         <>

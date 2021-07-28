@@ -67,6 +67,16 @@
     font-size: 18px;
     font-weight: bold;
 }
+
+.editTextArea {
+    resize: none;
+    width: 300px;
+    height: 100px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);
+}
+
 .eachPostDeleteButton:hover {
     cursor: pointer;
     color: white;

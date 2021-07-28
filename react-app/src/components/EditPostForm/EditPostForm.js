@@ -10,20 +10,21 @@ Modal.setAppElement('#root')
 
 const editModalStyles = {
     content: {
-        height: '400px',
-        width: '350px',
+        height: '500px',
+        width: '450px',
         border: 'none',
         borderRadius: '5px',
         backgroundColor: 'white',
         boxShadow: '5px 5px 10px rgba(0, 0, 0, 0.281)',
         marginLeft: 'auto',
         marginRight: 'auto',
-        marginTop: '150px',
+        marginTop: '140px',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         textAlign: 'center',
         flexDirection: 'column-reverse',
+
     }
 }
 
@@ -62,7 +63,7 @@ const EditPostForm = ({post}) => {
     return (
         <>
             <div className={styles.bigChungusContainer}>
-                <button className={styles.firstEditButton} onClick={openModalOnClick}>Edit Post</button>
+                <button className={styles.firstEditButton} onClick={openModalOnClick}>...</button>
                 <Modal
                 style={editModalStyles}
                 isOpen={open}
@@ -72,7 +73,7 @@ const EditPostForm = ({post}) => {
                     <br/>
                     <form onSubmit={editFormInfo}>
                         <h2>Edit Post</h2>
-                        <textarea className={styles.editTextArea} onChange={(e) => setEditText(e.target.value)}></textarea>
+                        <textarea placeholder="Change your post here" className={styles.editTextArea} onChange={(e) => setEditText(e.target.value)}></textarea>
                         <br/>
                         <button className={styles.eachPostEditButton} onClick={editFormInfo}>Done</button>
                         <button className={styles.editCancelButton} onClick={closeModalOnClick}>Cancel</button>

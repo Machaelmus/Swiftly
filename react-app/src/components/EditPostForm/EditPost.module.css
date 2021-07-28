@@ -2,14 +2,14 @@
     margin-top: 20px;
     margin-bottom: 40px;
 }
-.editCancelButton {
-    /* float: right; */
-}
 
 .editTextArea {
     resize: none;
     height: 150px;
     width: 270px;
+    border: none; 
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.281);
 }
 
 .eachPostEditButton {
@@ -69,10 +69,12 @@
     color: black;
 }
 .firstEditButton {
+    /* position: fixed; */
     background-color: white;
     color: black;
     font-weight: bold;
     border: none;
+    font-size: 20px;
 }
 
 .firstEditButton:hover {

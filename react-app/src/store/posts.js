@@ -99,6 +99,10 @@ const postsReducer = (state = initialState, action) => {
                 allPosts[post.id] = post;
             })
             return allPosts;
+        case GET_ONE_POST:
+            const onePost = {...state};
+            onePost[action.post.id] = action.post;
+            return onePost; 
         case EDIT_POST:
         case CREATE_POST:
             return {

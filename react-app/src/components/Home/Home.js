@@ -4,7 +4,7 @@ import {useSelector, useDispatch} from 'react-redux'
 import {getAllPosts} from '../../store/posts';
 import CreatePost from '../CreatePostForm/CreatePost';
 import styles from './Home.module.css';
-import PostContainer from '../PostContainer';
+import PostContainer from '../PostContainer/PostContainer';
 // import EditPostForm from '../EditPostForm/EditPostForm';
 
 const Home = () => {

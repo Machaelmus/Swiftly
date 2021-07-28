@@ -1,20 +1,37 @@
 .createPostDiv {
     margin-top: 100px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    background-color: white;
+    padding: 20px;
+    width: 780px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.281);
     /* TEMPORARY STYLES TO GET IT ON PAGE :D */
-}
-
-.createPostForm {
-
 }
 
 .createPostInput {
     resize: none;
     height: 40px;
-    width: 400px;
+    width: 630px;
+    background-color: #E9E9E9;
+    border: none;
 }
 
 .createPostSubmit {
+    height: 40px;
+    width: 150px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--purpleTheme);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
 
+.createPostSubmit:hover {
+    cursor: pointer;
+    background-color: var(--purpleHover);
 }

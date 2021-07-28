@@ -2,3 +2,81 @@
     margin-top: 20px;
     margin-bottom: 40px;
 }
+
+.editTextArea {
+    resize: none;
+    height: 150px;
+    width: 270px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.281);
+}
+
+.eachPostEditButton {
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+.editCancelButton {
+    font-size: 18px;
+}
+.eachPostDeleteButton {
+    margin-top: 25px;
+}
+.eachPostEditButton {
+    height: 35px;
+    width: 100px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--purpleTheme);
+    color: white;
+    font-weight: bold;
+}
+
+.eachPostDeleteButton {
+    border: none;
+    color:  #000000ab;
+    background-color: white;
+    font-size: 18px;
+    font-weight: bold;
+    width: 150px;
+    height: 35px;
+    border-radius: 20px;
+}
+
+.editCancelButton {
+    height: 35px;
+    width: 100px;
+    border: 2px solid var(--purpleTheme);
+    border-radius: 20px;
+    font-weight: bold;
+    color: var(--purpleTheme);
+    background-color: white;
+}
+
+.editCancelButton:hover {
+    color: white;
+    transition: all 0.4s ease;
+    background-color: var(--purpleTheme);
+    cursor: pointer;
+}
+.eachPostEditButton:hover {
+    cursor: pointer;
+    background-color: var(--purpleHover);
+}
+.eachPostDeleteButton:hover {
+    cursor: pointer;
+    color: black;
+}
+.firstEditButton {
+    background-color: white; 
+    color: black;
+    font-weight: lighter;
+    border: none;
+    font-size: 15px;
+}
+
+.firstEditButton:hover {
+    cursor: pointer;
+    color: var(--purpleTheme);
+}

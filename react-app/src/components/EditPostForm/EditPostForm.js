@@ -63,7 +63,7 @@ const EditPostForm = ({post}) => {
     return (
         <>
             <div className={styles.bigChungusContainer}>
-                <button className={styles.firstEditButton} onClick={openModalOnClick}>...</button>
+                <button className={styles.firstEditButton} onClick={openModalOnClick}>Options</button>
                 <Modal
                 style={editModalStyles}
                 isOpen={open}

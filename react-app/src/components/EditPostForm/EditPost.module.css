@@ -7,7 +7,7 @@
     resize: none;
     height: 150px;
     width: 270px;
-    border: none; 
+    border: none;
     border-radius: 5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.281);
 }
@@ -69,12 +69,11 @@
     color: black;
 }
 .firstEditButton {
-    /* position: fixed; */
-    background-color: white;
+    background-color: white; 
     color: black;
-    font-weight: bold;
+    font-weight: lighter;
     border: none;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .firstEditButton:hover {

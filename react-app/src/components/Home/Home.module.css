@@ -28,7 +28,6 @@
     margin-top: 40px;
     position: absolute;
     left: 1397px;
-    /* padding: 25px; */
     font-size: 18px;
 }
 
@@ -72,4 +71,8 @@
 .editOpenDropdown:hover {
     cursor: pointer;
     color: var(--purpleTheme);
+}
+
+button.optionsButton:hover {
+    cursor: pointer;
 }

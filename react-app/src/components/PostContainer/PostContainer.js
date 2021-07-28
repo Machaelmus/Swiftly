@@ -1,9 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { editOnePost, deleteOnePost } from '../store/posts';
+import { editOnePost, deleteOnePost } from '../../store/posts';
 import Modal from 'react-modal';
-import styles from './Home/Home.module.css';
+import styles from '../Home/Home.module.css';
 
+// REACT-MODAL SETTINGS
 Modal.setAppElement('#root')
 const editModalStyles = {
     content: {
@@ -21,15 +22,22 @@ const editModalStyles = {
         alignItems: 'center',
         textAlign: 'center',
         flexDirection: 'column-reverse',
+        zIndex: '98989898989898989898989898989898'
 
     }
 }
 
+
+
 const PostContainer = ({post}) => {
+    const editDeleteDropdown = useRef(null);
+    // State for the first dropdown containing words "edit, delete"
     const [openOptions, setOpenOptions] = useState(false);
     const dispatch = useDispatch()
+    // State for editing a review
     const [editText, setEditText] = useState('');
     const sessionUser = useSelector(state => state.session.user);
+    // State for opening the react-modal itself
     const [open, setOpen] = useState(false);
 
     // Edit Post Form dispatch function
@@ -49,38 +57,49 @@ const PostContainer = ({post}) => {
         dispatch(deleteOnePost(post.id))
     }
 
-    // Functions to change state of modal
+    // Functions to change state of react-modal
     function openModalOnClick() {
+        console.log('OPEN MODAL')
         setOpen(true);
     }
     function closeModalOnClick() {
         setOpen(false);
     }
     // Function to enable options dropdown
+    // This dropdown contains the "edit, delete" words
     const enableOptions = () => {
         if(openOptions) return;
         setOpenOptions(true)
 
     }
-    // Use effect for opening and closing the modal based on click events
-    const removeOptions = () => {
-        if(!openOptions) return;
-        setOpenOptions(false)
-    }
-    useEffect(() => {
-        if (!openOptions) return;
-        document.addEventListener('click', removeOptions);
-        return () =>document.removeEventListener('click', removeOptions)
-    }, [setOpenOptions, removeOptions])
+    // Use effects for opening and closing the modal based on click events
+    // These three are for the opening and closing of the original dropdown containing
+    // words "edit, delete"
+    // const removeOptions = () => {
+    //     if(!openOptions) return;
+    //     console.log('<<<<<<<<<<FIRE>>>>>>>>>>>>>>>>>', open)
+    //     setOpenOptions(false)
+    // }
 
     useEffect(() => {
-        if(!openOptions) return;
-        document.addEventListener('click', setOpenOptions(true))
-    }, [setOpenOptions])
+        const clickOutside = (event) => {
+            if(editDeleteDropdown.current && !editDeleteDropdown.current.contains(event.target)) {
+                console.log('Clicking outside the container')
+                setOpenOptions(false)
+            }
+        }
+        const body = document.getElementById('root')
+        body.addEventListener('click', clickOutside)
+        setOpenOptions(false)
+        return () => {
+            body.removeEventListener('click', clickOutside)
+            setOpenOptions(false)
+        }
+    }, [editDeleteDropdown])
 
     return (
         <>
-            <div className={styles.postDiv}>
+            <div ref={editDeleteDropdown} className={styles.postDiv}>
                 <button onClick={enableOptions} className={styles.optionsButton}>...</button>
             {openOptions && (
                 <div className={styles.optionsDrop}>

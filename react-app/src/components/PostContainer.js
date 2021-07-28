@@ -25,7 +25,6 @@ const editModalStyles = {
     }
 }
 
-
 const PostContainer = ({post}) => {
     const [openOptions, setOpenOptions] = useState(false);
     const dispatch = useDispatch()
@@ -33,7 +32,7 @@ const PostContainer = ({post}) => {
     const sessionUser = useSelector(state => state.session.user);
     const [open, setOpen] = useState(false);
 
-
+    // Edit Post Form dispatch function
     const editFormInfo = (e) => {
         e.preventDefault()
         const formInfo = {
@@ -45,51 +44,48 @@ const PostContainer = ({post}) => {
         setOpen(false)
     }
 
-
+    // Delete Post dispatch function
     const deletePostFunc = () => {
         dispatch(deleteOnePost(post.id))
     }
 
+    // Functions to change state of modal
     function openModalOnClick() {
         setOpen(true);
     }
     function closeModalOnClick() {
         setOpen(false);
     }
-
+    // Function to enable options dropdown
     const enableOptions = () => {
-        if(openOptions) {
-            return;
-        } else {
-            setOpenOptions(true)
-        }
+        if(openOptions) return;
+        setOpenOptions(true)
+
     }
+    // Use effect for opening and closing the modal based on click events
+    const removeOptions = () => {
+        if(!openOptions) return;
+        setOpenOptions(false)
+    }
+    useEffect(() => {
+        if (!openOptions) return;
+        document.addEventListener('click', removeOptions);
+        return () =>document.removeEventListener('click', removeOptions)
+    }, [setOpenOptions, removeOptions])
 
     useEffect(() => {
-        if (!openOptions) {
-            return;
-        } else {
-            const removeOptions = () => {
-                setOpenOptions(false)
-            }
-            document.addEventListener('click', removeOptions);
-            return () => document.removeEventListener('click', removeOptions);
-        }
+        if(!openOptions) return;
+        document.addEventListener('click', setOpenOptions(true))
     }, [setOpenOptions])
 
     return (
-
         <>
             <div className={styles.postDiv}>
                 <button onClick={enableOptions} className={styles.optionsButton}>...</button>
             {openOptions && (
                 <div className={styles.optionsDrop}>
                     <p onClick={openModalOnClick}>Edit</p>
-                    <Modal
-                        style={editModalStyles}
-                        isOpen={open}
-                        onRequestClose={closeModalOnClick}
-                    >
+                    <Modal style={editModalStyles} isOpen={open} onRequestClose={closeModalOnClick}>
                         <button className={styles.eachPostDeleteButton} onClick={deletePostFunc}>Delete post</button>
                         <br/>
                         <form onSubmit={editFormInfo}>

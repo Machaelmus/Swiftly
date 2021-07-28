@@ -72,15 +72,8 @@ const PostContainer = ({post}) => {
         setOpenOptions(true)
 
     }
+    
     // Use effects for opening and closing the modal based on click events
-    // These three are for the opening and closing of the original dropdown containing
-    // words "edit, delete"
-    // const removeOptions = () => {
-    //     if(!openOptions) return;
-    //     console.log('<<<<<<<<<<FIRE>>>>>>>>>>>>>>>>>', open)
-    //     setOpenOptions(false)
-    // }
-
     useEffect(() => {
         const clickOutside = (event) => {
             if(editDeleteDropdown.current && !editDeleteDropdown.current.contains(event.target)) {

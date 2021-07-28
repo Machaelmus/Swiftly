@@ -5,7 +5,7 @@ import {getAllPosts} from '../../store/posts';
 import CreatePost from '../CreatePostForm/CreatePost';
 import styles from './Home.module.css';
 import PostContainer from '../PostContainer';
-import EditPostForm from '../EditPostForm/EditPostForm';
+// import EditPostForm from '../EditPostForm/EditPostForm';
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -14,7 +14,7 @@ const Home = () => {
     useEffect(() => {
         dispatch(getAllPosts())
     }, [dispatch]);
-    
+
 
     return (
         <>
@@ -29,7 +29,7 @@ const Home = () => {
                     {posts.map((post) => (
                         <div key={post.id}>
                             <PostContainer className={styles.postContainerContainer} post={post} key={post.id}/>
-                            <EditPostForm post={post}/>
+                            {/* <EditPostForm post={post}/> */}
                         </div>
                     ))}
                 </div>

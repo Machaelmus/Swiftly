@@ -41,9 +41,6 @@
 }
 
 .loginEmail, .loginPassword {
-    height: 40px;
-    width: 250px;
-    margin-bottom: 20px;
     border: none;
     background-color: rgb(235, 235, 235);
 }
@@ -57,6 +54,9 @@
     text-indent: 5px;
     font-size: 15px;
     font-weight: bold;
+}
+.textDiv1 {
+    margin-bottom: 10px; 
 }
 
 .loginSubmit {

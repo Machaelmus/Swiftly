@@ -2,9 +2,35 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Redirect, Link } from 'react-router-dom';
 import { login } from '../../store/session';
+import TextField from '@material-ui/core/TextField'
+import { makeStyles } from '@material-ui/core';
 import styles from './Login.module.css';
 
+
+const useStyles = makeStyles({
+  root: {
+    '& label.Mui-focused': {
+      color: 'purple',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: 'purple',
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'black',
+      },
+      '&:hover fieldset': {
+        borderColor: 'purple',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'purple',
+      },
+    },
+  },
+})
+
 const LoginForm = () => {
+  const classes = useStyles();
   const [errors, setErrors] = useState([]);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -54,11 +80,11 @@ const LoginForm = () => {
               </div>
             ))}
           </div>
-          <div>
-            <input className={styles.loginEmail} name='email' type='text' placeholder='Email' value={email} onChange={updateEmail} />
+          <div className={styles.textDiv1}>
+            <TextField className={classes.root} id="outlined-basic" label="Email" variant="outlined" name='email' type='text' value={email} onChange={updateEmail} />
           </div>
-          <div>
-            <input className={styles.loginPassword} name='password' type='password' placeholder='Password' value={password} onChange={updatePassword} />
+          <div className={styles.textDiv1}>
+            <TextField id="outlined-basic" label="Password" variant="outlined" className={classes.root} name='password' type='password' value={password} onChange={updatePassword} />
           </div>
           <button className={styles.loginSubmit} type='submit'>Login</button>
           <br/>

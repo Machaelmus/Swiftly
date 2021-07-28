@@ -10,6 +10,7 @@ import User from './components/UserProfile/User';
 import { authenticate } from './store/session';
 import Splash from './components/Splash/Splash';
 import Home from './components/Home/Home';
+import SinglePostPage from './components/SinglePostPage/SinglePostPage';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -47,6 +48,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path='/home' exact={true} >
           <Home/>
+        </ProtectedRoute>
+        <ProtectedRoute path="/posts/:id" exact={true}>
+          <SinglePostPage/>
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>

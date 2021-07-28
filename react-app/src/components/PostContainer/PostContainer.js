@@ -72,7 +72,7 @@ const PostContainer = ({post}) => {
         setOpenOptions(true)
 
     }
-    
+
     // Use effects for opening and closing the modal based on click events
     useEffect(() => {
         const clickOutside = (event) => {
@@ -96,7 +96,7 @@ const PostContainer = ({post}) => {
                 <button onClick={enableOptions} className={styles.optionsButton}>...</button>
             {openOptions && (
                 <div className={styles.optionsDrop}>
-                    <p onClick={openModalOnClick}>Edit</p>
+                    <p className={styles.editOpenDropdown} onClick={openModalOnClick}>Edit</p>
                     <Modal style={editModalStyles} isOpen={open} onRequestClose={closeModalOnClick}>
                         <button className={styles.eachPostDeleteButton} onClick={deletePostFunc}>Delete post</button>
                         <br/>
@@ -108,7 +108,7 @@ const PostContainer = ({post}) => {
                             <button className={styles.editCancelButton} onClick={closeModalOnClick}>Cancel</button>
                         </form>
                     </Modal>
-                    <p>Delete</p>
+                    {/* <p>Delete</p> */}
                 </div>
             )}
                 <p className={styles.eachPostTime}>{post.timeOfPost}</p>

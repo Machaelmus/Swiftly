@@ -6,8 +6,30 @@
     padding: 20px;
     border-radius: 5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.281);
-    /* border-top-left-radius: 20px;
-    border-top-right-radius: 20px; */
+}
+
+.optionsButton {
+    border: none;
+    position: absolute;
+    background-color: white;
+    align-self: flex-end;
+    margin-right: 20px;
+    margin-top: -15px;
+    font-size: 30px;
+}
+
+.optionsDrop {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);
+    height: 100px;
+    text-align: center;
+    width: 80px;
+    margin-top: 40px;
+    position: absolute;
+    left: 1397px;
+    /* padding: 25px; */
+    font-size: 18px;
 }
 
 .homeContainer {

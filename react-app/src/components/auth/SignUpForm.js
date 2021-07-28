@@ -2,9 +2,34 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { Redirect, Link } from 'react-router-dom';
 import { signUp, login } from '../../store/session';
+import TextField from '@material-ui/core/TextField'
+import { makeStyles } from '@material-ui/core';
 import styles from './Signup.module.css';
 
+const useStyles = makeStyles({
+  root: {
+    '& label.Mui-focused': {
+      color: 'purple',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: 'purple',
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'black',
+      },
+      '&:hover fieldset': {
+        borderColor: 'purple',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'purple',
+      },
+    },
+  },
+})
+
 const SignUpForm = () => {
+  const classes = useStyles();
   const [errors, setErrors] = useState([]);
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -62,17 +87,18 @@ const SignUpForm = () => {
               <div className={styles} key={ind}>{error}</div>
             ))}
           </div>
-          <div>
-            <input className={styles.signupUsername} placeholder="Username" type='text' name='username' onChange={updateUsername} value={username} />
+          <div className={styles.signupTextFields}>
+          {/* id="outlined-basic" label="Email" variant="outlined" */}
+            <TextField id="outlined-basic" label="Username" variant="outlined" className={classes.root} type='text' name='username' onChange={updateUsername} value={username} />
           </div>
-          <div>
-            <input className={styles.signupEmail} placeholder="Email" type='text' name='email' onChange={updateEmail} value={email} />
+          <div className={styles.signupTextFields}>
+            <TextField id="outlined-basic" label="Email" variant="outlined" className={classes.root} type='text' name='email' onChange={updateEmail} value={email} />
           </div>
-          <div>
-            <input className={styles.signupPassword} placeholder="Password" type='password' name='password' onChange={updatePassword} value={password} />
+          <div className={styles.signupTextFields}>
+            <TextField id="outlined-basic" label="Password" variant="outlined" className={classes.root} type='password' name='password' onChange={updatePassword} value={password} />
           </div>
-          <div>
-            <input className={styles.signupConfirm} placeholder="Confirm password" type='password' name='repeat_password' onChange={updateRepeatPassword} value={repeatPassword} required={true} />
+          <div className={styles.signupTextFields}>
+            <TextField id="outlined-basic" label="Confirm password" variant="outlined" className={classes.root} type='password' name='repeat_password' onChange={updateRepeatPassword} value={repeatPassword} required={true} />
           </div>
           <button className={styles.signupSubmit} type='submit'>Sign Up</button>
           <br/>

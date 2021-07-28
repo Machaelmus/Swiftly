@@ -67,7 +67,12 @@
     font-size: 18px;
     font-weight: bold;
 }
-
+.eachPostDeleteButton:hover {
+    cursor: pointer;
+    color: white;
+    border-color: var(--purpleHover);
+    background-color: var(--purpleHover);
+}
 .editOpenDropdown:hover {
     cursor: pointer;
     color: var(--purpleTheme);
@@ -75,4 +80,38 @@
 
 button.optionsButton:hover {
     cursor: pointer;
+}
+
+.eachPostEditButton,
+.editCancelButton {
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.eachPostEditButton {
+    margin-right: 20px;
+    border: none;
+    color: white;
+    background-color: var(--purpleTheme);
+}
+
+.eachPostEditButton:hover {
+    cursor: pointer;
+    background-color: var(--purpleHover);
+}
+
+.editCancelButton {
+    color: var(--purpleTheme);
+    border: 2px solid var(--purpleTheme);
+}
+
+.editCancelButton:hover {
+    cursor: pointer;
+    color: white;
+    border-color: var(--purpleHover);
+    background-color: var(--purpleHover);
 }

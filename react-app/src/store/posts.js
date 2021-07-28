@@ -38,6 +38,15 @@ export const getAllPosts = () => async (dispatch) => {
     }
 }
 
+export const getIndividualPost = (id) => async (dispatch) => {
+    const response = await fetch(`/api/posts/${id}`);
+
+    if(response.ok) {
+        const singlePost = await response.json();
+        dispatch(getOnePost(singlePost))
+    }
+}
+
 export const createOnePost = (club) => async (dispatch) => {
     const response = await fetch('/api/posts', {
         method: 'POST',

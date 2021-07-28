@@ -5,8 +5,10 @@ import styles from './singlepost.module.css';
 
 const SinglePostPage = () => {
     const {id} = useParams();
-    const posts = useSelector(state => Object.values(state.posts))
-    const singlePost = posts.find((post) => post.id === +id)
+    const posts = useSelector(state => Object.values(state.posts));
+    const singlePost = posts.find((post) => post.id === +id);
+    console.log('SINGLE POST ==>', singlePost);
+    
     return (
         <div>
 

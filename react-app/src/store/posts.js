@@ -1,4 +1,5 @@
 const GET_POSTS = 'posts/GET_POSTS';
+const GET_ONE_POST = 'posts/GET_ONE_POST';
 const CREATE_POST = 'posts/CREATE_POST';
 const DELETE_POST = 'posts/DELETE_POST';
 const EDIT_POST = 'posts/EDIT_POST';
@@ -6,6 +7,11 @@ const EDIT_POST = 'posts/EDIT_POST';
 const getPosts = (posts) => ({
     type: GET_POSTS,
     posts,
+});
+
+const getOnePost = (post) => ({
+    type: GET_ONE_POST,
+    post,
 });
 
 const createPost = (post) => ({

@@ -13,3 +13,20 @@ export const getAllReplies = () => async (dispatch) => {
         dispatch(getReplies(allReplies))
     }
 }
+
+const initialState = {};
+
+const repliesReducer = (state = initialState, action) => {
+    switch(action.type) {
+        case GET_REPLIES:
+            const allReplies = {}
+            action.replies.replies.forEach((reply) => {
+                allReplies[reply.id] = reply;
+            })
+            return allReplies;
+        default:
+            return state;
+    }
+}
+
+export default repliesReducer;

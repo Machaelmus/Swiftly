@@ -40,7 +40,7 @@ function App() {
         <Route path='/signup' exact={true}>
           <SignUpForm />
         </Route>
-        <ProtectedRoute path="/posts/id">
+        <ProtectedRoute path="/posts/:id">
           <SinglePost />
         </ProtectedRoute>
         <ProtectedRoute path='/users' exact={true} >

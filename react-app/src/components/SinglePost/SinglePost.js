@@ -5,9 +5,11 @@ import { getOnePost } from '../../store/posts';
 import styles from './singlepost.module.css';
 
 const SinglePost = () => {
-    const dispatch = useDispatch();
     const {id} = useParams();
-
+    const posts = useSelector(state => Object.values(state.posts));
+    const post = posts.find((post) => post.id === +id);
+    const dispatch = useDispatch();
+    console.log('SINGLE POST ===>', post)
     useEffect(() => {
         dispatch(getOnePost(id))
     }, [dispatch])

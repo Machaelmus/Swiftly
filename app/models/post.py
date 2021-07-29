@@ -13,7 +13,7 @@ class Post(db.Model):
     # ========================================================================
 
     # Relationship between Posts and replies
-    postReplies = db.relationship('Reply', back_populates='replyToPost')
+    postReplies = db.relationship('Reply', cascade="all, delete-orphan", back_populates='replyToPost')
     # Creates relationship between post and users to determine the author
     postAuthor = db.relationship('User', back_populates='userPosts')
 

@@ -20,13 +20,12 @@ const SinglePost = () => {
         e.preventDefault()
         dispatch(deleteOneReply(singleReply.id))
     }
-
     useEffect(() => {
-        dispatch(getAllReplies())
+        dispatch(getOnePost(id))
     }, [dispatch])
 
     useEffect(() => {
-        dispatch(getOnePost(id))
+        dispatch(getAllReplies())
     }, [dispatch])
 
     return (
@@ -48,7 +47,7 @@ const SinglePost = () => {
                 <CreateReplyForm post={post}/>
                 {/* POST A REPLY COMPONENT HERE */}
                     {replies && replies.map((reply) => (
-                        <div>{reply?.postId === post?.id &&
+                        <div key={reply.id}>{reply?.postId === post?.id &&
                             <div className={styles.repliesToSinglePostContainer}>
                                 <p>reply from this person</p>
                                 <p>{reply.timeOfPost}</p>

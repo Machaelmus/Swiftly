@@ -1,5 +1,5 @@
 
-import React, {useRef, useEffect} from 'react';
+import React, {useRef, useEffect, useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import LogoutButton from '../auth/LogoutButton';
@@ -17,19 +17,35 @@ const NavBar = () => {
   }
 
   useEffect(() => {
-    
-  })
+    const clickOutsideNavOptions = (event) => {
+      if(navDropdown.current && !navDropdown.current.contains(event.target)) {
+        setNavOptions(false)
+      }
+    }
+    const body = document.getElementById('root')
+    body.addEventListener('click', clickOutsideNavOptions)
+    setNavOptions(false)
+    return () => {
+      body.removeEventListener('click', clickOutsideNavOptions)
+      setNavOptions(false)
+    }
+  }, [navDropdown])
 
     if(sessionUser) {
         return (
-          <nav className={styles.navContainer}>
+          <nav ref={navDropdown} className={styles.navContainer}>
             <div className={styles.navUl}>
               <div className={styles.navLogo}></div>
               <div className={styles.navRightSide}>
                 <img src={sessionUser.profileImage} className={styles.navUserImage}></img>
                 <p className={styles.navUsername}>{sessionUser.username}</p>
                 <div className={styles.navAddFriends}><AiOutlinePlus/></div>
-                <div className={styles.navProfileDropDown}><AiOutlineMenu/></div>
+                <div onClick={enableNavOptions} className={styles.navProfileDropDown}><AiOutlineMenu/></div>
+                {navOptions && (
+                  <div>
+                    <LogoutButton/>
+                  </div>
+                )}
                 {/* <li className={styles.navLogout}>
                   <LogoutButton />
                 </li> */}

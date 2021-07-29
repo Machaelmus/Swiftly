@@ -93,6 +93,10 @@ button.optionsButton:hover {
     cursor: pointer;
 }
 
+.eachPostTime {
+    font-weight: bold;
+}
+
 .eachPostEditButton,
 .editCancelButton {
     height: 40px;

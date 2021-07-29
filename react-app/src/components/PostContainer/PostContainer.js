@@ -112,7 +112,7 @@ const PostContainer = ({post}) => {
                 </div>
             )}
                 <p className={styles.eachPostTime}>{post.timeOfPost}</p>
-                <h2 className={styles.eachPostPost}>{post.post}</h2>
+                <p className={styles.eachPostPost}>{post.post}</p>
             </div>
         </>
     )

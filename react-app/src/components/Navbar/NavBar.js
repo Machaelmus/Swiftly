@@ -1,5 +1,5 @@
 
-import React, {useRef} from 'react';
+import React, {useRef, useEffect} from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import LogoutButton from '../auth/LogoutButton';
@@ -8,7 +8,17 @@ import {AiOutlinePlus, AiOutlineMenu} from 'react-icons/ai'
 
 const NavBar = () => {
   const navDropdown = useRef(null);
+  const [navOptions, setNavOptions] = useState(false);
   const sessionUser = useSelector(state => state.session.user);
+
+  const enableNavOptions = () => {
+    if(navOptions) return;
+    setNavOptions(true);
+  }
+
+  useEffect(() => {
+    
+  })
 
     if(sessionUser) {
         return (

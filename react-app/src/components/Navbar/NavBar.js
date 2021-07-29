@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import LogoutButton from '../auth/LogoutButton';
 import styles from './Navbar.module.css';
+import {AiOutlinePlus, AiOutlineMenu} from 'react-icons/ai'
 
 const NavBar = () => {
   const sessionUser = useSelector(state => state.session.user);
@@ -16,8 +17,8 @@ const NavBar = () => {
               <div className={styles.navRightSide}>
                 <div className={styles.navUserImage}></div>
                 <p className={styles.navUsername}>{sessionUser.username}</p>
-                <div className={styles.navAddFriends}>+</div>
-                <div className={styles.navProfileDropDown}>v</div>
+                <div className={styles.navAddFriends}><AiOutlinePlus/></div>
+                <div className={styles.navProfileDropDown}><AiOutlineMenu/></div>
                 {/* <li className={styles.navLogout}>
                   <LogoutButton />
                 </li> */}

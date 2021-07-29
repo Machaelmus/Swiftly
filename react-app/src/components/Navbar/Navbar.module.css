@@ -32,7 +32,7 @@
 
 .navAddFriends,
 .navProfileDropDown {
-    margin-left: 60px;
+    margin-left: 30px;
 }
 
 .navUserImage {
@@ -43,13 +43,23 @@
 }
 
 .navUsername {
-
+    margin-bottom: 20px;
+    margin-left: 10px;
+    font-weight: bold;
 }
+
 .navAddFriends {
-
+    background-color: lightgray;
+    height: 50px;
+    width: 50px;
+    border-radius: 40px;
 }
-.navProfileDropDown {
 
+.navProfileDropDown {
+    background-color: lightgray;
+    height: 50px;
+    width: 50px;
+    border-radius: 40px;
 }
 
 .navUl {

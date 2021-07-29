@@ -6,13 +6,13 @@ import LogoutButton from '../auth/LogoutButton';
 import styles from './Navbar.module.css';
 import {AiOutlinePlus, AiOutlineMenu} from 'react-icons/ai';
 import {IoSettingsOutline } from 'react-icons/io5';
-import {IoExitOutline} from 'react-icons/io5';
 import {GoLightBulb} from 'react-icons/go';
 
 
 const NavBar = () => {
   const navDropdown = useRef(null);
   const [navOptions, setNavOptions] = useState(false);
+  const [theme, setTheme] = useState('Dark Mode')
   const sessionUser = useSelector(state => state.session.user);
 
   const enableNavOptions = () => {
@@ -48,7 +48,7 @@ const NavBar = () => {
                 {navOptions && (
                   <div className={styles.insideDropdown}>
                     <p><IoSettingsOutline className={styles.logoTop}/>Profile & Settings</p>
-                    <p><GoLightBulb className={styles.logoTop}/>Dark Mode</p>
+                    <p className={styles.themeButton}><GoLightBulb className={styles.logoTop}/>Dark Mode</p>
                     <LogoutButton/>
                   </div>
                 )}

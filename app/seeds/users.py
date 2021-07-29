@@ -20,13 +20,13 @@ def seed_users():
     captainamerica = User(
         username='MrRodgers', status='Murica', handle='#Cap', profileImage='https://cdn.vox-cdn.com/thumbor/T-F4dV0PEp6eC-Z7lTu6fcdhDFQ=/0x0:1916x784/1200x800/filters:focal(517x45:823x351)/cdn.vox-cdn.com/uploads/chorus_image/image/59126061/Screen_Shot_2018_03_22_at_3.09.54_PM.0.png', email='cap@murica.net', password='password')
     ironman = User(
-        username='ActualTonyStark', status='I need a new flux-incapacitator 9000 ', handle='#IncredibleTonyStark', profileImage='https://dailysuperheroes.com/wp-content/uploads/2020/02/tony-stark.jpg', email='tony@starkindustries.com', password='password')
+        username='TonyStark', status='I need a new flux-incapacitator 9000 ', handle='#IncredibleTonyStark', profileImage='https://dailysuperheroes.com/wp-content/uploads/2020/02/tony-stark.jpg', email='tony@starkindustries.com', password='password')
     hulk = User(
         username='GreenGiant', status='HULK SMASH', handle='#Rawr', profileImage='https://cdn.vox-cdn.com/thumbor/Pvdo1lFYBBDbEG54FLW4tJ4pUcM=/0x0:2100x1181/1200x800/filters:focal(909x410:1245x746)/cdn.vox-cdn.com/uploads/chorus_image/image/67426099/experience_avengers_day.0.jpg', email='bruce@sciencecompany.com', password='password')
     wolverine = User(
         username='WeaponX', status='What do you want?', handle='#Bub', profileImage='https://hips.hearstapps.com/digitalspyuk.cdnds.net/16/21/1464175888-hugh-jackman-muscles-claws-in-the-wolverine.jpg', email='scarybigclaws@xmen.com', password='password')
     spiderman = User(
-        username='FriendlyNeighbor', status='Stop bullying!', handle='#Wooohooo', profileImage='https://upload.wikimedia.org/wikipedia/commons/c/c2/Tobey_Maguire_2014.jpg', email='peterparker@mail.com', password='password')
+        username='Spidey', status='Stop bullying!', handle='#Wooohooo', profileImage='https://upload.wikimedia.org/wikipedia/commons/c/c2/Tobey_Maguire_2014.jpg', email='peterparker@mail.com', password='password')
 
 
     db.session.add(demo)

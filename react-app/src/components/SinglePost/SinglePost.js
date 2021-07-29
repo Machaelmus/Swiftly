@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { getOnePost } from '../../store/posts';
 import styles from './singlepost.module.css';
 
@@ -16,7 +16,11 @@ const SinglePost = () => {
 
     return (
         <div className={styles.singlePostPageContainer}>
-            <div className={styles.returnArrow}><h1>Return</h1></div>
+            <div className={styles.returnArrow}>
+                <Link to="/home">
+                    <h1>Return</h1>
+                </Link>
+            </div>
             <div className={styles.singlePostContainer}>
                 <h1>Post username</h1>
                 <p>Post time</p>

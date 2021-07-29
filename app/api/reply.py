@@ -50,3 +50,11 @@ def editReply(id):
         replyToEdit.timeOfReply = date.today()
         db.session.commit()
         return replyToEdit.to_dict()
+
+
+@reply_routes.route('/api/replies/<int:id>', methods=['DELETE'])
+def deleteReply(id):
+    replyToDelete = Reply.query.get(id)
+    db.session.delete(replyToDelete)
+    db.session.commit()
+    return replyToDelete.to_dict()

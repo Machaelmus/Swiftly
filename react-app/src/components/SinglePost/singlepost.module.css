@@ -1,3 +1,43 @@
 .returnArrow {
     margin-top: 100px;
 }
+
+.repliesToSinglePostContainer {
+    padding: 20px;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);
+}
+
+.homeContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "navigation feed extra";
+    width: 100%;
+    height: 100%;
+}
+
+.navigation {
+    grid-area: navigation;
+}
+
+.feed {
+    justify-self: center;
+    grid-area: feed;
+}
+
+.extra {
+    grid-area: extra;
+}
+
+.singlePostPageContainer {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);
+}

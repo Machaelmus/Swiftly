@@ -13,7 +13,7 @@ const SinglePost = () => {
     const post = posts.find((post) => post.id === +id);
     const dispatch = useDispatch();
     console.log('SINGLE POST ===>', post)
-    
+
     useEffect(() => {
         dispatch(getAllReplies())
     }, [dispatch])
@@ -38,13 +38,15 @@ const SinglePost = () => {
                     </div>
                 </div>
                 {/* POST A REPLY COMPONENT HERE */}
-                {replies.map((reply) => (
-                    <div className={styles.repliesToSinglePostContainer}>
-                        <p>reply from this person</p>
-                        <p>{reply.timeOfPost}</p>
-                        <p>{reply.reply}</p>
-                    </div>
-                ))}
+                    {replies && replies.map((reply) => (
+                        <div>{reply?.postId === post?.id &&
+                            <div className={styles.repliesToSinglePostContainer}>
+                                <p>reply from this person</p>
+                                <p>{reply.timeOfPost}</p>
+                                <p>{reply.reply}</p>
+                            </div>
+                        }</div>
+                    ))}
             </div>
         </div>
     )

@@ -5,7 +5,8 @@ import { useSelector } from 'react-redux';
 import LogoutButton from '../auth/LogoutButton';
 import styles from './Navbar.module.css';
 import {AiOutlinePlus, AiOutlineMenu} from 'react-icons/ai';
-import {IoExitOutline, IoSettingsOutline } from 'react-icons/io';
+import {IoSettingsOutline } from 'react-icons/io5';
+import {IoExitOutline} from 'react-icons/io5';
 import {GoLightBulb} from 'react-icons/go';
 
 
@@ -46,9 +47,9 @@ const NavBar = () => {
                 <div onClick={enableNavOptions} className={styles.navProfileDropDown}><AiOutlineMenu/></div>
                 {navOptions && (
                   <div className={styles.insideDropdown}>
-                    <p>Profile & Settings</p>
-                    <p>Dark Mode</p>
-                    <LogoutButton/>
+                    <p><IoSettingsOutline className={styles.logoTop}/>Profile & Settings</p>
+                    <p><GoLightBulb className={styles.logoTop}/>Dark Mode</p>
+                    <IoExitOutline className={styles.logoTop}/><LogoutButton/>
                   </div>
                 )}
                 {/* <li className={styles.navLogout}>

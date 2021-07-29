@@ -13,8 +13,12 @@
     left: 0;
 }
 
-.navLogout {
-
+.logoTop {
+    padding: 5px;
+    margin-bottom: -10px;
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
 }
 
 .navLogo {
@@ -50,8 +54,12 @@
 
 .insideDropdown {
     position: absolute;
-    top: 85px;
-    padding: 20px; 
+    top: 75px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.411);
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 500; 
     background-color: white;
     right: 50px;
 }

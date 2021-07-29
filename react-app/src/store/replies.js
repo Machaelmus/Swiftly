@@ -45,6 +45,11 @@ const repliesReducer = (state = initialState, action) => {
                 allReplies[reply.id] = reply;
             })
             return allReplies;
+        case CREATE_REPLY:
+            return {
+                ...state,
+                [action.reply.id]: action.reply
+            }
         default:
             return state;
     }

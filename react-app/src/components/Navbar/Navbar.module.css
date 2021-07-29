@@ -48,6 +48,14 @@
     font-weight: bold;
 }
 
+.insideDropdown {
+    position: absolute;
+    top: 85px;
+    padding: 20px; 
+    background-color: white;
+    right: 50px;
+}
+
 .navAddFriends {
     display: flex;
     justify-content: center;

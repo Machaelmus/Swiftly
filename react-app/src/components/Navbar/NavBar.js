@@ -4,7 +4,10 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import LogoutButton from '../auth/LogoutButton';
 import styles from './Navbar.module.css';
-import {AiOutlinePlus, AiOutlineMenu} from 'react-icons/ai'
+import {AiOutlinePlus, AiOutlineMenu} from 'react-icons/ai';
+import {IoExitOutline, IoSettingsOutline } from 'react-icons/io';
+import {GoLightBulb} from 'react-icons/go';
+
 
 const NavBar = () => {
   const navDropdown = useRef(null);
@@ -42,7 +45,9 @@ const NavBar = () => {
                 <div className={styles.navAddFriends}><AiOutlinePlus/></div>
                 <div onClick={enableNavOptions} className={styles.navProfileDropDown}><AiOutlineMenu/></div>
                 {navOptions && (
-                  <div>
+                  <div className={styles.insideDropdown}>
+                    <p>Profile & Settings</p>
+                    <p>Dark Mode</p>
                     <LogoutButton/>
                   </div>
                 )}

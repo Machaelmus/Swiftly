@@ -70,7 +70,7 @@
 .navProfileDropDown:hover, .navAddFriends:hover {
     transition: all 0.3s ease;
     cursor: pointer;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.397);
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.383);
     background-color: rgba(177, 177, 177, 0.431);
 }
 .navUl {

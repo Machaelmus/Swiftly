@@ -49,7 +49,7 @@ const NavBar = () => {
                   <div className={styles.insideDropdown}>
                     <p><IoSettingsOutline className={styles.logoTop}/>Profile & Settings</p>
                     <p><GoLightBulb className={styles.logoTop}/>Dark Mode</p>
-                    <IoExitOutline className={styles.logoTop}/><LogoutButton/>
+                    <LogoutButton/>
                   </div>
                 )}
                 {/* <li className={styles.navLogout}>

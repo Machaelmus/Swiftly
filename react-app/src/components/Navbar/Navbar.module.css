@@ -13,8 +13,31 @@
     left: 0;
 }
 
-.navLogout {
+.logoTop {
+    padding: 5px;
+    margin-bottom: -10px;
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+}
 
+.logoutFromNav {
+    height: 35px;
+    width: 100px;
+    margin-left: 10px;
+    border-radius: 20px;
+    border: 2px solid var(--purpleTheme);
+    background-color: white;
+    color: var(--purpleTheme);
+    font-size: 15px;
+    font-weight: 500;
+}
+.logoutFromNav:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: var(--purpleHover);
+    border-color: var(--purpleHover);
+    color: white;
+    cursor: pointer;
 }
 
 .navLogo {
@@ -46,6 +69,18 @@
     margin-bottom: 20px;
     margin-left: 10px;
     font-weight: bold;
+}
+
+.insideDropdown {
+    position: absolute;
+    top: 75px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.411);
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: white;
+    right: 50px;
 }
 
 .navAddFriends {

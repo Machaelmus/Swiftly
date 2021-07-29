@@ -68,6 +68,7 @@ export const deleteOneReply = (id) => async (dispatch) => {
     if(response.ok) {
         const deletedReply = await response.json();
         dispatch(deleteReply(deletedReply))
+
     }
 }
 

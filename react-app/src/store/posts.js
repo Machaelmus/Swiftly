@@ -83,9 +83,9 @@ export const deleteOnePost = (id) => async (dispatch) => {
         headers: {'Content-Type': 'application/json'}
     });
     if(response.ok) {
-        const deletedPost = await response.json()
-        console.log('BHFDUIKBFHUDSBHUFSDBUYFBDJKSA',deletedPost)
-        dispatch(deletePost(deletedPost))
+        const deletedReview = await response.json()
+        dispatch(deletePost(deletedReview))
+
     }
 }
 

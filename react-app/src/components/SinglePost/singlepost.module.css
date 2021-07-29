@@ -3,6 +3,7 @@
 }
 
 .repliesToSinglePostContainer {
+    padding: 20px;
     background-color: white;
 }
 
@@ -29,4 +30,9 @@
 
 .extra {
     grid-area: extra;
+}
+
+.singlePostPageContainer {
+    padding: 20px; 
+    background-color: white;
 }

@@ -19,18 +19,19 @@ const SinglePost = () => {
     return (
         <div className={styles.homeContainer}>
             <div className={styles.feed}>
+                <div className={styles.returnArrow}>
+                    <Link to="/home">
+                        <h1>Return</h1>
+                    </Link>
+                </div>
                 <div className={styles.singlePostPageContainer}>
-                    <div className={styles.returnArrow}>
-                        <Link to="/home">
-                            <h1>Return</h1>
-                        </Link>
-                    </div>
                     <div className={styles.singlePostContainer}>
                         <h1>Post username</h1>
                         <p>{post?.timeOfPost}</p>
                         <p>{post?.post}</p>
                     </div>
                 </div>
+                {/* POST A REPLY COMPONENT HERE */}
                 <div className={styles.repliesToSinglePostContainer}>
                     <p>reply from this person</p>
                     <p>reply time</p>

@@ -21,12 +21,12 @@ const createPost = (post) => ({
 
 const editPost = (post) => ({
     type: EDIT_POST,
-    post
+    post,
 });
 
 const deletePost = (post) => ({
     type: DELETE_POST,
-    post
+    post,
 });
 
 export const getAllPosts = () => async (dispatch) => {

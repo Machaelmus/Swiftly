@@ -4,3 +4,7 @@
     list-style: none;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+html {
+    background-color: #F0F0F0;
+}

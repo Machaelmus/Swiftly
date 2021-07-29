@@ -4,23 +4,26 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import LogoutButton from '../auth/LogoutButton';
 import styles from './Navbar.module.css';
+import {AiOutlinePlus, AiOutlineMenu} from 'react-icons/ai'
 
 const NavBar = () => {
   const sessionUser = useSelector(state => state.session.user);
+
     if(sessionUser) {
         return (
           <nav className={styles.navContainer}>
-            <ul className={styles.navUl}>
+            <div className={styles.navUl}>
               <div className={styles.navLogo}></div>
-              <li className={styles.navHome}>
-                <NavLink to='/home' exact={true} activeClassName='active'>
-                  Home
-                </NavLink>
-              </li>
-              <li className={styles.navLogout}>
-                <LogoutButton />
-              </li>
-            </ul>
+              <div className={styles.navRightSide}>
+                <div className={styles.navUserImage}></div>
+                <p className={styles.navUsername}>{sessionUser.username}</p>
+                <div className={styles.navAddFriends}><AiOutlinePlus/></div>
+                <div className={styles.navProfileDropDown}><AiOutlineMenu/></div>
+                {/* <li className={styles.navLogout}>
+                  <LogoutButton />
+                </li> */}
+              </div>
+            </div>
           </nav>
         );
     } else {

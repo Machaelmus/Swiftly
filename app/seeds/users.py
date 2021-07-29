@@ -8,13 +8,13 @@ def seed_users():
     # status
     # bio
     demo = User(
-        username='Demo', status='Doing nothing',  handle='#Demo-lition', profileImage='https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png', email='demo@aa.io', password='password')
+        username='Demo', status='Doing nothing',  handle='#Demo-lition', profileImage='https://wallpapercave.com/wp/wp7810895.jpg', email='demo@aa.io', password='password')
     marnie = User(
-        username='marnie', status='Im bored', handle='#MarnieMarn', profileImage='https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png', email='marnie@aa.io', password='password')
+        username='marnie', status='Im bored', handle='#MarnieMarn', profileImage='https://wallpapercave.com/wp/wp7810895.jpg', email='marnie@aa.io', password='password')
     bobbie = User(
-        username='bobbie', status='Who else saw the concert last week?', handle='#bobbybob', profileImage='https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png', email='bobbie@aa.io', password='password')
+        username='bobbie', status='Who else saw the concert last week?', handle='#bobbybob', profileImage='https://wallpapercave.com/wp/wp7810895.jpg', email='bobbie@aa.io', password='password')
     michael = User(
-        username='michael', status='Spiderman saved my friend last week!', handle='#RoamingMoose', profileImage='https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png', email='michael@mail.com', password='password')
+        username='michael', status='Spiderman saved my friend last week!', handle='#RoamingMoose', profileImage='https://wallpapercave.com/wp/wp7810895.jpg', email='michael@mail.com', password='password')
     john = User(
         username='johncena', status='Its like Im not even here...', handle='#YouCantSeeMe', profileImage='https://resizing.flixster.com/IpEFWZUF1Cd_NZPC5gCEVhcJd-M=/506x652/v2/https://flxt.tmsimg.com/v9/AllPhotos/487578/487578_v9_ba.jpg', email='cantseeme@gmail.com', password='password')
     captainamerica = User(

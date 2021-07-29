@@ -16,7 +16,7 @@ const CreateReplyForm = () => {
         const replyInfo = {
             reply: replyText,
             userId: sessionUser.id,
-            postId: id, 
+            postId: id,
             timeOfReply: Date.now()
         }
         dispatch(createOneReply(replyInfo));

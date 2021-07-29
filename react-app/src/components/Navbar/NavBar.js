@@ -15,7 +15,7 @@ const NavBar = () => {
             <div className={styles.navUl}>
               <div className={styles.navLogo}></div>
               <div className={styles.navRightSide}>
-                <div className={styles.navUserImage}></div>
+                <img src={sessionUser.profileImage} className={styles.navUserImage}></img>
                 <p className={styles.navUsername}>{sessionUser.username}</p>
                 <div className={styles.navAddFriends}><AiOutlinePlus/></div>
                 <div className={styles.navProfileDropDown}><AiOutlineMenu/></div>

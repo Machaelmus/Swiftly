@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, {useRef} from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import LogoutButton from '../auth/LogoutButton';
@@ -7,6 +7,7 @@ import styles from './Navbar.module.css';
 import {AiOutlinePlus, AiOutlineMenu} from 'react-icons/ai'
 
 const NavBar = () => {
+  const navDropdown = useRef(null);
   const sessionUser = useSelector(state => state.session.user);
 
     if(sessionUser) {

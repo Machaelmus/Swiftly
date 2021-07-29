@@ -9,11 +9,11 @@ def seed_replies():
     reply2 = Reply(
         userId=1, postId=1, reply='Amazing', timeOfReply=date.today())
     reply3 = Reply(
-        userId=1, postId=1, reply='I didnt like what you had to say', timeOfReply=date.today())
+        userId=1, postId=3, reply='I didnt like what you had to say', timeOfReply=date.today())
     reply4 = Reply(
-        userId=1, postId=1, reply='Good insight, thanks!', timeOfReply=date.today())
+        userId=1, postId=2, reply='Good insight, thanks!', timeOfReply=date.today())
     reply5 = Reply(
-        userId=1, postId=1, reply='No way man', timeOfReply=date.today())
+        userId=1, postId=2, reply='No way man', timeOfReply=date.today())
 
 
     db.session.add(reply1)

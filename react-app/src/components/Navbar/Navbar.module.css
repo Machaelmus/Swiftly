@@ -49,17 +49,23 @@
 }
 
 .navAddFriends {
-    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(211, 211, 211, 0.431);;
     height: 50px;
     width: 50px;
     border-radius: 40px;
 }
 
 .navProfileDropDown {
-    background-color: lightgray;
+    background-color: rgba(211, 211, 211, 0.431);
     height: 50px;
     width: 50px;
     border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navUl {

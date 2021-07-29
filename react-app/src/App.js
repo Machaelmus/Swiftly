@@ -9,6 +9,7 @@ import UsersList from './components/UserProfile/UsersList';
 import User from './components/UserProfile/User';
 import { authenticate } from './store/session';
 import Splash from './components/Splash/Splash';
+import SinglePost from './components/SinglePost/SinglePost';
 import Home from './components/Home/Home';
 
 function App() {
@@ -39,6 +40,9 @@ function App() {
         <Route path='/signup' exact={true}>
           <SignUpForm />
         </Route>
+        <ProtectedRoute path="/posts/id">
+          <SinglePost />
+        </ProtectedRoute>
         <ProtectedRoute path='/users' exact={true} >
           <UsersList/>
         </ProtectedRoute>

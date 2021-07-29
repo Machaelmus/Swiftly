@@ -5,6 +5,7 @@ import { getOnePost } from '../../store/posts';
 import styles from './singlepost.module.css';
 import { BsChat } from 'react-icons/bs';
 import { getAllReplies } from '../../store/replies';
+import CreateReplyForm from '../CreateReplyForm/CreateReplyForm';
 
 const SinglePost = () => {
     const { id } = useParams();
@@ -37,6 +38,9 @@ const SinglePost = () => {
                         <p>{post?.post}</p>
                     </div>
                 </div>
+
+                <CreateReplyForm post={post}/>
+
                 {/* POST A REPLY COMPONENT HERE */}
                     {replies && replies.map((reply) => (
                         <div>{reply?.postId === post?.id &&

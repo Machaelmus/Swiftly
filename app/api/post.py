@@ -1,5 +1,5 @@
 from flask import Blueprint, request
-from app.models import db
+from app.models import db, User
 from app.models.post import Post
 from flask_login import current_user
 from app.forms.post_form import CreatePostForm
@@ -14,6 +14,12 @@ post_routes = Blueprint('posts', __name__)
 def getPosts():
     allPosts = Post.query.all()
     return {'posts': [post.to_dict() for post in allPosts]}
+
+
+@post_routes.route('/api/posts/<int:id>', methods=['GET'])
+def getPost(id):
+    onePost = Post.query.get(id)
+    return onePost.to_dict()
 
 
 @post_routes.route('/api/posts', methods=['POST'])

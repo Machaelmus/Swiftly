@@ -1,7 +1,7 @@
 const GET_REPLIES = 'replies/GET_REPLIES';
 const CREATE_REPLY = 'replies/CREATE_REPLY';
 const EDIT_REPLY = 'replies/EDIT_REPLY';
-
+const DELETE_REPLY = 'replies/DELETE_REPLY';
 
 const getReplies = (replies) => ({
     type: GET_REPLIES,
@@ -16,7 +16,12 @@ const createReply = (reply) => ({
 const editReply = (reply) => ({
     type: EDIT_REPLY,
     reply,
-})
+});
+
+const deleteReply = (reply) => ({
+    type: DELETE_REPLY,
+    reply,
+});
 
 export const getAllReplies = () => async (dispatch) => {
     const response = await fetch('/api/replies');
@@ -55,6 +60,17 @@ export const editOneReply = (id, reply) => async (dispatch) => {
 
 }
 
+export const deleteOneReply = (id) => async (dispatch) => {
+    const response = await fetch(`/api/replies/${id}`, {
+        method: 'DELETE',
+        headers: {'Content-Type': 'application/json'},
+    })
+    if(response.ok) {
+        const deletedReply = await response.json();
+        dispatch(deleteReply(deletedReply))
+    }
+}
+
 const initialState = {};
 
 const repliesReducer = (state = initialState, action) => {
@@ -71,6 +87,10 @@ const repliesReducer = (state = initialState, action) => {
                 ...state,
                 [action.reply.id]: action.reply
             }
+        case DELETE_REPLY:
+            const replyDeletion = {...state}
+            delete replyDeletion[action.reply.id]
+            return replyDeletion;
         default:
             return state;
     }

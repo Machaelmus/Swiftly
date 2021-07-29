@@ -1,4 +1,5 @@
 const GET_POSTS = 'posts/GET_POSTS';
+const GET_POST = 'posts/GET_POST';
 const CREATE_POST = 'posts/CREATE_POST';
 const DELETE_POST = 'posts/DELETE_POST';
 const EDIT_POST = 'posts/EDIT_POST';
@@ -6,6 +7,11 @@ const EDIT_POST = 'posts/EDIT_POST';
 const getPosts = (posts) => ({
     type: GET_POSTS,
     posts,
+});
+
+const getPost = (payload) => ({
+    type: GET_POST,
+    payload,
 });
 
 const createPost = (post) => ({
@@ -29,6 +35,15 @@ export const getAllPosts = () => async (dispatch) => {
     if(response.ok) {
         const allPosts = await response.json();
         dispatch(getPosts(allPosts));
+    }
+}
+
+export const getOnePost = (id) => async (dispatch) => {
+    const response = await fetch(`/api/posts/${id}`);
+
+    if(response.ok) {
+        const onePost = await response.json();
+        dispatch(getPost(onePost));
     }
 }
 
@@ -78,6 +93,10 @@ const initialState = {};
 
 const postsReducer = (state = initialState, action) => {
     switch(action.type) {
+        case GET_POST:
+            const onePost = {...state}
+            onePost[action.payload.id] = action.payload
+            return onePost;
         case GET_POSTS:
             const allPosts = {}
             action.posts.posts.forEach((post) => {

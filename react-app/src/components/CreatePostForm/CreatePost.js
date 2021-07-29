@@ -28,7 +28,10 @@ const CreatePost = () => {
 
     return (
         <div className={styles.createPostDiv}>
-            <h3 className={styles.createPostUsername}>Hey {sessionUser.username}!</h3>
+            <div className={styles.createPostNameAndImageContainer}>
+                <img className={styles.createPostUserImage} src={sessionUser.profileImage}></img>
+                <h3 className={styles.createPostUsername}>Hey {sessionUser.username}!</h3>
+            </div>
             <form onSubmit={createForm} className={styles.createPostForm}>
                 <textarea onChange={(e) => setPostText(e.target.value)} className={styles.createPostInput} placeholder={`Whats on your mind, ${sessionUser.username}?`}></textarea>
                 <br/>

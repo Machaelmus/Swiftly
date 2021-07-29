@@ -10,6 +10,20 @@
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.281);
 }
 
+.createPostNameAndImageContainer {
+    display: flex;
+    margin-top: -12px;
+}
+
+.createPostUserImage {
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: lightgray;
+    height: 50px;
+    width: 50px;
+    border-radius: 40px;
+}
+
 .createPostUsername {
     margin-top: 10px;
     margin-right: 25px;

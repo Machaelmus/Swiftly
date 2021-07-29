@@ -14,3 +14,4 @@ reply_routes = Blueprint('replies', __name__)
 def getReplies():
     allReplies = Reply.query.all()
     return {'replies': [reply.to_dict() for reply in allReplies]}
+    

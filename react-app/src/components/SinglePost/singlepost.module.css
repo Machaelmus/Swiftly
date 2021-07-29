@@ -5,6 +5,9 @@
 .repliesToSinglePostContainer {
     padding: 20px;
     background-color: white;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);
 }
 
 .homeContainer {
@@ -33,6 +36,8 @@
 }
 
 .singlePostPageContainer {
-    padding: 20px; 
+    padding: 20px;
+    border-radius: 5px;
     background-color: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);
 }

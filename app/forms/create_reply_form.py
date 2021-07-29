@@ -4,5 +4,5 @@ from wtforms.validators import DataRequired
 
 
 
-class EditReplyForm(FlaskForm):
+class CreateReplyForm(FlaskForm):
     reply = StringField('reply', validators=[DataRequired()])

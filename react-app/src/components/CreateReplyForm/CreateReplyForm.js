@@ -20,12 +20,12 @@ const CreateReplyForm = () => {
     }
 
     return (
-        <div className={}>
-            <h3>Hey {sessionUser.username}!</h3>
-            <form onSubmit={createReply}>
-                <textarea onChange={(e) => setReplyText(e.target.value)} placeholder="Reply here"></textarea>
+        <div className={styles.createReplyDiv}>
+            <h3 className={styles.createReplyUser}>Hey {sessionUser.username}!</h3>
+            <form className={styles.createReplyForm} onSubmit={createReply}>
+                <textarea className={styles.createReplyTextArea} onChange={(e) => setReplyText(e.target.value)} placeholder="Reply here"></textarea>
                 <br/>
-                <button type="submit">Reply</button>
+                <button className={styles.createReplySubmitButton} type="submit">Reply</button>
             </form>
         </div>
     )

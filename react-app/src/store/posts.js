@@ -93,6 +93,10 @@ const initialState = {};
 
 const postsReducer = (state = initialState, action) => {
     switch(action.type) {
+        case GET_POST:
+            const onePost = {...state}
+            onePost[action.payload.id] = action.payload
+            return onePost;
         case GET_POSTS:
             const allPosts = {}
             action.posts.posts.forEach((post) => {

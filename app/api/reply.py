@@ -1,5 +1,6 @@
 from flask import Blueprint, request
 from app.models import db, User
+from app.models import reply
 from app.models.post import Post
 from app.models.reply import Reply
 from flask_login import current_user
@@ -36,3 +37,24 @@ def createReply():
         db.session.add(reply)
         db.session.commit()
         return reply.to_dict()
+
+
+@reply_routes.route('/api/replies/<int:id>', methods=['PUT'])
+def editReply(id):
+    form = CreateReplyForm()
+    if form.validate_on_submit():
+        replyToEdit = Reply.query.filter(id == Reply.id).one()
+        replyToEdit.userId = current_user.id
+        replyToEdit.reply = form.reply.data
+        replyToEdit.postId = request.json['postId']
+        replyToEdit.timeOfReply = date.today()
+        db.session.commit()
+        return replyToEdit.to_dict()
+
+
+@reply_routes.route('/api/replies/<int:id>', methods=['DELETE'])
+def deleteReply(id):
+    replyToDelete = Reply.query.get(id)
+    db.session.delete(replyToDelete)
+    db.session.commit()
+    return replyToDelete.to_dict()

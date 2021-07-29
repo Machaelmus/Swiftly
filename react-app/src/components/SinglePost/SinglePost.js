@@ -1,19 +1,25 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import { getOnePost } from '../../store/posts';
 import styles from './singlepost.module.css';
 import { BsChat } from 'react-icons/bs';
 import { getAllReplies } from '../../store/replies';
+import { deleteOneReply } from '../../store/replies';
 import CreateReplyForm from '../CreateReplyForm/CreateReplyForm';
 
 const SinglePost = () => {
     const { id } = useParams();
     const replies = useSelector(state => Object.values(state.replies))
+    const singleReply = replies.find((reply) => reply.id)
     const posts = useSelector(state => Object.values(state.posts));
     const post = posts.find((post) => post.id === +id);
     const dispatch = useDispatch();
-    console.log('SINGLE POST ===>', post)
+
+    const deleteReply = (e) => {
+        e.preventDefault()
+        dispatch(deleteOneReply(singleReply.id))
+    }
 
     useEffect(() => {
         dispatch(getAllReplies())
@@ -40,7 +46,6 @@ const SinglePost = () => {
                 </div>
 
                 <CreateReplyForm post={post}/>
-
                 {/* POST A REPLY COMPONENT HERE */}
                     {replies && replies.map((reply) => (
                         <div>{reply?.postId === post?.id &&
@@ -48,6 +53,7 @@ const SinglePost = () => {
                                 <p>reply from this person</p>
                                 <p>{reply.timeOfPost}</p>
                                 <p>{reply.reply}</p>
+                                <button onClick={deleteReply}>Delete</button>
                             </div>
                         }</div>
                     ))}

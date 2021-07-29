@@ -5,7 +5,6 @@ from app.models.post import Post
 from app.models.reply import Reply
 from flask_login import current_user
 from app.forms.create_reply_form import CreateReplyForm
-# from app.forms.edit_post_form import EditPostForm
 from datetime import date
 
 
@@ -16,7 +15,6 @@ reply_routes = Blueprint('replies', __name__)
 def getReplies():
     allReplies = Reply.query.all()
     allPosts = Post.query.all()
-    # allReplies = Reply.query.join(Post).filter(Reply.postId == Post.id).all()
     return {'replies': [reply.to_dict() for reply in allReplies], 'posts': [post.to_dict() for post in allPosts]}
 
 
@@ -24,9 +22,6 @@ def getReplies():
 def createReply():
     form = CreateReplyForm()
     form['csrf_token'].data = request.cookies['csrf_token']
-    print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>', request.json['postId'])
-    # currentPostId = Post.query.filter(Reply.postId == Post.id).first()
-    # print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>', currentPostId)
     if form.validate_on_submit():
         reply = Reply(
             userId = current_user.id,

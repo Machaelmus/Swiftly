@@ -53,7 +53,6 @@ def editPost(id):
 @post_routes.route('/api/posts/<int:id>', methods=['DELETE'])
 def deletePost(id):
     postToDelete = Post.query.get(id)
-    print('===========BACKEND ROUTE===========>', postToDelete)
     db.session.delete(postToDelete)
     db.session.commit()
     return postToDelete.to_dict()

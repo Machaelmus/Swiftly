@@ -3,8 +3,8 @@ from app.models import db, User
 from app.models.post import Post
 from app.models.reply import Reply
 from flask_login import current_user
-from app.forms.create_reply_form import CreateReplyForm, EditReplyForm
-from app.forms.edit_post_form import EditPostForm
+from app.forms.create_reply_form import CreateReplyForm
+# from app.forms.edit_post_form import EditPostForm
 from datetime import date
 
 
@@ -20,13 +20,17 @@ def getReplies():
 
 
 @reply_routes.route('/api/replies', methods=['POST'])
-def createRelpy():
+def createReply():
     form = CreateReplyForm()
     form['csrf_token'].data = request.cookies['csrf_token']
+    print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>', request.json['postId'])
+    # currentPostId = Post.query.filter(Reply.postId == Post.id).first()
+    # print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>', currentPostId)
     if form.validate_on_submit():
         reply = Reply(
             userId = current_user.id,
             reply = form.reply.data,
+            postId = request.json['postId'],
             timeOfReply = date.today()
         )
         db.session.add(reply)

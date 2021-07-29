@@ -47,11 +47,11 @@ export const getOnePost = (id) => async (dispatch) => {
     }
 }
 
-export const createOnePost = (club) => async (dispatch) => {
+export const createOnePost = (post) => async (dispatch) => {
     const response = await fetch('/api/posts', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(club)
+        body: JSON.stringify(post)
     });
 
     if(response.ok) {

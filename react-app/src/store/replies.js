@@ -22,7 +22,7 @@ export const getAllReplies = () => async (dispatch) => {
 }
 
 export const createOneReply = (reply) => async (dispatch) => {
-    const response = await fetch('api/replies', {
+    const response = await fetch('/api/replies', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(reply)

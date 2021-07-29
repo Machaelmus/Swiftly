@@ -3,9 +3,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import { getOnePost } from '../../store/posts';
 import styles from './singlepost.module.css';
+import { BsChat } from 'react-icons/bs';
+
 
 const SinglePost = () => {
-    const {id} = useParams();
+    const { id } = useParams();
     const posts = useSelector(state => Object.values(state.posts));
     const post = posts.find((post) => post.id === +id);
     const dispatch = useDispatch();
@@ -23,8 +25,8 @@ const SinglePost = () => {
             </div>
             <div className={styles.singlePostContainer}>
                 <h1>Post username</h1>
-                <p>Post time</p>
-                <p>Post itself</p>
+                <p>{post.timeOfPost}</p>
+                <p>{post.post}</p>
             </div>
         </div>
     )

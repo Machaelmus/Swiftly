@@ -22,7 +22,7 @@ const SinglePost = () => {
         e.preventDefault()
         dispatch(deleteOneReply(singleReply.id))
     }
-    
+
     useEffect(() => {
         dispatch(getOnePost(id))
     }, [dispatch])
@@ -56,14 +56,18 @@ const SinglePost = () => {
                         <div key={reply.id}>{reply?.postId === post?.id &&
                             <div className={styles.repliesToSinglePostContainer}>
                                 <div className={styles.profileImageForRepliesContainer}>
-                                    <img className={styles.replyUserImage}></img>
-                                    <p className={styles.replyUsername}>username</p>
+                                    <div className={styles.replyAuthorAndProfileImage}>
+                                        <img className={styles.replyUserImage} src={reply.user.profileImage}></img>
+                                        <p className={styles.replyUsername}>{reply.user.username}</p>
+                                    </div>
+                                    <br/>
                                 </div>
-                                <p>{reply.timeOfPost}</p>
+                                <p>{reply.timeOfReply}</p>
+                                {/* <p>{reply.timeOfPost}</p> */}
                                 <p>{reply.reply}</p>
+                                 {sessionUser.id === reply.user.id &&
                                 <button onClick={deleteReply}>Delete</button>
-                                 {/* {sessionUser.id === reply.user.id &&
-                                 } */}
+                                 }
                             </div>
                         }</div>
                     ))}

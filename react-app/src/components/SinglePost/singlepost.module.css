@@ -9,6 +9,10 @@
     width: 150px;
 }
 
+.replyAuthorAndProfileImage {
+    display: flex; 
+}
+
 .userImageContainer {
     display: flex;
 }
@@ -61,7 +65,7 @@
 }
 
 .replyUsername {
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 .feed {

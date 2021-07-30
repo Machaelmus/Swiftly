@@ -79,14 +79,27 @@
 }
 .postUsernameYEH {
     margin: 0;
+    margin-bottom: -11px;
 }
 .postUsernameYEH:hover {
     color: var(--purpleTheme);
 }
 .postUserImage {
     height: 100px;
-    width: 100px; 
+    width: 100px;
 }
+.postUserImageSrc {
+    height: 55px;
+    width: 55px;
+    border: none;
+    border-radius: 40px;
+    margin-right: 10px; 
+}
+
+.userProfileImageAndUsernameContainer {
+    display: flex;
+}
+
 .eachPostDeleteButton:hover {
     cursor: pointer;
     color: white;

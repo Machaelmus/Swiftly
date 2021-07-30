@@ -112,9 +112,12 @@ const PostContainer = ({post}) => {
                     {/* <p>Delete</p> */}
                 </div>
             )}
-                <Link to={`/users/${post.user.id}`}>
-                    <h1 className={styles.postUsernameYEH}>{post.user.username}</h1>
-                </Link>
+                <div className={styles.userProfileImageAndUsernameContainer}>
+                    <img className={styles.postUserImageSrc} src={post.user.profileImage}></img>
+                    <Link to={`/users/${post.user.id}`}>
+                        <h1 className={styles.postUsernameYEH}>{post.user.username}</h1>
+                    </Link>
+                </div>
                 <p className={styles.eachPostTime}>{post.timeOfPost}</p>
                 <Link to={`/posts/${post.id}`}>
                 <p className={styles.eachPostPost}>{post.post}</p>

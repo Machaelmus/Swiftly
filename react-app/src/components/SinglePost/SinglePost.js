@@ -31,7 +31,6 @@ const editModalStyles = {
     }
 }
 
-
 const SinglePost = () => {
     const replyEditAndDeleteDropDown = useRef(null);
     const { id } = useParams();
@@ -133,19 +132,19 @@ const SinglePost = () => {
                                 <p>{reply.reply}</p>
                                  {sessionUser.id === reply.user.id &&
                                     <div>
-                                        <button onClick={enableReplyOptions}><BsThreeDots/></button>
+                                        <button className={styles.editReplyThreeDots} onClick={enableReplyOptions}><BsThreeDots/></button>
                                         {openReplyOptions && (
                                             <div className={styles.replyOptionsDrop}>
-                                                <p onClick={openReplyModalOnClick}>Edit</p>
+                                                <p className={styles.openEditMenu} onClick={openReplyModalOnClick}>Edit</p>
                                                 <Modal style={editModalStyles} isOpen={openReplyModal} onRequestClose={closeReplyModalOnClick}>
-                                                    <button onClick={deleteReply}>Delete reply</button>
+                                                    <button className={styles.deleteReplyButton} onClick={deleteReply}>Delete reply</button>
                                                     <br/>
-                                                    <form onSubmit={editReply}>
-                                                        <h2>Edit Reply</h2>
-                                                        <textarea placeholder="Change your reply here" onChange={(e) => setEditReplyText(e.target.value)}></textarea>
+                                                    <form className={styles.modalEditReplyForm} onSubmit={editReply}>
+                                                        <h2 className={styles.editModalReplyHeading}>Edit Reply</h2>
+                                                        <textarea className={styles.modalEditReplyTextArea} placeholder="Change your reply here" onChange={(e) => setEditReplyText(e.target.value)}></textarea>
                                                         <br/>
-                                                        <button onClick={editReply}>Edit reply</button>
-                                                        <button onClick={closeReplyModalOnClick}>Cancel</button>
+                                                        <button className={styles.editReplyButtonInsideModal} onClick={editReply}>Edit reply</button>
+                                                        <button className={styles.cancelEditReplyModalButton} onClick={closeReplyModalOnClick}>Cancel</button>
                                                     </form>
                                                 </Modal>
                                             </div>

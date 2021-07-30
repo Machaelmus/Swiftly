@@ -10,7 +10,7 @@
 }
 
 .replyAuthorAndProfileImage {
-    display: flex; 
+    display: flex;
 }
 
 .userImageContainer {
@@ -83,4 +83,32 @@
     border-radius: 5px;
     background-color: white;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);
+}
+
+.editReplyThreeDots {
+    
+}
+.replyOptionsDrop {
+    
+}
+.openEditMenu {
+    
+}
+.deleteReplyButton {
+    
+}
+.modalEditReplyForm {
+    
+}
+.editModalReplyHeading {
+    
+}
+.modalEditReplyTextArea {
+    
+}
+.editReplyButtonInsideModal {
+    
+}
+.cancelEditReplyModalButton {
+    
 }

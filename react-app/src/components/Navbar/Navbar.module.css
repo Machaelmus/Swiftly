@@ -32,6 +32,7 @@
     font-size: 15px;
     font-weight: 500;
 }
+
 .logoutFromNav:hover {
     transition: all 0.3s ease-in-out;
     background-color: var(--purpleHover);
@@ -50,8 +51,6 @@
     background-size: 97%;
     background-repeat: no-repeat;
 }
-
-
 
 .navAddFriends,
 .navProfileDropDown {
@@ -102,12 +101,14 @@
     justify-content: center;
     align-items: center;
 }
+
 .navProfileDropDown:hover, .navAddFriends:hover {
     transition: all 0.3s ease;
     cursor: pointer;
     box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.383);
     background-color: rgba(177, 177, 177, 0.431);
 }
+
 .navUl {
     display: flex;
     flex-direction: row;
@@ -123,8 +124,8 @@
     margin-right: 40px;
 }
 
-
 /* ================================================================== */
+
 .cheetah {
     background-image: url('./SwiftlyLogo.png');
     margin-top: 15px;
@@ -139,11 +140,21 @@
     margin-left: 20px;
     font-size: 40px;
     color: white;
+    font-family: 'Days One', sans-serif;
+    font-weight: 400;
+}
+.swiftlyTextName {
+    font-family: 'Days One', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--mediumGray);
+    margin-right: 1500px;
 }
 
 .logoAndText {
     display: flex;
 }
+
 .navSplashUl {
     display: flex;
     width: 100vw;

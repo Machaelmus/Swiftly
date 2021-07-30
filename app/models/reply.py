@@ -28,4 +28,5 @@ class Reply(db.Model):
             'postId': self.postId,
             'reply': self.reply,
             'timeOfReply': self.timeOfReply,
+            'user': self.replyAuthor.to_dict()
         }

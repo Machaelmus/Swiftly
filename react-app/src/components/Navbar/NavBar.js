@@ -40,6 +40,7 @@ const NavBar = () => {
           <nav ref={navDropdown} className={styles.navContainer}>
             <div className={styles.navUl}>
               <div className={styles.navLogo}></div>
+              <h1 className={styles.swiftlyTextName}>Swiftly</h1>
               <div className={styles.navRightSide}>
                 <img src={sessionUser.profileImage} className={styles.navUserImage}></img>
                 <p className={styles.navUsername}>{sessionUser.username}</p>

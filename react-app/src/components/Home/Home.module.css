@@ -83,6 +83,10 @@
 .postUsernameYEH:hover {
     color: var(--purpleTheme);
 }
+.postUserImage {
+    height: 100px;
+    width: 100px; 
+}
 .eachPostDeleteButton:hover {
     cursor: pointer;
     color: white;

@@ -4,8 +4,22 @@
     height: 40px;
     width: 40px;
 }
+
 .returnArrow {
     width: 150px;
+}
+
+.userImageContainer {
+    display: flex;
+}
+
+.userImage {
+    margin-top: 17px;
+    margin-right: 10px; 
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 40px;
 }
 .returnReturn:hover {
     color: var(--purpleHover);

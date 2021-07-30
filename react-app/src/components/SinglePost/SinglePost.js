@@ -16,6 +16,7 @@ const SinglePost = () => {
     const posts = useSelector(state => Object.values(state.posts));
     const post = posts.find((post) => post.id === +id);
     const dispatch = useDispatch();
+    const sessionUser = useSelector(state => state.session.user);
 
     const deleteReply = (e) => {
         e.preventDefault()
@@ -55,11 +56,12 @@ const SinglePost = () => {
                             <div className={styles.repliesToSinglePostContainer}>
                                 <div className={styles.profileImageForRepliesContainer}>
                                     <img className={styles.replyUserImage} src={post?.user.profileImage}></img>
-                                    <p className={styles.replyUsername}>{post.user.username}</p>
+                                    <p className={styles.replyUsername}>UsernameHere</p>
                                 </div>
                                 <p>{reply.timeOfPost}</p>
                                 <p>{reply.reply}</p>
-                                <button onClick={deleteReply}>Delete</button>
+                                {(sessionUser.id === post.user.id) &&
+                                    <button onClick={deleteReply}>Delete</button>}
                             </div>
                         }</div>
                     ))}

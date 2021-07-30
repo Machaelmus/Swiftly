@@ -93,11 +93,18 @@
     width: 55px;
     border: none;
     border-radius: 40px;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .userProfileImageAndUsernameContainer {
     display: flex;
+}
+.threeDots {
+    margin-top: 20px;
+    margin-right: -10px;
+}
+.threeDots:hover {
+    color: var(--purpleTheme);
 }
 
 .eachPostDeleteButton:hover {

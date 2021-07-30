@@ -15,7 +15,7 @@
 
 .userImage {
     margin-top: 17px;
-    margin-right: 10px; 
+    margin-right: 10px;
     height: 50px;
     width: 50px;
     border: none;
@@ -32,6 +32,18 @@
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);
 }
 
+.replyUserImage {
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 40px;
+}
+
+.profileImageForRepliesContainer {
+    display: flex;
+}
+
 .homeContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -46,6 +58,10 @@
 
 .navigation {
     grid-area: navigation;
+}
+
+.replyUsername {
+    font-weight: bold; 
 }
 
 .feed {

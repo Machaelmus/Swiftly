@@ -53,7 +53,10 @@ const SinglePost = () => {
                     {replies && replies.map((reply) => (
                         <div key={reply.id}>{reply?.postId === post?.id &&
                             <div className={styles.repliesToSinglePostContainer}>
-                                <p>{post.user.username}</p>
+                                <div className={styles.profileImageForRepliesContainer}>
+                                    <img className={styles.replyUserImage} src={post?.user.profileImage}></img>
+                                    <p className={styles.replyUsername}>{post.user.username}</p>
+                                </div>
                                 <p>{reply.timeOfPost}</p>
                                 <p>{reply.reply}</p>
                                 <button onClick={deleteReply}>Delete</button>

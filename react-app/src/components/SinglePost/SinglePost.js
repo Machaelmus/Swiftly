@@ -38,7 +38,7 @@ const SinglePost = () => {
                 </div>
                 <div className={styles.singlePostPageContainer}>
                     <div className={styles.singlePostContainer}>
-                        <h1>Post username</h1>
+                        <h1>{post?.user.username}</h1>
                         <p>{post?.timeOfPost}</p>
                         <p>{post?.post}</p>
                     </div>
@@ -49,7 +49,7 @@ const SinglePost = () => {
                     {replies && replies.map((reply) => (
                         <div key={reply.id}>{reply?.postId === post?.id &&
                             <div className={styles.repliesToSinglePostContainer}>
-                                <p>reply from this person</p>
+                                <p>{post.user.username}</p>
                                 <p>{reply.timeOfPost}</p>
                                 <p>{reply.reply}</p>
                                 <button onClick={deleteReply}>Delete</button>

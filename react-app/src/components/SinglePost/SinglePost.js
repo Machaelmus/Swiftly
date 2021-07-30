@@ -3,10 +3,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import { getOnePost } from '../../store/posts';
 import styles from './singlepost.module.css';
-import { BsChat } from 'react-icons/bs';
 import { getAllReplies } from '../../store/replies';
 import { deleteOneReply } from '../../store/replies';
 import CreateReplyForm from '../CreateReplyForm/CreateReplyForm';
+import { BsChat } from 'react-icons/bs';
+import {BsArrowLeft} from 'react-icons/bs';
 
 const SinglePost = () => {
     const { id } = useParams();
@@ -33,7 +34,7 @@ const SinglePost = () => {
             <div className={styles.feed}>
                 <div className={styles.returnArrow}>
                     <Link to="/home">
-                        <h1>Return</h1>
+                        <h1 className={styles.returnReturn}><BsArrowLeft className={styles.fatArrow}/>Return</h1>
                     </Link>
                 </div>
                 <div className={styles.singlePostPageContainer}>

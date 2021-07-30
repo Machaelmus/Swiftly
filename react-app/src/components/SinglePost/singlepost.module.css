@@ -1,7 +1,15 @@
-.returnArrow {
+.fatArrow{
     margin-top: 100px;
+    margin-bottom: -9px;
+    height: 40px;
+    width: 40px;
 }
-
+.returnArrow {
+    width: 150px;
+}
+.returnReturn:hover {
+    color: var(--purpleHover);
+}
 .repliesToSinglePostContainer {
     padding: 20px;
     background-color: white;
@@ -37,7 +45,7 @@
 
 .singlePostPageContainer {
     padding: 20px;
-    width: 820px; 
+    width: 820px;
     border-radius: 5px;
     background-color: white;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);

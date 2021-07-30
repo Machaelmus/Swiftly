@@ -12,7 +12,7 @@ class Reply(db.Model):
     # Creates relationship between replies and posts
     replyToPost = db.relationship('Post', back_populates='postReplies')
     # Creates relationship between replies and users to determine the author
-    replyAuthor = db.relationship('User', back_populates='userReplies')
+    replyAuthor = db.relationship('User', lazy='subquery', back_populates='userReplies')
 
     # ========================================================================
 
@@ -28,5 +28,5 @@ class Reply(db.Model):
             'postId': self.postId,
             'reply': self.reply,
             'timeOfReply': self.timeOfReply,
-            'user': self.replyAuthor.to_dict()
+            'user': self.replyAuthor.to_dict(),
         }

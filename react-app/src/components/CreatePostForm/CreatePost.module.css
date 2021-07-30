@@ -37,6 +37,12 @@
     border: none;
 }
 
+.createPostInput:focus {
+    outline: none;
+    transition: all 0.4s ease; 
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.342);
+}
+
 .createPostSubmit {
     height: 40px;
     width: 150px;

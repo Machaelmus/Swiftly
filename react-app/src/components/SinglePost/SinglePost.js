@@ -4,14 +4,14 @@ import { useParams, Link } from 'react-router-dom';
 import { getOnePost } from '../../store/posts';
 import styles from './singlepost.module.css';
 import { getAllReplies } from '../../store/replies';
-import { deleteOneReply } from '../../store/replies';
-import { editOneReply } from '../../store/replies';
+import { deleteOneReply, editOneReply } from '../../store/replies';
 import Modal from 'react-modal';
 import CreateReplyForm from '../CreateReplyForm/CreateReplyForm';
 import { BsThreeDots } from 'react-icons/bs';
 import {BsArrowLeft} from 'react-icons/bs';
 
 Modal.setAppElement('#root')
+
 const editModalStyles = {
     content: {
         height: '500px',

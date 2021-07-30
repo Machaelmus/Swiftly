@@ -23,8 +23,6 @@ const editModalStyles = {
         alignItems: 'center',
         textAlign: 'center',
         flexDirection: 'column-reverse',
-        zIndex: '98989898989898989898989898989898'
-
     }
 }
 

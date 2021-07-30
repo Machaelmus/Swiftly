@@ -132,26 +132,26 @@ const SinglePost = () => {
                                 <p>{reply.timeOfReply}</p>
                                 <p>{reply.reply}</p>
                                  {sessionUser.id === reply.user.id &&
-                                 <div>
-                                    <button onClick={enableReplyOptions}><BsThreeDots/></button>
-                                    {openReplyOptions && (
-                                        <div className={styles.replyOptionsDrop}>
-                                            <p onClick={openReplyModalOnClick}>Edit</p>
-                                            <Modal style={editModalStyles} isOpen={openReplyModal} onRequestClose={closeReplyModalOnClick}>
-                                                <button onClick={deleteReply}>Delete reply</button>
-                                                <br/>
-                                                <form onSubmit={editReply}>
-                                                    <h2>Edit Reply</h2>
-                                                    <textarea placeholder="Change your reply here" onChange={(e) => setEditReplyText(e.target.value)}></textarea>
+                                    <div>
+                                        <button onClick={enableReplyOptions}><BsThreeDots/></button>
+                                        {openReplyOptions && (
+                                            <div className={styles.replyOptionsDrop}>
+                                                <p onClick={openReplyModalOnClick}>Edit</p>
+                                                <Modal style={editModalStyles} isOpen={openReplyModal} onRequestClose={closeReplyModalOnClick}>
+                                                    <button onClick={deleteReply}>Delete reply</button>
                                                     <br/>
-                                                    <button onClick={editReply}>Edit reply</button>
-                                                    <button onClick={closeReplyModalOnClick}>Cancel</button>
-                                                </form>
-                                            </Modal>
-                                        </div>
-                                    )
-                                    }
-                                </div>
+                                                    <form onSubmit={editReply}>
+                                                        <h2>Edit Reply</h2>
+                                                        <textarea placeholder="Change your reply here" onChange={(e) => setEditReplyText(e.target.value)}></textarea>
+                                                        <br/>
+                                                        <button onClick={editReply}>Edit reply</button>
+                                                        <button onClick={closeReplyModalOnClick}>Cancel</button>
+                                                    </form>
+                                                </Modal>
+                                            </div>
+                                        )
+                                        }
+                                    </div>
                                  }
                             </div>
                         }</div>

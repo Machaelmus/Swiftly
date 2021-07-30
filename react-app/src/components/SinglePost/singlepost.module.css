@@ -86,29 +86,42 @@
 }
 
 .editReplyThreeDots {
-    
+    background-color: white;
+    border: none;
+    font-size: 25px;
+    float: right;
+    margin-top: -140px;
+    /* position: absolute;  */
 }
 .replyOptionsDrop {
-    
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.315);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    border-radius: 10px;
+    margin-top: -110px;
+    justify-content: center;
+    float: right;
 }
 .openEditMenu {
-    
+    background-color: white;
 }
 .deleteReplyButton {
     
 }
 .modalEditReplyForm {
-    
+
 }
 .editModalReplyHeading {
-    
+
 }
 .modalEditReplyTextArea {
-    
+
 }
 .editReplyButtonInsideModal {
-    
+
 }
 .cancelEditReplyModalButton {
-    
+
 }

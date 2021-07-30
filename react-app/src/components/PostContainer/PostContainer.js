@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { editOnePost, deleteOnePost } from '../../store/posts';
 import Modal from 'react-modal';
 import styles from '../Home/Home.module.css';
-
+import {BsThreeDots} from 'react-icons/bs'
 // REACT-MODAL SETTINGS
 Modal.setAppElement('#root')
 const editModalStyles = {
@@ -94,7 +94,8 @@ const PostContainer = ({post}) => {
     return (
         <>
             <div ref={editDeleteDropdown} className={styles.postDiv}>
-                <button onClick={enableOptions} className={styles.optionsButton}>...</button>
+                {(sessionUser.id === post.user.id) &&
+                    <button onClick={enableOptions} className={styles.optionsButton}><BsThreeDots className={styles.threeDots}/></button>}
             {openOptions && (
                 <div className={styles.optionsDrop}>
                     <p className={styles.editOpenDropdown} onClick={openModalOnClick}>Edit</p>
@@ -112,11 +113,18 @@ const PostContainer = ({post}) => {
                     {/* <p>Delete</p> */}
                 </div>
             )}
+                <div className={styles.userProfileImageAndUsernameContainer}>
+                    <img className={styles.postUserImageSrc} src={post.user.profileImage}></img>
+                    <Link to={`/users/${post.user.id}`}>
+                        <h1 className={styles.postUsernameYEH}>{post.user.username}</h1>
+                    </Link>
+                </div>
                 <Link to={`/posts/${post.id}`}>
-                    <h1>Post heading</h1>
+                    <div>
+                        <p className={styles.eachPostTime}>{post.timeOfPost}</p>
+                        <p className={styles.eachPostPost}>{post.post}</p>
+                    </div>
                 </Link>
-                <p className={styles.eachPostTime}>{post.timeOfPost}</p>
-                <p className={styles.eachPostPost}>{post.post}</p>
             </div>
         </>
     )

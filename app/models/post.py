@@ -24,4 +24,6 @@ class Post(db.Model):
             'userId': self.userId,
             'post': self.post,
             'timeOfPost': self.timeOfPost,
+            'user': self.postAuthor.to_dict(),
+            # 'users': [a.to_dict() for a in self.postAuthor]
         }

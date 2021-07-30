@@ -1,13 +1,47 @@
-.returnArrow {
+.fatArrow{
     margin-top: 100px;
+    margin-bottom: -9px;
+    height: 40px;
+    width: 40px;
 }
 
+.returnArrow {
+    width: 150px;
+}
+
+.userImageContainer {
+    display: flex;
+}
+
+.userImage {
+    margin-top: 17px;
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 40px;
+}
+.returnReturn:hover {
+    color: var(--purpleHover);
+}
 .repliesToSinglePostContainer {
     padding: 20px;
     background-color: white;
     margin-top: 20px;
     border-radius: 5px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);
+}
+
+.replyUserImage {
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 40px;
+}
+
+.profileImageForRepliesContainer {
+    display: flex;
 }
 
 .homeContainer {
@@ -26,6 +60,10 @@
     grid-area: navigation;
 }
 
+.replyUsername {
+    font-weight: bold; 
+}
+
 .feed {
     justify-self: center;
     grid-area: feed;
@@ -37,6 +75,7 @@
 
 .singlePostPageContainer {
     padding: 20px;
+    width: 820px;
     border-radius: 5px;
     background-color: white;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);

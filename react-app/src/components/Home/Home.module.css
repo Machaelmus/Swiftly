@@ -77,6 +77,35 @@
     border-radius: 5px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);
 }
+.postUsernameYEH {
+    margin: 0;
+    margin-bottom: -11px;
+}
+.postUsernameYEH:hover {
+    color: var(--purpleTheme);
+}
+.postUserImage {
+    height: 100px;
+    width: 100px;
+}
+.postUserImageSrc {
+    height: 55px;
+    width: 55px;
+    border: none;
+    border-radius: 40px;
+    margin-right: 10px;
+}
+
+.userProfileImageAndUsernameContainer {
+    display: flex;
+}
+.threeDots {
+    margin-top: 20px;
+    margin-right: -10px;
+}
+.threeDots:hover {
+    color: var(--purpleTheme);
+}
 
 .eachPostDeleteButton:hover {
     cursor: pointer;

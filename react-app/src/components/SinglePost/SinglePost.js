@@ -58,6 +58,8 @@ const SinglePost = () => {
             postId: id,
             timeOfReply: Date.now()
         }
+        setOpenReplyModal(false);
+        setOpenReplyOptions(false);
         dispatch(editOneReply(singleReply.id, replyInfomation))
     }
 

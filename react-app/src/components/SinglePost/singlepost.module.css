@@ -1,3 +1,4 @@
+@import url('../../variables.css');
 .fatArrow{
     margin-top: 100px;
     margin-bottom: -9px;
@@ -7,6 +8,10 @@
 
 .returnArrow {
     width: 150px;
+}
+
+.replyAuthorAndProfileImage {
+    display: flex;
 }
 
 .userImageContainer {
@@ -61,7 +66,7 @@
 }
 
 .replyUsername {
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 .feed {
@@ -79,4 +84,101 @@
     border-radius: 5px;
     background-color: white;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);
+}
+
+.editReplyThreeDots {
+    background-color: white;
+    border: none;
+    font-size: 25px;
+    float: right;
+    margin-top: -140px;
+    /* position: absolute;  */
+}
+
+.editReplyThreeDots:hover {
+    cursor: pointer;
+}
+
+.replyOptionsDrop {
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.315);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    border-radius: 10px;
+    margin-top: -110px;
+    justify-content: center;
+    float: right;
+}
+.openEditMenu {
+    background-color: white;
+}
+
+.openEditMenu:hover {
+    cursor: pointer;
+}
+
+.deleteReplyButton {
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: white;
+    color: var(--purpleTheme);
+    border-radius: 20px;
+    margin-top: 10px;
+    border: 2px solid var(--purpleTheme);
+}
+
+.deleteReplyButton:hover {
+    cursor: pointer;
+    color: var(--purpleHover);
+    border-color: var(--purpleHover);
+}
+
+.modalEditReplyForm {
+
+}
+.editModalReplyHeading {
+
+}
+.modalEditReplyTextArea {
+    resize: none;
+    width: 300px;
+    height: 100px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);
+}
+.editReplyButtonInsideModal {
+    height: 40px;
+    width: 100px;
+    border: none;
+    background-color: var(--purpleTheme);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+.editReplyButtonInsideModal:hover {
+    background-color: var(--purpleHover);
+    cursor: pointer;
+}
+.cancelEditReplyModalButton {
+    height: 40px;
+    color: var(--purpleTheme);
+    width: 100px;
+    background-color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: 2px solid var(--purpleTheme);
+}
+
+.cancelEditReplyModalButton:hover {
+    cursor: pointer;
+    border-color: var(--purpleHover);
+    color: var(--purpleHover);
 }

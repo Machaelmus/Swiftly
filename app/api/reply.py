@@ -37,8 +37,10 @@ def createReply():
 @reply_routes.route('/api/replies/<int:id>', methods=['PUT'])
 def editReply(id):
     form = CreateReplyForm()
+    form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit():
         replyToEdit = Reply.query.filter(id == Reply.id).one()
+        print('BACKEND =======================>>>>>>', replyToEdit)
         replyToEdit.userId = current_user.id
         replyToEdit.reply = form.reply.data
         replyToEdit.postId = request.json['postId']
@@ -49,7 +51,10 @@ def editReply(id):
 
 @reply_routes.route('/api/replies/<int:id>', methods=['DELETE'])
 def deleteReply(id):
+    # print('ID OF THE REPLY', id)
     replyToDelete = Reply.query.get(id)
+    # print(replyToDelete, 'REPLY TO DELETE')
+    # db.session.expunge(replyToDelete)
     db.session.delete(replyToDelete)
     db.session.commit()
     return replyToDelete.to_dict()

@@ -131,7 +131,7 @@ const SinglePost = () => {
                                 <p>{reply.timeOfReply}</p>
                                 <p>{reply.reply}</p>
                                  {sessionUser.id === reply.user.id &&
-                                    <div>
+                                    <div ref={replyEditAndDeleteDropDown}>
                                         <button className={styles.editReplyThreeDots} onClick={enableReplyOptions}><BsThreeDots/></button>
                                         {openReplyOptions && (
                                             <div className={styles.replyOptionsDrop}>

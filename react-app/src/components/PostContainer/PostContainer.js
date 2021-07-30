@@ -47,8 +47,9 @@ const PostContainer = ({post}) => {
             userId: sessionUser.id,
             timeOfPost: Date.now()
         }
-        dispatch(editOnePost(post.id, formInfo))
-        setOpen(false)
+        dispatch(editOnePost(post.id, formInfo));
+        setOpen(false);
+        setOpenOptions(false);
     }
 
     // Delete Post dispatch function
@@ -62,6 +63,7 @@ const PostContainer = ({post}) => {
         setOpen(true);
     }
     function closeModalOnClick() {
+        setOpenOptions(false)
         setOpen(false);
     }
     // Function to enable options dropdown

@@ -137,13 +137,13 @@ const SinglePost = () => {
                                             <div className={styles.replyOptionsDrop}>
                                                 <p className={styles.openEditMenu} onClick={openReplyModalOnClick}>Edit</p>
                                                 <Modal style={editModalStyles} isOpen={openReplyModal} onRequestClose={closeReplyModalOnClick}>
-                                                    <button className={styles.deleteReplyButton} onClick={deleteReply}>Delete reply</button>
+                                                    <button className={styles.deleteReplyButton} onClick={deleteReply}>Delete</button>
                                                     <br/>
                                                     <form className={styles.modalEditReplyForm} onSubmit={editReply}>
                                                         <h2 className={styles.editModalReplyHeading}>Edit Reply</h2>
                                                         <textarea className={styles.modalEditReplyTextArea} placeholder="Change your reply here" onChange={(e) => setEditReplyText(e.target.value)}></textarea>
                                                         <br/>
-                                                        <button className={styles.editReplyButtonInsideModal} onClick={editReply}>Edit reply</button>
+                                                        <button className={styles.editReplyButtonInsideModal} onClick={editReply}>Edit</button>
                                                         <button className={styles.cancelEditReplyModalButton} onClick={closeReplyModalOnClick}>Cancel</button>
                                                     </form>
                                                 </Modal>

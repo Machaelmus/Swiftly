@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { editOnePost, deleteOnePost } from '../../store/posts';
+import postsReducer, { editOnePost, deleteOnePost } from '../../store/posts';
 import Modal from 'react-modal';
 import styles from '../Home/Home.module.css';
 
@@ -112,11 +112,13 @@ const PostContainer = ({post}) => {
                     {/* <p>Delete</p> */}
                 </div>
             )}
-                <Link to={`/posts/${post.id}`}>
-                    <h1>Post heading</h1>
+                <Link to={`/users/${post.user.id}`}>
+                    <h1 className={styles.postUsernameYEH}>{post.user.username}</h1>
                 </Link>
                 <p className={styles.eachPostTime}>{post.timeOfPost}</p>
+                <Link to={`/posts/${post.id}`}>
                 <p className={styles.eachPostPost}>{post.post}</p>
+                </Link>
             </div>
         </>
     )

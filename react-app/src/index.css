@@ -8,3 +8,13 @@
 html {
     background-color: #F0F0F0;
 }
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}

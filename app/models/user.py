@@ -37,7 +37,6 @@ class User(db.Model, UserMixin):
     # Creates relationship between users and posts
     userPosts = db.relationship('Post', back_populates='postAuthor')
 
-
     def to_dict(self):
         return {
             'id': self.id,
@@ -46,6 +45,7 @@ class User(db.Model, UserMixin):
             'profileImage': self.profileImage,
             'handle': self.handle,
             'status': self.status,
+            # 'userpost': [post.to_dict() for post in self.userPosts]
             # 'bio': self.bio,
             # 'birthdate': self.birthdate,
         }

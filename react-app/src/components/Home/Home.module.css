@@ -77,7 +77,12 @@
     border-radius: 5px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);
 }
-
+.postUsernameYEH {
+    margin: 0;
+}
+.postUsernameYEH:hover {
+    color: var(--purpleTheme);
+}
 .eachPostDeleteButton:hover {
     cursor: pointer;
     color: white;

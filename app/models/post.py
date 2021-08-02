@@ -1,5 +1,12 @@
 from .db import db
 
+
+postReplyLikes = db.Table(
+    db.Column('userId', db.Integer, db.ForeignKey('users.id'), primary_key=True),
+    db.Column('postId', db.Integer, db.ForeignKey('posts.id'), primary_key=True),
+)
+
+
 class Post(db.Model):
     __tablename__ = 'posts'
 

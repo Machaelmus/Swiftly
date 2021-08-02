@@ -23,7 +23,9 @@ class Post(db.Model):
     postReplies = db.relationship('Reply', cascade="all, delete-orphan", back_populates='replyToPost')
     # Creates relationship between post and users to determine the author
     postAuthor = db.relationship('User', back_populates='userPosts')
-
+    # Creates relationship between likes join table and the post.
+    likesOnPosts = db.relationship('postReplyLikes', backref=db.backref('post'))
+    # Might need lazy = joined according to docs :/
 
     def to_dict(self):
         return {

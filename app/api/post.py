@@ -58,21 +58,17 @@ def deletePost(id):
     return postToDelete.to_dict()
 
 
-@post_routes.route('/api/posts/<int:id>/liked', methods=['POST'])
+@post_routes.route('/api/posts/<int:id>', methods=['POST'])
 def likePost(id):
-    currentPost = Post.query.get(id)
-    postToLike = likedPost(
-        userId = current_user.id,
-        postId = currentPost
-    )
-    db.session.add(postToLike)
+    postToLike = Post.query.get(id)
+    current_user.likePost(postToLike)
     db.session.commit()
     return postToLike.to_dict()
 
 
-@post_routes.route('/api/posts/<int:id>/liked', methods=['DELETE'])
+@post_routes.route('/api/posts/<int:id>', methods=['DELETE'])
 def unlikePost(id):
     postToUnlike = likedPost.query.get(id)
-    db.session.delete(postToUnlike)
+    current_user.unlikePost(postToUnlike)
     db.session.commit()
     return postToUnlike.to_dict()

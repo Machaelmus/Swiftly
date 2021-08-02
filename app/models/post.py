@@ -1,11 +1,12 @@
 from .db import db
+from .likes import likedPost
 
-
-likedPost = db.Table(
-    'likedPost',
-    db.Column('userId', db.Integer, db.ForeignKey('users.id'), primary_key=True),
-    db.Column('postId', db.Integer, db.ForeignKey('posts.id'), primary_key=True),
-)
+# likedPost = db.Table(
+#     'likedPost',
+#     db.metadata,
+#     db.Column('userId', db.Integer, db.ForeignKey('users.id'), primary_key=True),
+#     db.Column('postId', db.Integer, db.ForeignKey('posts.id'), primary_key=True),
+# )
 
 
 class Post(db.Model):
@@ -25,7 +26,7 @@ class Post(db.Model):
     # Creates relationship between post and users to determine the author
     postAuthor = db.relationship('User', back_populates='userPosts')
     # Creates relationship between likes join table and the post.
-    likesOnPosts = db.relationship('User', secondary=likedPost, back_populates='userPostLikes')
+    likesOnPosts = db.relationship('likedPost', back_populates='likedPostPost')
     # Might need lazy = joined according to docs :/
 
 

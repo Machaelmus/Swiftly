@@ -58,8 +58,6 @@ const SinglePost = () => {
             postId: id,
             timeOfReply: Date.now()
         }
-        setOpenReplyModal(false);
-        setOpenReplyOptions(false);
         dispatch(editOneReply(singleReply.id, replyInfomation))
     }
 
@@ -84,10 +82,8 @@ const SinglePost = () => {
         }
         const body = document.getElementById('root')
         body.addEventListener('click', clickOutsideMenu)
-        setOpenReplyOptions(false)
         return () => {
             body.removeEventListener('click', clickOutsideMenu)
-            setOpenReplyOptions(false)
         }
     }, [replyEditAndDeleteDropDown])
 

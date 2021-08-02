@@ -1,7 +1,7 @@
 from .db import db
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
-from .post import postReplyLikes
+
 
 class User(db.Model, UserMixin):
     __tablename__ = 'users'
@@ -32,11 +32,11 @@ class User(db.Model, UserMixin):
 
     # ========================================================================
 
-    # Creates relationship between user and replies
+    # Creates relationship between user and replies!
     userReplies = db.relationship('Reply', back_populates='replyAuthor')
-    # Creates relationship between users and posts
+    # Creates relationship between users and posts!
     userPosts = db.relationship('Post', back_populates='postAuthor')
-
+    # Creates relationship between the user and the joins table for posts they've liked!
     userPostLikes = db.relationship('postReplyLikes', backref=db.backref('user'))
     # Might need lazy = joined here as well
 

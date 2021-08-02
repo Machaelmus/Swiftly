@@ -5,6 +5,8 @@ import { editOnePost, deleteOnePost } from '../../store/posts';
 import Modal from 'react-modal';
 import styles from '../Home/Home.module.css';
 import {BsThreeDots} from 'react-icons/bs'
+import {AiOutlineLike} from 'react-icons/ai';
+
 // REACT-MODAL SETTINGS
 Modal.setAppElement('#root')
 const editModalStyles = {
@@ -119,12 +121,16 @@ const PostContainer = ({post}) => {
                         <h1 className={styles.postUsernameYEH}>{post.user.username}</h1>
                     </Link>
                 </div>
-                <Link to={`/posts/${post.id}`}>
                     <div>
                         <p className={styles.eachPostTime}>{post.timeOfPost}</p>
+                    <Link to={`/posts/${post.id}`}>
                         <p className={styles.eachPostPost}>{post.post}</p>
+                    </Link>
+                    <div className={styles.likedPostContainer}>
+                       <AiOutlineLike/>
+                       <p>Like</p>
                     </div>
-                </Link>
+                    </div>
             </div>
         </>
     )

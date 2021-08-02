@@ -6,7 +6,7 @@ import { likeOnePost, unlikeOnePost } from '../../store/likes';
 import Modal from 'react-modal';
 import styles from '../Home/Home.module.css';
 import {BsThreeDots} from 'react-icons/bs'
-import {AiOutlineLike, AiOutlineComment, AiOutlineHeart} from 'react-icons/ai';
+import {AiOutlineComment, AiOutlineHeart, AiFillHeart} from 'react-icons/ai';
 
 // REACT-MODAL SETTINGS
 Modal.setAppElement('#root')
@@ -143,6 +143,7 @@ const PostContainer = ({post}) => {
                     </Link>
                     <div className={styles.likedPostContainer}>
                         <AiOutlineHeart onClick={likeAPost} className={styles.likedThumbsUp}/>
+                        <AiFillHeart onClick={unlikeAPost}/>
                         <AiOutlineComment className={styles.commentOnPost}/>
                     </div>
                     </div>

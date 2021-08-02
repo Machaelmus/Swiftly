@@ -28,7 +28,7 @@ export const likeOnePost = (id, like) => async (dispatch) => {
 }
 
 export const unlikeOnePost = (id) => async (dispatch) => {
-    const response = await fetch(`/api/posts/${id}`, {
+    const response = await fetch(`/api/posts/like/${id}`, {
         method: 'DELETE',
         headers: {'Content-Type': 'application/json'},
     })

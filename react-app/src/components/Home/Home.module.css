@@ -69,6 +69,11 @@
     font-weight: bold;
 }
 
+.likedPostContainer {
+    display: flex;
+    align-items: center;
+}
+
 .editTextArea {
     resize: none;
     width: 300px;

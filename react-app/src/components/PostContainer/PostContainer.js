@@ -127,8 +127,8 @@ const PostContainer = ({post}) => {
                         <p className={styles.eachPostPost}>{post.post}</p>
                     </Link>
                     <div className={styles.likedPostContainer}>
-                       <AiOutlineLike/>
-                       <p>Like</p>
+                       <AiOutlineLike className={styles.likedThumbsUp}/>
+                       
                     </div>
                     </div>
             </div>

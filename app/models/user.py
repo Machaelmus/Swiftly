@@ -47,7 +47,7 @@ class User(db.Model, UserMixin):
 
     def unlikePost(self, post):
         if self.liked(post):
-            likedPost.query.filter(postId=post.id, userId=self.id).delete()
+            likedPost.query.filter_by(postId=post.id, userId=self.id).delete()
 
 
     def liked(self, post):

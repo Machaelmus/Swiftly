@@ -66,7 +66,7 @@ def likePost(id):
     return postToLike.to_dict()
 
 
-@post_routes.route('/api/posts/<int:id>', methods=['DELETE'])
+@post_routes.route('/api/posts/like/<int:id>', methods=['DELETE'])
 def unlikePost(id):
     postToUnlike = likedPost.query.get(id)
     current_user.unlikePost(postToUnlike)

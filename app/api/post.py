@@ -1,6 +1,6 @@
 from flask import Blueprint, request
 from app.models import db, User
-from app.models.post import Post
+from app.models.post import Post, likedPost
 from flask_login import current_user
 from app.forms.post_form import CreatePostForm
 from app.forms.edit_post_form import EditPostForm
@@ -56,3 +56,15 @@ def deletePost(id):
     db.session.delete(postToDelete)
     db.session.commit()
     return postToDelete.to_dict()
+
+
+@post_routes.route('/api/posts/<int:id>/liked', methods=['POST'])
+def likePost(id):
+    currentPost = Post.query.get(id)
+    postToLike = likedPost(
+        userId = current_user.id,
+        postId = currentPost
+    )
+    db.session.add(postToLike)
+    db.session.commit()
+    return postToLike.to_dict()

@@ -1,4 +1,13 @@
 from .db import db
+from .likes import likedPost
+
+# likedPost = db.Table(
+#     'likedPost',
+#     db.metadata,
+#     db.Column('userId', db.Integer, db.ForeignKey('users.id'), primary_key=True),
+#     db.Column('postId', db.Integer, db.ForeignKey('posts.id'), primary_key=True),
+# )
+
 
 class Post(db.Model):
     __tablename__ = 'posts'
@@ -16,6 +25,9 @@ class Post(db.Model):
     postReplies = db.relationship('Reply', cascade="all, delete-orphan", back_populates='replyToPost')
     # Creates relationship between post and users to determine the author
     postAuthor = db.relationship('User', back_populates='userPosts')
+    # Creates relationship between likes join table and the post.
+    likesOnPosts = db.relationship('likedPost', back_populates='likedPostPost')
+    # Might need lazy = joined according to docs :/
 
 
     def to_dict(self):

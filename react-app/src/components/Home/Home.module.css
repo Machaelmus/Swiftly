@@ -69,6 +69,32 @@
     font-weight: bold;
 }
 
+.commentOnPost {
+    height: 30px;
+    width: 30px;
+}
+
+.likedPostContainer {
+    display: flex;
+    align-items: center;
+}
+
+.likedThumbsUp:hover, .commentOnPost:hover {
+    cursor: pointer;
+    color: var(--purpleHover);
+}
+
+.likedThumbsUp {
+    height: 30px;
+    width: 30px;
+    margin-right: 30px;
+    /* margin-left: 25px;  */
+}
+
+/* .likeWord {
+    font-size: 20px;
+} */
+
 .editTextArea {
     resize: none;
     width: 300px;

@@ -1,7 +1,8 @@
 from .db import db
 
 
-postReplyLikes = db.Table(
+likedPost = db.Table(
+    'likedPost',
     db.Column('userId', db.Integer, db.ForeignKey('users.id'), primary_key=True),
     db.Column('postId', db.Integer, db.ForeignKey('posts.id'), primary_key=True),
 )
@@ -24,7 +25,7 @@ class Post(db.Model):
     # Creates relationship between post and users to determine the author
     postAuthor = db.relationship('User', back_populates='userPosts')
     # Creates relationship between likes join table and the post.
-    likesOnPosts = db.relationship('postReplyLikes', backref=db.backref('post'))
+    likesOnPosts = db.relationship('likedPost', backref=db.backref('posts'))
     # Might need lazy = joined according to docs :/
 
     def to_dict(self):

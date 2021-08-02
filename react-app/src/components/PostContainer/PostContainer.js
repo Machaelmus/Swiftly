@@ -5,7 +5,7 @@ import { editOnePost, deleteOnePost } from '../../store/posts';
 import Modal from 'react-modal';
 import styles from '../Home/Home.module.css';
 import {BsThreeDots} from 'react-icons/bs'
-import {AiOutlineLike} from 'react-icons/ai';
+import {AiOutlineLike, AiOutlineComment, AiOutlineHeart} from 'react-icons/ai';
 
 // REACT-MODAL SETTINGS
 Modal.setAppElement('#root')
@@ -127,8 +127,8 @@ const PostContainer = ({post}) => {
                         <p className={styles.eachPostPost}>{post.post}</p>
                     </Link>
                     <div className={styles.likedPostContainer}>
-                       <AiOutlineLike className={styles.likedThumbsUp}/>
-                       
+                        <AiOutlineHeart className={styles.likedThumbsUp}/>
+                        <AiOutlineComment className={styles.commentOnPost}/>
                     </div>
                     </div>
             </div>

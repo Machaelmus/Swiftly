@@ -1,6 +1,6 @@
 
 import React, {useRef, useEffect, useState} from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import LogoutButton from '../auth/LogoutButton';
 import styles from './Navbar.module.css';
@@ -48,7 +48,9 @@ const NavBar = () => {
                 <div onClick={enableNavOptions} className={styles.navProfileDropDown}><AiOutlineMenu/></div>
                 {navOptions && (
                   <div className={styles.insideDropdown}>
-                    <p><IoSettingsOutline className={styles.logoTop}/>Profile & Settings</p>
+                    <Link className={styles.profileSettingsLink} to={`/users/${sessionUser.id}`}>
+                      <p><IoSettingsOutline className={styles.logoTop}/>Profile & Settings</p>
+                    </Link>
                     <p className={styles.themeButton}><GoLightBulb className={styles.logoTop}/>Dark Mode</p>
                     <LogoutButton/>
                   </div>

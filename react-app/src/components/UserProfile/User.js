@@ -23,23 +23,32 @@ function User() {
 
   return (
     <>
-    <div className={styles.wholeProfileContainer}>
-      <div className={styles.profileUserImageContainer}>
-        <img className={styles.profileUserImage} src={user.profileImage}></img>
+    {/* Whole page */}
+      <div className={styles.wholeProfileContainer}>
+          {/* Profile image container */}
+          <div className={styles.profileUserImageContainer}>
+            <img className={styles.profileUserImage} src={user.profileImage}></img>
+          </div>
+          {/* Profile information */}
+          <div className={styles.profileUsernameFollowButtonContainer}>
+            {/* Follow button and username */}
+            <div className={styles.buttonAndUsername}>
+              <p className={styles.profileUsername}>{user.username}</p>
+              <button className={styles.profileFollowButton}>Follow</button>
+            </div>
+            {/* Handle and status */}
+            <div className={styles.profileHandleAndStatusContainer}>
+              <p className={styles.profileUserHandle}>{user.handle}</p>
+              <p className={styles.profileUserStatus}>{user.status}</p>
+            </div>
+
+          </div>
       </div>
-      <div className={styles.profileUsernameFollowButtonContainer}>
-        <p className={styles.profileUsername}>{user.username}</p>
-        <button className={styles.profileFollowButton}>Follow</button>
-      </div>
-      {/* <div> */}
-        {/* DISPLAY NUMBER OF POSTS AND FOLLOWERS HERE */}
-      {/* </div> */}
-      <div className={styles.profileHandleAndStatusContainer}>
-        <p className={styles.profileUserHandle}>{user.handle}</p>
-        <p className={styles.profileUserStatus}>{user.status}</p>
-      </div>
-    </div>
     </>
   );
 }
 export default User;
+
+{/* <div> */}
+  {/* DISPLAY NUMBER OF POSTS AND FOLLOWERS HERE */}
+{/* </div> */}

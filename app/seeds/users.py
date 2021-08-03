@@ -18,15 +18,21 @@ def seed_users():
     john = User(
         username='johncena', status='Its like Im not even here...', handle='#YouCantSeeMe', profileImage='https://resizing.flixster.com/IpEFWZUF1Cd_NZPC5gCEVhcJd-M=/506x652/v2/https://flxt.tmsimg.com/v9/AllPhotos/487578/487578_v9_ba.jpg', email='cantseeme@gmail.com', password='password')
     captainamerica = User(
-        username='MrRodgers', status='Murica', handle='#Cap', profileImage='https://cdn.vox-cdn.com/thumbor/T-F4dV0PEp6eC-Z7lTu6fcdhDFQ=/0x0:1916x784/1200x800/filters:focal(517x45:823x351)/cdn.vox-cdn.com/uploads/chorus_image/image/59126061/Screen_Shot_2018_03_22_at_3.09.54_PM.0.png', email='cap@murica.net', password='password')
+        username='MrRodgers', status='Murica', handle='#Cap', profileImage='https://cdn1-www.superherohype.com/assets/uploads/2011/09/file_168508_0_ewavengersheadshots1.jpg', email='cap@murica.net', password='password')
     ironman = User(
-        username='TonyStark', status='I need a new flux-incapacitator 9000 ', handle='#IncredibleTonyStark', profileImage='https://dailysuperheroes.com/wp-content/uploads/2020/02/tony-stark.jpg', email='tony@starkindustries.com', password='password')
+        username='TonyStark', status=':D', handle='#IncredibleTonyStark', profileImage='https://cdn-www.comingsoon.net/assets/uploads/2011/09/file_82704_1_ewavengersheadshots2.jpg', email='tony@starkindustries.com', password='password')
     hulk = User(
-        username='GreenGiant', status='HULK SMASH', handle='#Rawr', profileImage='https://cdn.vox-cdn.com/thumbor/Pvdo1lFYBBDbEG54FLW4tJ4pUcM=/0x0:2100x1181/1200x800/filters:focal(909x410:1245x746)/cdn.vox-cdn.com/uploads/chorus_image/image/67426099/experience_avengers_day.0.jpg', email='bruce@sciencecompany.com', password='password')
+        username='GreenGiant', status='HULK SMASH', handle='#Rawr', profileImage='https://www.ramascreen.com/wp-content/uploads/The-Avengers-Bruce-Banner_Hulk.jpg', email='bruce@sciencecompany.com', password='password')
     wolverine = User(
-        username='WeaponX', status='What do you want?', handle='#Bub', profileImage='https://hips.hearstapps.com/digitalspyuk.cdnds.net/16/21/1464175888-hugh-jackman-muscles-claws-in-the-wolverine.jpg', email='scarybigclaws@xmen.com', password='password')
+        username='Wolverine', status='What do you want?', handle='#Bub', profileImage='https://media.vanityfair.com/photos/591f645412adfc468fcd6446/9:16/w_540,h_960,c_limit/wolverine-and-wolverine.jpg', email='scarybigclaws@xmen.com', password='password')
     spiderman = User(
-        username='Spidey', status='Stop bullying!', handle='#Wooohooo', profileImage='https://upload.wikimedia.org/wikipedia/commons/c/c2/Tobey_Maguire_2014.jpg', email='peterparker@mail.com', password='password')
+        username='Spidey', status='Stop bullying!', handle='#Wooohooo', profileImage='https://pbs.twimg.com/media/EOLTlIIW4AE8zYZ.jpg', email='peterparker@mail.com', password='password')
+    groot = User(
+        username='Groot', status='...I am groot...', handle='#IAMGROOOT', profileImage='https://c4.wallpaperflare.com/wallpaper/204/71/692/movie-guardians-of-the-galaxy-vol-2-baby-groot-groot-wallpaper-thumb.jpg', email='tree@branch.com', password='password')
+    starlord = User(
+        username='Quill', status='Boooyah!', handle='#Spaceman', profileImage='https://i.pinimg.com/originals/13/81/69/138169aa7f1ec532ffceb5ffec840496.jpg', email='starlord@awesomesauce.com', password='password')
+    thanos = User(
+        username='Thanos', status='My power shall consume the galaxy!', handle='#Conquer', profileImage='https://www.sideshow.com/storage/product-images/903429/thanos_marvel_square.jpg', email='bigscarythumb@purplebadguy.com', password='password')
 
 
     db.session.add(demo)
@@ -39,6 +45,9 @@ def seed_users():
     db.session.add(hulk)
     db.session.add(wolverine)
     db.session.add(spiderman)
+    db.session.add(groot)
+    db.session.add(starlord)
+    db.session.add(thanos)
     db.session.commit()
 
 

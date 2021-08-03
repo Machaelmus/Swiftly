@@ -142,9 +142,15 @@ const PostContainer = ({post}) => {
                         <p className={styles.eachPostPost}>{post.post}</p>
                     </Link>
                     <div className={styles.likedPostContainer}>
-                        <AiOutlineHeart onClick={likeAPost} className={styles.likedThumbsUp}/>
-                        <AiFillHeart onClick={unlikeAPost}/>
-                        <AiOutlineComment className={styles.commentOnPost}/>
+                        <div className={styles.likeCommentContainer}>
+                            <AiOutlineHeart onClick={likeAPost} className={styles.likedThumbsUp}/>
+                            <p>Like</p>
+                        </div>
+                        {/* <AiFillHeart onClick={unlikeAPost}/> */}
+                        <div className={styles.commentCommentContainer}>
+                            <AiOutlineComment className={styles.commentOnPost}/>
+                            <p>Comment</p>
+                        </div>
                     </div>
                     </div>
             </div>

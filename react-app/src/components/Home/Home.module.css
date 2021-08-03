@@ -24,6 +24,18 @@
     font-size: 35px;
 }
 
+.likeCommentContainer {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 18px;
+}
+.commentCommentContainer {
+    display: flex;
+    align-items: center;
+    font-size: 18px; 
+}
+
 .optionsButton {
     border: none;
     position: absolute;
@@ -87,6 +99,7 @@
 .commentOnPost {
     height: 30px;
     width: 30px;
+    margin-right: 5px;
 }
 
 .likedPostContainer {
@@ -102,7 +115,7 @@
 .likedThumbsUp {
     height: 30px;
     width: 30px;
-    margin-right: 30px;
+    margin-right: 5px;
     /* margin-left: 25px;  */
 }
 

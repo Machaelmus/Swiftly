@@ -1,5 +1,10 @@
+.wholeProfileContainer {
+    display: flex;
+    align-items: center;
+}
 .profileUserImageContainer {
     margin-top: 100px;
+    /* display: flex;  */
 }
 .profileUserImage {
     height: 150px;
@@ -7,7 +12,7 @@
     border-radius: 80px;
 }
 .profileUsernameFollowButtonContainer {
-
+    display: flex;
 }
 .profileUsername {
 
@@ -16,7 +21,7 @@
 
 }
 .profileHandleAndStatusContainer {
-
+    display: flex;
 }
 .profileUserHandle {
 

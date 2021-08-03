@@ -23,6 +23,7 @@ function User() {
 
   return (
     <>
+    <div className={styles.wholeProfileContainer}>
       <div className={styles.profileUserImageContainer}>
         <img className={styles.profileUserImage} src={user.profileImage}></img>
       </div>
@@ -37,6 +38,7 @@ function User() {
         <p className={styles.profileUserHandle}>{user.handle}</p>
         <p className={styles.profileUserStatus}>{user.status}</p>
       </div>
+    </div>
     </>
   );
 }

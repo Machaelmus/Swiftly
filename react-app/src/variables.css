@@ -6,3 +6,20 @@
     --lighterGray: #7D7F80;
     --lightestGray: #D2D3D3;
 }
+
+.orangeButtonStyle {
+    height: 50px;
+    width: 150px;
+    border: none;
+    transition: 0.4s;
+    border-radius: 30px;
+    background-size: 200% auto;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background-image: linear-gradient(to left,#ffa154 0%, #FF7954 51%, #FFAB49 100%);
+}
+
+.orangeButtonStyle:hover {
+    background-position: left center;
+}

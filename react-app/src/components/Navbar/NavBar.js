@@ -44,7 +44,9 @@ const NavBar = () => {
               <div className={styles.navRightSide}>
                 <img src={sessionUser.profileImage} className={styles.navUserImage}></img>
                 <p className={styles.navUsername}>{sessionUser.username}</p>
-                <div className={styles.navAddFriends}><AiOutlinePlus/></div>
+                <Link to="/users">
+                  <div className={styles.navAddFriends}><AiOutlinePlus/></div>
+                </Link>
                 <div onClick={enableNavOptions} className={styles.navProfileDropDown}><AiOutlineMenu/></div>
                 {navOptions && (
                   <div className={styles.insideDropdown}>

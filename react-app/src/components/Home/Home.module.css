@@ -4,7 +4,7 @@
     width: 800px;
     background-color: white;
     padding: 20px;
-   
+
     border-bottom: 1px solid rgb(175, 175, 175);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.281);
 }
@@ -71,7 +71,15 @@
 }
 
 .navigation {
+    height: 100vh;
+    width: 400px;
+    background-color: white;
+    border-right: 1px solid lightgray;
     grid-area: navigation;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .feed {
@@ -211,4 +219,91 @@ button.optionsButton:hover {
     color: white;
     border-color: var(--purpleHover);
     background-color: var(--purpleHover);
+}
+.navContain {
+    margin-top: 150px;
+    display: flex;
+    margin-left: 120px;
+    flex-direction: column;
+
+}
+.sideNavHome, .sideNavStories, .sideNavLiked, .sideNavFindUsers, .sideNavProfile {
+    font-weight: bold;
+    font-size: 30px;
+    width: 200px;
+}
+.sideNavHome {
+    display: flex;
+    align-items: center;
+}
+.sideNavStories {
+    display: flex;
+    align-items: center;
+}
+.sideNavLiked {
+    display: flex;
+    align-items: center;
+}
+.sideNavFindUsers {
+    display: flex;
+    align-items: center;
+}
+
+.sideNavProfile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sideNavPostButton {
+    height: 50px;
+    width: 200px;
+    border: none;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: var(--purpleTheme);
+    color: white;
+    margin-bottom: 60px;
+}
+
+.navProfileHandle {
+    margin-top: -20px;
+    margin-left: 10px;
+}
+
+.sideNavPostButton:hover {
+    transition: all 0.3s ease;
+    background-color: var(--purpleHover);
+    cursor: pointer;
+}
+
+.navProfileImageForUser {
+    height: 80px;
+    width: 80px;
+    border: none;
+    border-radius: 40px;
+}
+.navProfileUsername {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.navProfileUsername:hover {
+    color: var(--purpleHover);
+}
+.divForProfileStuff {
+    display: flex;
+}
+.links {
+    margin-left: 10px;
+}
+
+.sideNavHome:hover,
+.sideNavStories:hover,
+.sideNavLiked:hover,
+.sideNavFindUsers:hover,
+.sideNavProfile:hover {
+    color: var(--purpleHover);
+    cursor: pointer;
 }

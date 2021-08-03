@@ -24,6 +24,9 @@ const Home = () => {
             <div className={styles.navigation}></div>
             {/* FEED */}
             <div className={styles.feed}>
+                <div className={styles.homeHeadingContainer}>
+                    <h1 className={styles.homeHome}>Home</h1>
+                </div>
                 <CreatePost/>
                 <div className={styles.bigDiv}>
                     {posts.map((post) => (

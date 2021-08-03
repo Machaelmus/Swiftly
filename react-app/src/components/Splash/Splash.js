@@ -1,8 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { Link, useHistory } from 'react-router-dom';
+import { login } from '../../store/session';
 import './Splash.css';
 
 const Splash = () => {
+    const dispatch = useDispatch();
+    const history = useHistory()
+    const demoLogin = async (e) => {
+        e.preventDefault()
+        await dispatch(login('demo@aa.io', 'password'));
+        history.push('/home')
+    }
+
     return (
         <>
         <div className="backgroundImage">
@@ -11,9 +21,7 @@ const Splash = () => {
                 <p className="splashJoin">Join today</p>
             </div>
             <div className="splashButtons">
-                <Link to="/login">
-                    <button className="splashLogin1">Log in</button>
-                </Link>
+                    <button onClick={demoLogin} className="splashLogin1">Demo Login</button>
                 <Link to="/signup">
                     <button className="splashSignup">Sign up</button>
                 </Link>

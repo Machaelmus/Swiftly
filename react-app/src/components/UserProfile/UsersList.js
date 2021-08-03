@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
+import styles from './userList.module.css';
 
 function UsersList() {
   const [users, setUsers] = useState([]);
@@ -15,16 +16,28 @@ function UsersList() {
 
   const userComponents = users.map((user) => {
     return (
-      <li key={user.id}>
-        <NavLink to={`/users/${user.id}`}>{user.username}</NavLink>
-      </li>
+
+      <div className={styles.allusersContainer} key={user.id}>
+          <div className={styles.allusersImageandUsername}>
+            <img className={styles.allusersProfileImage} src={user.profileImage}></img>
+            <NavLink className={styles.allusersUsernames} to={`/users/${user.id}`}>{user.username}</NavLink>
+          </div>
+          <div className={styles.allusersFollowButtonContainer}>
+            <button className={styles.allusersFollowButton}>Follow</button>
+          </div>
+        </div>
     );
   });
 
   return (
     <>
-      <h1>User List: </h1>
-      <ul>{userComponents}</ul>
+    <div className={styles.wholePageContainerForAllUsers}>
+      <h1 className={styles.usersToFollow}>Users to follow</h1>
+      <Link to="/home">
+        <h2 className={styles.returnHome}>Return</h2>
+      </Link>
+      <div className={styles.wholeBigChungus}>{userComponents}</div>
+    </div>
     </>
   );
 }

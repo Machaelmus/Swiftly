@@ -1,6 +1,6 @@
 
 import React, {useRef, useEffect, useState} from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import LogoutButton from '../auth/LogoutButton';
 import styles from './Navbar.module.css';
@@ -44,11 +44,15 @@ const NavBar = () => {
               <div className={styles.navRightSide}>
                 <img src={sessionUser.profileImage} className={styles.navUserImage}></img>
                 <p className={styles.navUsername}>{sessionUser.username}</p>
-                <div className={styles.navAddFriends}><AiOutlinePlus/></div>
+                <Link to="/users">
+                  <div className={styles.navAddFriends}><AiOutlinePlus/></div>
+                </Link>
                 <div onClick={enableNavOptions} className={styles.navProfileDropDown}><AiOutlineMenu/></div>
                 {navOptions && (
                   <div className={styles.insideDropdown}>
-                    <p><IoSettingsOutline className={styles.logoTop}/>Profile & Settings</p>
+                    <Link className={styles.profileSettingsLink} to={`/users/${sessionUser.id}`}>
+                      <p><IoSettingsOutline className={styles.logoTop}/>Profile & Settings</p>
+                    </Link>
                     <p className={styles.themeButton}><GoLightBulb className={styles.logoTop}/>Dark Mode</p>
                     <LogoutButton/>
                   </div>

@@ -21,6 +21,15 @@
     /* padding: 3px; */
 }
 
+.userStats {
+    display: flex;
+    font-size: 18px;
+}
+
+.userPostStat, .userFollowerStat {
+    margin-right: 80px;
+}
+
 .buttonAndUsername {
     display: flex;
     align-items: center;

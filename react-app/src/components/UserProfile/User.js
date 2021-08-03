@@ -31,10 +31,17 @@ function User() {
           </div>
           {/* Profile information */}
           <div className={styles.profileUsernameFollowButtonContainer}>
+
+
             {/* Follow button and username */}
             <div className={styles.buttonAndUsername}>
               <p className={styles.profileUsername}>{user.username}</p>
               <button className={styles.profileFollowButton}>Follow</button>
+            </div>
+            <div className={styles.userStats}>
+              <p className={styles.userPostStat}>Posts</p>
+              <p className={styles.userFollowerStat}>Followers</p>
+              <p>Following</p>
             </div>
             {/* Handle and status */}
             <div className={styles.profileHandleAndStatusContainer}>

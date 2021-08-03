@@ -4,8 +4,9 @@
     width: 780px;
     background-color: white;
     padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 25px;
+    /* border-radius: 5px; */
+    /* margin-bottom: 25px; */
+    border-bottom: 1px solid rgb(175, 175, 175); 
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.281);
 }
 

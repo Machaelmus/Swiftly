@@ -147,13 +147,17 @@
     color: white;
     font-family: 'Days One', sans-serif;
     font-weight: 400;
+
 }
 .swiftlyTextName {
     font-family: 'Days One', sans-serif;
     font-size: 40px;
     font-weight: 400;
-    color: var(--mediumGray);
-    margin-right: 1500px;
+    background-image: linear-gradient(to left,#ffa154 0%, #FF7954 51%, #FFAB49 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    margin-right: 1300px;
 }
 
 .logoAndText {

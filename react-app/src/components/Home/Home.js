@@ -33,9 +33,9 @@ const Home = () => {
                     {/* <div className={styles.sideNavStories}>
                     <BsBook/> <p className={styles.links}>Stories</p>
                     </div> */}
-                    <div className={styles.sideNavLiked}>
+                    {/* <div className={styles.sideNavLiked}>
                     <AiOutlineHeart/> <p className={styles.links}>Liked</p>
-                    </div>
+                    </div> */}
                     <div className={styles.sideNavFindUsers}>
                     <AiOutlineSearch/> <p className={styles.links}>Find users</p>
                     </div>

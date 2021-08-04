@@ -30,9 +30,9 @@ const Home = () => {
                     <div className={styles.sideNavHome}>
                     <AiOutlineHome/> <p className={styles.links}>Home</p>
                     </div>
-                    <div className={styles.sideNavStories}>
+                    {/* <div className={styles.sideNavStories}>
                     <BsBook/> <p className={styles.links}>Stories</p>
-                    </div>
+                    </div> */}
                     <div className={styles.sideNavLiked}>
                     <AiOutlineHeart/> <p className={styles.links}>Liked</p>
                     </div>

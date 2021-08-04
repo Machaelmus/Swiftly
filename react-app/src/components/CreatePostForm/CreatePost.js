@@ -7,7 +7,6 @@ const CreatePost = () => {
     const dispatch = useDispatch()
     const sessionUser = useSelector(state => state.session.user);
     const [postText, setPostText] = useState('');
-    // const [errors, setErrors] = useState([]);
 
     const createForm = async (e) => {
         e.preventDefault();
@@ -17,23 +16,17 @@ const CreatePost = () => {
             userId: sessionUser.id,
             timeOfPost: Date.now()
         }
-
-        // const newlyCreatedClub =
         dispatch(createOnePost(formInfo))
-        // if(newlyCreatedClub.errors) {
-        //     setErrors(newlyCreatedClub.errors);
-        //     return;
-        // }
     }
 
     return (
         <div className={styles.createPostDiv}>
             <div className={styles.createPostNameAndImageContainer}>
                 <img className={styles.createPostUserImage} src={sessionUser.profileImage}></img>
-                <h3 className={styles.createPostUsername}>Hey {sessionUser.username}!</h3>
+                <h3 className={styles.createPostUsername}>{sessionUser.username}</h3>
             </div>
             <form onSubmit={createForm} className={styles.createPostForm}>
-                <textarea onChange={(e) => setPostText(e.target.value)} className={styles.createPostInput} placeholder={`Whats on your mind, ${sessionUser.username}?`}></textarea>
+                <textarea required onChange={(e) => setPostText(e.target.value)} className={styles.createPostInput} placeholder={`Whats on your mind, ${sessionUser.username}?`}></textarea>
                 <br/>
                 <button type="submit" className={styles.createPostSubmit}>Post</button>
             </form>

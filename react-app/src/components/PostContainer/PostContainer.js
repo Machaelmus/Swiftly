@@ -76,20 +76,20 @@ const PostContainer = ({post}) => {
         setOpenOptions(true)
     }
 
-    const likeAPost = (e) => {
-        e.preventDefault();
+    // const likeAPost = (e) => {
+    //     e.preventDefault();
 
-        const likeInfo = {
-            userId: sessionUser.id,
-            postId: post.id,
-        }
-        dispatch(likeOnePost(post.id, likeInfo))
-    }
+    //     const likeInfo = {
+    //         userId: sessionUser.id,
+    //         postId: post.id,
+    //     }
+    //     dispatch(likeOnePost(post.id, likeInfo))
+    // }
 
-    const unlikeAPost = (e) => {
-        e.preventDefault()
-        dispatch(unlikeOnePost(post.id))
-    }
+    // const unlikeAPost = (e) => {
+    //     e.preventDefault()
+    //     dispatch(unlikeOnePost(post.id))
+    // }
 
     // Use effects for opening and closing the modal based on click events
     useEffect(() => {
@@ -142,15 +142,17 @@ const PostContainer = ({post}) => {
                         <p className={styles.eachPostPost}>{post.post}</p>
                     </Link>
                     <div className={styles.likedPostContainer}>
-                        <div className={styles.likeCommentContainer}>
+                        {/* <div className={styles.likeCommentContainer}>
                             <AiOutlineHeart onClick={likeAPost} className={styles.likedThumbsUp}/>
                             <p>Like</p>
-                        </div>
+                        </div> */}
                         {/* <AiFillHeart onClick={unlikeAPost}/> */}
+                        <Link className={styles.linkToCommentsOnPosts} to={`/posts/${post.id}`}>
                         <div className={styles.commentCommentContainer}>
-                            <AiOutlineComment className={styles.commentOnPost}/>
-                            <p>Comment</p>
+                                <AiOutlineComment className={styles.commentOnPost}/>
+                                <p>Comment</p>
                         </div>
+                        </Link>
                     </div>
                     </div>
             </div>

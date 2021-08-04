@@ -54,7 +54,7 @@
     width: 80px;
     margin-top: 40px;
     position: absolute;
-    left: 1397px;
+    left: 1290px;
     font-size: 18px;
 }
 
@@ -179,6 +179,11 @@
     color: var(--purpleTheme);
 }
 
+.commentCommentContainer:hover  {
+    color: var(--purpleHover);
+    cursor: pointer;
+}
+
 button.optionsButton:hover {
     cursor: pointer;
 }
@@ -232,6 +237,7 @@ button.optionsButton:hover {
     font-size: 30px;
     width: 200px;
 }
+
 .sideNavHome {
     display: flex;
     align-items: center;
@@ -304,6 +310,8 @@ button.optionsButton:hover {
 .sideNavLiked:hover,
 .sideNavFindUsers:hover,
 .sideNavProfile:hover {
-    color: var(--purpleHover);
+    background-image: linear-gradient(to left,#ffa154 0%, #FF7954 51%, #FFAB49 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     cursor: pointer;
 }

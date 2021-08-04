@@ -179,6 +179,11 @@
     color: var(--purpleTheme);
 }
 
+.commentCommentContainer:hover  {
+    color: var(--purpleHover);
+    cursor: pointer;
+}
+
 button.optionsButton:hover {
     cursor: pointer;
 }

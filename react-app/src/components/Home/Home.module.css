@@ -139,13 +139,16 @@
     margin: 0;
     margin-bottom: -11px;
 }
+
 .postUsernameYEH:hover {
     color: var(--purpleTheme);
 }
+
 .postUserImage {
     height: 100px;
     width: 100px;
 }
+
 .postUserImageSrc {
     height: 55px;
     width: 55px;
@@ -157,10 +160,12 @@
 .userProfileImageAndUsernameContainer {
     display: flex;
 }
+
 .threeDots {
     margin-top: 20px;
     margin-right: -10px;
 }
+
 .threeDots:hover {
     color: var(--purpleTheme);
 }
@@ -171,6 +176,7 @@
     border-color: var(--purpleHover);
     background-color: var(--purpleHover);
 }
+
 .editOpenDropdown:hover {
     cursor: pointer;
     color: var(--purpleTheme);
@@ -222,6 +228,7 @@ button.optionsButton:hover {
     border-color: var(--purpleHover);
     background-color: var(--purpleHover);
 }
+
 .navContain {
     margin-top: 150px;
     display: flex;
@@ -229,6 +236,7 @@ button.optionsButton:hover {
     flex-direction: column;
 
 }
+
 .sideNavHome, .sideNavStories, .sideNavLiked, .sideNavFindUsers, .sideNavProfile {
     font-weight: bold;
     font-size: 30px;
@@ -239,14 +247,17 @@ button.optionsButton:hover {
     display: flex;
     align-items: center;
 }
+
 .sideNavStories {
     display: flex;
     align-items: center;
 }
+
 .sideNavLiked {
     display: flex;
     align-items: center;
 }
+
 .sideNavFindUsers {
     display: flex;
     align-items: center;
@@ -292,12 +303,15 @@ button.optionsButton:hover {
     font-weight: bold;
     font-size: 20px;
 }
+
 .navProfileUsername:hover {
     color: var(--purpleHover);
 }
+
 .divForProfileStuff {
     display: flex;
 }
+
 .links {
     margin-left: 10px;
 }

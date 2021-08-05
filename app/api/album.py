@@ -33,9 +33,9 @@ def createAlbum():
 
 
 # edit route to be done later
-@album_routes.route('/api/albums/<int:id>')
-def editAlbum():
-    return
+# @album_routes.route('/api/albums/<int:id>')
+# def editAlbum():
+#     return
 
 
 @album_routes.route('/api/albums/<int:id>')

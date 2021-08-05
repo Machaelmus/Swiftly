@@ -8,25 +8,36 @@ const Albums = () => {
     const dispatch = useDispatch();
 
 
-    useEffect(() => {
-        dispatch(getAllAlbums())
-    }, [dispatch]);
+    // useEffect(() => {
+    //     dispatch(getAllAlbums())
+    // }, [dispatch]);
 
 
     return (
-        <div className={styles.albumsWholeContainer}>
-            <div className={styles.albumsCreateFormContainer}>
-                <h2 className={styles.albumsFormHeading}>Create an album</h2>
-                <div className={styles.albumsFormBackground}>
-                    <form className={styles.albumsForm}>
-                        <input type='text' placeholder='Album Cover Photo'></input>
-                        <input className={styles.albumsInputTitle} type='text' placeholder='Title'></input>
-                        <textarea className={styles.albumsDescription} placeholder='Description'></textarea>
-                        <button className={styles.albumsCreateSubmit} type='submit'>Create Album</button>
-                    </form>
+        <div className={styles.albumContainer}>
+
+            <div className={styles.create}>
+
+                <div className={styles.albumsCreateFormContainer}>
+                    <h2 className={styles.albumsFormHeading}>Create an album</h2>
+                    <div className={styles.albumsFormBackground}>
+                        <form className={styles.albumsForm}>
+                            <input className={styles.albumsInputPhotoUrl} type='text' placeholder='Album Cover Photo'></input>
+                            <input className={styles.albumsInputTitle} type='text' placeholder='Title'></input>
+                            <textarea className={styles.albumsDescription} placeholder='Description'></textarea>
+                            <button className={styles.albumsCreateSubmit} type='submit'>Create Album</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <h1>Hello from the albums page!</h1>
+            {/* ========================== */}
+            <div className={styles.list}>
+
+                <h1>Hello from the albums page!</h1>
+                
+            </div>
+
+
         </div>
     )
 }

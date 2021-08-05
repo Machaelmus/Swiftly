@@ -1,0 +1,68 @@
+.albumContainer {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "create list";
+}
+
+.create { grid-area: create; }
+
+.list { grid-area: list; }
+
+.albumsFormHeading {
+    font-size: 40px;
+    margin-left: 50px; 
+}
+
+.albumsFormBackground {
+    margin-left: 50px;
+    display: flex;
+    background-color: white;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.288);
+}
+
+.albumsForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.albumsInputPhotoUrl,
+.albumsInputTitle {
+    height: 40px;
+    width: 220px;
+    margin-bottom: 10px;
+}
+
+.albumsDescription {
+    resize: none;
+    height: 70px;
+    width: 221px;
+    margin-bottom: 10px;
+}
+
+.albumsCreateSubmit {
+    height: 40px;
+    width: 150px;
+    border: none;
+    background-color: orange;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 40px;
+}
+
+.albumsCreateSubmit:hover {
+    background-color: orangered;
+    cursor: pointer;
+}

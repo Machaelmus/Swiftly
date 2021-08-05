@@ -23,6 +23,7 @@ def createAlbum():
     if form.validate_on_submit():
         newAlbum = Album(
             userId = current_user.id,
+            coverPhotoUrl = form.coverPhotoUrl.data,
             title = form.title.data,
             description = form.description.data,
             albumCreatedAt = date.today(),

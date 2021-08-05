@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getAllAlbums } from '../../store/albums';
+import { getAllAlbums, deleteAnAlbum } from '../../store/albums';
 import CreateAlbumForm from '../CreateAlbumForm/CreateAlbumForm';
 import styles from './albums.module.css';
 

@@ -24,3 +24,10 @@ def editAlbum():
 def createAlbum():
     return
 
+
+@album_routes.route('/api/albums/<int:id>')
+def deleteAlbum(id):
+    deleteAlbum = Album.query.get(id)
+    db.session.delete(deleteAlbum)
+    db.session.commit()
+    return deleteAlbum.to_dict()

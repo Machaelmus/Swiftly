@@ -19,10 +19,23 @@ const deleteAlbum = (album) => ({
 
 export const getAllAlbums = () => async (dispatch) => {
     const response = await fetch('/api/albums');
-    
+
     if(response.ok) {
         const everyAlbum = await response.json()
         dispatch(getAlbums(everyAlbum))
         return everyAlbum;
+    }
+}
+
+export const createAnAlbum = (album) => async (dispatch) => {
+    const response = await fetch('/api/albums', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(album),
+    })
+    if(response.ok) {
+        const createdAlbum = await response.json()
+        dispatch(createAlbum(createdAlbum))
+        return createdAlbum; 
     }
 }

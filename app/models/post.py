@@ -17,8 +17,6 @@ class Post(db.Model):
     post = db.Column(db.Text, nullable=False)
     timeOfPost = db.Column(db.Date, nullable=False)
 
-    # Creates a relationship between Likes, posts and users to find users that liked each post.
-        # postUserLikes = db.relationship('Like', backref=db.backref('users'))
     # ========================================================================
 
     # Relationship between Posts and replies
@@ -26,8 +24,6 @@ class Post(db.Model):
     # Creates relationship between post and users to determine the author
     postAuthor = db.relationship('User', lazy='subquery', back_populates='userPosts')
     # Creates relationship between likes join table and the post.
-    # likesOnPosts = db.relationship('likedPost', back_populates='likedPostPost')
-    # Might need lazy = joined according to docs :/
 
 
     def to_dict(self):

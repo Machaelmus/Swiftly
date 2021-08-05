@@ -16,11 +16,6 @@ class Reply(db.Model):
 
     # ========================================================================
 
-    # Creates relationship between replies and reply likes to detemine how many likes on the reply
-        # replyLikes = db.relationship('ReplyLikes', backref=db.backref('replies'))
-
-
-
     def to_dict(self):
         return {
             'id': self.id,

@@ -16,7 +16,7 @@ def getAlbums():
     return {'albums': [album.to_dict() for album in allAlbums]}
 
 
-@album_routes.route('/api/albums')
+@album_routes.route('/api/albums', methods=['POST'])
 def createAlbum():
     form = CreateAlbumForm()
     form['csrf_token'].data = request.cookies['csrf_token']
@@ -39,7 +39,7 @@ def createAlbum():
 #     return
 
 
-@album_routes.route('/api/albums/<int:id>')
+@album_routes.route('/api/albums/<int:id>', methods=['DELETE'])
 def deleteAlbum(id):
     deleteAlbum = Album.query.get(id)
     db.session.delete(deleteAlbum)

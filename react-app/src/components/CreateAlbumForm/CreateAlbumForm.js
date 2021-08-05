@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import albumsReducer, { createAnAlbum } from '../../store/albums';
+import { createAnAlbum } from '../../store/albums';
 import styles from '../Albums/albums.module.css';
 
 const CreateAlbumForm = () => {
@@ -29,9 +29,9 @@ const CreateAlbumForm = () => {
             <h2 className={styles.albumsFormHeading}>Create an album</h2>
             <div className={styles.albumsFormBackground}>
                 <form onSubmit={createOneAlbum} className={styles.albumsForm}>
-                    <input className={styles.albumsInputPhotoUrl} type='text' placeholder='Album Cover Photo'></input>
-                    <input className={styles.albumsInputTitle} type='text' placeholder='Title'></input>
-                    <textarea className={styles.albumsDescription} placeholder='Description'></textarea>
+                    <input onChange={(e) => setCoverPhotoUrl(e.target.value)} className={styles.albumsInputPhotoUrl} type='text' placeholder='Album Cover Photo'></input>
+                    <input onChange={(e) => setTitle(e.target.value)} className={styles.albumsInputTitle} type='text' placeholder='Title'></input>
+                    <textarea onChange={(e) => setDescription(e.target.value)} className={styles.albumsDescription} placeholder='Description'></textarea>
                     <button className={styles.albumsCreateSubmit} type='submit'>Create Album</button>
                 </form>
             </div>

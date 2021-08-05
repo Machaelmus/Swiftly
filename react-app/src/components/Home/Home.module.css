@@ -4,10 +4,10 @@
     width: 800px;
     background-color: white;
     padding: 20px;
-
     border-bottom: 1px solid rgb(175, 175, 175);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.281);
 }
+
 .homeHeadingContainer {
     margin-top: 90px;
     background-color: white;
@@ -19,6 +19,7 @@
     border-bottom: 1px solid rgb(175, 175, 175);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.281);
 }
+
 .homeHome {
     font-size: 35px;
 }
@@ -29,6 +30,7 @@
     margin-right: 20px;
     font-size: 18px;
 }
+
 .commentCommentContainer {
     display: flex;
     align-items: center;
@@ -123,12 +125,7 @@
     height: 30px;
     width: 30px;
     margin-right: 5px;
-    /* margin-left: 25px;  */
 }
-
-/* .likeWord {
-    font-size: 20px;
-} */
 
 .editTextArea {
     resize: none;

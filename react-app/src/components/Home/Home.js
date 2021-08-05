@@ -1,15 +1,12 @@
 import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux'
-// import { createOnePost } from '../../store/posts';
 import {getAllPosts} from '../../store/posts';
 import CreatePost from '../CreatePostForm/CreatePost';
 import styles from './Home.module.css';
 import PostContainer from '../PostContainer/PostContainer';
-import {AiOutlineHome, AiOutlineHeart, AiOutlineSearch} from 'react-icons/ai';
-import {BsBook} from 'react-icons/bs';
+import {AiOutlineHome, AiOutlineSearch} from 'react-icons/ai';
 import {IoPersonOutline} from 'react-icons/io5';
-// import EditPostForm from '../EditPostForm/EditPostForm';
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -30,12 +27,6 @@ const Home = () => {
                     <div className={styles.sideNavHome}>
                     <AiOutlineHome/> <p className={styles.links}>Home</p>
                     </div>
-                    {/* <div className={styles.sideNavStories}>
-                    <BsBook/> <p className={styles.links}>Stories</p>
-                    </div> */}
-                    {/* <div className={styles.sideNavLiked}>
-                    <AiOutlineHeart/> <p className={styles.links}>Liked</p>
-                    </div> */}
                     <div className={styles.sideNavFindUsers}>
                     <AiOutlineSearch/> <p className={styles.links}>Find users</p>
                     </div>
@@ -64,7 +55,6 @@ const Home = () => {
                     {posts.map((post) => (
                         <div key={post.id}>
                             <PostContainer className={styles.postContainerContainer} post={post} key={post.id}/>
-                            {/* <EditPostForm post={post}/> */}
                         </div>
                     ))}
                 </div>

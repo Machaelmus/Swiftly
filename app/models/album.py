@@ -6,6 +6,7 @@ class Album(db.Model):
 
     id = db.Column(db.Integer, primary_key=True, nullable=False)
     userId = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    coverPhotoUrl = db.Column(db.Text, nullable=False)
     title = db.Column(db.String, nullable=False)
     description = db.Column(db.Text, nullable=False)
     albumCreatedAt = db.Column(db.Date, nullable=False)
@@ -18,6 +19,7 @@ class Album(db.Model):
         return {
             'id': self.id,
             'userId': self.userId,
+            'coverPhotoUrl': self.coverPhotoUrl,
             'title': self.title,
             'description': self.description,
             'albumCreatedAt': self.albumCreatedAt,

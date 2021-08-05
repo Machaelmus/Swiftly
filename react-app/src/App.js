@@ -53,7 +53,7 @@ function App() {
         <ProtectedRoute path='/home' exact={true} >
           <Home/>
         </ProtectedRoute>
-        <ProtectedRoute to='/users/stories' exact={true}>
+        <ProtectedRoute to='/albums' exact={true}>
           <Albums/>
         </ProtectedRoute>
       </Switch>

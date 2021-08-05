@@ -57,7 +57,7 @@ const albumsReducer = (state=initialState, action) => {
     switch(action.type) {
         case GET_ALBUMS:
             const allAlbums = {}
-            action.albums.forEach((album) => {
+            action.albums.albums.forEach((album) => {
                 allAlbums[album.id] = album
             })
             return allAlbums;
@@ -75,4 +75,4 @@ const albumsReducer = (state=initialState, action) => {
     }
 }
 
-export default albumsReducer; 
+export default albumsReducer;

@@ -4,3 +4,5 @@ from .followers import followers
 from .post import Post
 from .reply import Reply
 from .replylikes import replylikes
+from .images import Image
+from .album import Album

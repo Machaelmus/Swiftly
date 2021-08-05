@@ -11,3 +11,12 @@ class Image(db.Model):
 
     imageAlbum = db.relationship('Album', back_populates='albumImages')
     imageOwner = db.relationship('User', back_populates='ownerOfImage')
+
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'userId': self.userId,
+            'albumId': self.albumId,
+            'imageUrl': self.imageUrl, 
+        }

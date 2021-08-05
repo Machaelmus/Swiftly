@@ -12,4 +12,13 @@ class Album(db.Model):
 
     albumImages = db.relationship('Image', back_populates='imageAlbum')
     albumOwner = db.relationship('User', back_populates='ownerOfAlbum')
-    
+
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'userId': self.userId,
+            'title': self.title,
+            'description': self.description,
+            'albumCreatedAt': self.albumCreatedAt,
+        }

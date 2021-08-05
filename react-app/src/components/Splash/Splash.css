@@ -1,5 +1,5 @@
 .backgroundImage {
-    background-image: url('/root/App_Academy/projects/capstone/python-project-starter/react-app/src/components/Splash/660836.jpg');
+    background-image: url('./660836.jpg');
     position: absolute;
     background-repeat: no-repeat;
     background-size: 100%;

@@ -11,6 +11,7 @@ import { authenticate } from './store/session';
 import Splash from './components/Splash/Splash';
 import SinglePost from './components/SinglePost/SinglePost';
 import Home from './components/Home/Home';
+import Albums from './components/Albums/Albums';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -51,6 +52,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path='/home' exact={true} >
           <Home/>
+        </ProtectedRoute>
+        <ProtectedRoute to='/albums' exact={true}>
+          <Albums/>
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>

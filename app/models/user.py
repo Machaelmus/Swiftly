@@ -1,3 +1,4 @@
+from sqlalchemy.orm import backref
 from .db import db
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
@@ -32,6 +33,10 @@ class User(db.Model, UserMixin):
     userReplies = db.relationship('Reply', back_populates='replyAuthor')
     # Creates relationship between users and posts!
     userPosts = db.relationship('Post', back_populates='postAuthor')
+    # Creates relationship between the user and albums!
+    ownerOfAlbum = db.relationship('Album', back_populates='albumOwner')
+    # Creates relationship between the user and images!
+    ownerOfImage = db.relationship('Image', back_populates='imageOwner')
 
 
     def to_dict(self):

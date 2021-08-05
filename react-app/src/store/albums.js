@@ -36,6 +36,17 @@ export const createAnAlbum = (album) => async (dispatch) => {
     if(response.ok) {
         const createdAlbum = await response.json()
         dispatch(createAlbum(createdAlbum))
-        return createdAlbum; 
+        return createdAlbum;
+    }
+}
+
+export const deleteAnAlbum = (id) => async (dispatch) => {
+    const response = await fetch(`/api/albums/${id}`, {
+        method: 'DELETE',
+        headers: {'Content-Type': 'application/json'},
+    })
+    if(response.ok) {
+        const deletedAlbum = await response.json()
+        dispatch(deleteAlbum(deletedAlbum))
     }
 }

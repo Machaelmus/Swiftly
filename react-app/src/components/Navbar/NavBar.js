@@ -12,7 +12,6 @@ import {GoLightBulb} from 'react-icons/go';
 const NavBar = () => {
   const navDropdown = useRef(null);
   const [navOptions, setNavOptions] = useState(false);
-  const [theme, setTheme] = useState('Dark Mode')
   const sessionUser = useSelector(state => state.session.user);
 
   const enableNavOptions = () => {

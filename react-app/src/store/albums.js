@@ -50,3 +50,29 @@ export const deleteAnAlbum = (id) => async (dispatch) => {
         dispatch(deleteAlbum(deletedAlbum))
     }
 }
+
+const initialState = {}
+
+const albumsReducer = (state=initialState, action) => {
+    switch(action.type) {
+        case GET_ALBUMS:
+            const allAlbums = {}
+            action.albums.forEach((album) => {
+                allAlbums[album.id] = album
+            })
+            return allAlbums;
+        case CREATE_ALBUM:
+            return {
+                ...state,
+                [action.album.id]: action.album
+            }
+        case DELETE_ALBUM:
+            const albumToDelete = {...state}
+            delete albumToDelete[action.album.id];
+            return albumToDelete;
+        default:
+            return state;
+    }
+}
+
+export default albumsReducer; 

@@ -15,15 +15,26 @@ def getAlbums():
     allAlbums = Album.query.all()
     return {'albums': [album.to_dict() for album in allAlbums]}
 
-# edit route to be done later
-@album_routes.route('/api/albums/<int:id>')
-def editAlbum():
-    return
-
 
 @album_routes.route('/api/albums')
 def createAlbum():
     form = CreateAlbumForm()
+    form['csrf_token'].data = request.cookies['csrf_token']
+    if form.validate_on_submit():
+        newAlbum = Album(
+            userId = current_user.id,
+            title = form.title.data,
+            description = form.description.data,
+            albumCreatedAt = date.today(),
+        )
+        db.session.add(newAlbum)
+        db.session.commit()
+        return newAlbum.to_dict()
+
+
+# edit route to be done later
+@album_routes.route('/api/albums/<int:id>')
+def editAlbum():
     return
 
 

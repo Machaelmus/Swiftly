@@ -1,7 +1,7 @@
 from .db import db
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
-from .likes import likedPost
+
 
 class User(db.Model, UserMixin):
     __tablename__ = 'users'
@@ -25,10 +25,6 @@ class User(db.Model, UserMixin):
     def check_password(self, password):
         return check_password_hash(self.password, password)
 
-    # Creates relationship between Likes, User and Posts where it returns the posts the user liked
-        # userPostLikes = db.relationship('Like', backref=db.backref('posts'))
-    # Creates relationship between user and likes to replies
-        # userReplyLikes = db.relationship('ReplyLikes', backref=db.backref('replies'))
 
     # ========================================================================
 
@@ -36,22 +32,6 @@ class User(db.Model, UserMixin):
     userReplies = db.relationship('Reply', back_populates='replyAuthor')
     # Creates relationship between users and posts!
     userPosts = db.relationship('Post', back_populates='postAuthor')
-    # Creates relationship between the user and the joins table for posts they've liked!
-    userPostLikes = db.relationship('likedPost', back_populates='likedPostUser')
-    # Might need lazy = joined here as well
-
-    def likePost(self, post):
-        if not self.liked(post):
-            likingPost = likedPost(postId=post.id, userId=self.id)
-            db.session.add(likingPost)
-
-    def unlikePost(self, post):
-        if self.liked(post):
-            likedPost.query.filter_by(postId=post.id, userId=self.id).delete()
-
-
-    def liked(self, post):
-        return likedPost.query.filter(likedPost.userId == self.id, likedPost.postId == post.id).count() > 0
 
 
     def to_dict(self):
@@ -62,7 +42,4 @@ class User(db.Model, UserMixin):
             'profileImage': self.profileImage,
             'handle': self.handle,
             'status': self.status,
-            # 'userpost': [post.to_dict() for post in self.userPosts]
-            # 'bio': self.bio,
-            # 'birthdate': self.birthdate,
         }

@@ -2,11 +2,10 @@ import React, {useState, useEffect, useRef} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { editOnePost, deleteOnePost } from '../../store/posts';
-import { likeOnePost, unlikeOnePost } from '../../store/likes';
 import Modal from 'react-modal';
 import styles from '../Home/Home.module.css';
 import {BsThreeDots} from 'react-icons/bs'
-import {AiOutlineComment, AiOutlineHeart, AiFillHeart} from 'react-icons/ai';
+import {AiOutlineComment} from 'react-icons/ai';
 
 // REACT-MODAL SETTINGS
 Modal.setAppElement('#root')
@@ -76,21 +75,6 @@ const PostContainer = ({post}) => {
         setOpenOptions(true)
     }
 
-    // const likeAPost = (e) => {
-    //     e.preventDefault();
-
-    //     const likeInfo = {
-    //         userId: sessionUser.id,
-    //         postId: post.id,
-    //     }
-    //     dispatch(likeOnePost(post.id, likeInfo))
-    // }
-
-    // const unlikeAPost = (e) => {
-    //     e.preventDefault()
-    //     dispatch(unlikeOnePost(post.id))
-    // }
-
     // Use effects for opening and closing the modal based on click events
     useEffect(() => {
         const clickOutside = (event) => {
@@ -127,7 +111,6 @@ const PostContainer = ({post}) => {
                             <button className={styles.editCancelButton} onClick={closeModalOnClick}>Cancel</button>
                         </form>
                     </Modal>
-                    {/* <p>Delete</p> */}
                 </div>
             )}
                 <div className={styles.userProfileImageAndUsernameContainer}>
@@ -142,11 +125,6 @@ const PostContainer = ({post}) => {
                         <p className={styles.eachPostPost}>{post.post}</p>
                     </Link>
                     <div className={styles.likedPostContainer}>
-                        {/* <div className={styles.likeCommentContainer}>
-                            <AiOutlineHeart onClick={likeAPost} className={styles.likedThumbsUp}/>
-                            <p>Like</p>
-                        </div> */}
-                        {/* <AiFillHeart onClick={unlikeAPost}/> */}
                         <Link className={styles.linkToCommentsOnPosts} to={`/posts/${post.id}`}>
                         <div className={styles.commentCommentContainer}>
                                 <AiOutlineComment className={styles.commentOnPost}/>

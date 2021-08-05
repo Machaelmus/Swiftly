@@ -92,7 +92,6 @@
     font-size: 25px;
     float: right;
     margin-top: -140px;
-    /* position: absolute;  */
 }
 
 .editReplyThreeDots:hover {
@@ -136,12 +135,6 @@
     border-color: var(--purpleHover);
 }
 
-.modalEditReplyForm {
-
-}
-.editModalReplyHeading {
-
-}
 .modalEditReplyTextArea {
     resize: none;
     width: 300px;

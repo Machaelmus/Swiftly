@@ -56,6 +56,3 @@ function User() {
 }
 export default User;
 
-{/* <div> */}
-  {/* DISPLAY NUMBER OF POSTS AND FOLLOWERS HERE */}
-{/* </div> */}

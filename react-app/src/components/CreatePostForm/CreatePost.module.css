@@ -1,20 +1,15 @@
 .createPostDiv {
-    /* margin-top: 20px; */
     display: flex;
     justify-content: flex-end;
-    /* margin-bottom: 40px; */
     background-color: white;
     padding: 20px;
     width: 800px;
     border-bottom: 1px solid rgb(175, 175, 175);
-    /* border-top-left-radius: 10px;
-    border-top-right-radius: 10px; */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.281);
 }
 
 .createPostNameAndImageContainer {
     display: flex;
-    /* align-items: center; */
     margin-top: -12px;
 }
 

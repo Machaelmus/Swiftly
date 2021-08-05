@@ -35,8 +35,6 @@ const ReplyBox = ({reply}) => {
     const [openReplyModal, setOpenReplyModal] = useState(false);
     const posts = useSelector(state => Object.values(state.posts));
     const post = posts.find((post) => post.id === +id);
-    // const replies = useSelector(state => Object.values(state.replies))
-    // const singleReply = replies.find((reply) => reply.id)
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
 

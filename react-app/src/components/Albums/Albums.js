@@ -24,7 +24,7 @@ const Albums = () => {
             {/* ========================== */}
             <div className={styles.list}>
 
-                <h1>Hello from the albums page!</h1>
+                <h1>Your albums</h1>
                 <div>
                     {albums.map((album) => (
                         <AllAlbums key={album.id} album={album}/>

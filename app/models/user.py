@@ -37,21 +37,8 @@ class User(db.Model, UserMixin):
     # Creates relationship between users and posts!
     userPosts = db.relationship('Post', back_populates='postAuthor')
     # Creates relationship between the user and the joins table for posts they've liked!
-    userPostLikes = db.relationship('likedPost', back_populates='likedPostUser')
+    # userPostLikes = db.relationship('likedPost', back_populates='likedPostUser')
     # Might need lazy = joined here as well
-
-    def likePost(self, post):
-        if not self.liked(post):
-            likingPost = likedPost(postId=post.id, userId=self.id)
-            db.session.add(likingPost)
-
-    def unlikePost(self, post):
-        if self.liked(post):
-            likedPost.query.filter_by(postId=post.id, userId=self.id).delete()
-
-
-    def liked(self, post):
-        return likedPost.query.filter(likedPost.userId == self.id, likedPost.postId == post.id).count() > 0
 
 
     def to_dict(self):

@@ -16,6 +16,12 @@ def getAlbums():
     return {'albums': [album.to_dict() for album in allAlbums]}
 
 
+@album_routes.route('/api/albums/<int:id>', methods=['GET'])
+def getOneAlbum(id):
+    oneAlbum = Album.query.get(id)
+    return oneAlbum.to_dict()
+
+
 @album_routes.route('/api/albums', methods=['POST'])
 def createAlbum():
     form = CreateAlbumForm()

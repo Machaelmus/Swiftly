@@ -59,11 +59,6 @@
     background-position: right center;
 }
 
-/* buttons
-    #FF7954 - dark
-    #FFAB49 - light
-*/
-
 .splashLogin1 {
     background-image: linear-gradient(to right,#ffa154 0%, #FF7954 51%, #FFAB49 100%);
 }

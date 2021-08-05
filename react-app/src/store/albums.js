@@ -16,3 +16,13 @@ const deleteAlbum = (album) => ({
     type: DELETE_ALBUM,
     album,
 });
+
+export const getAllAlbums = () => async (dispatch) => {
+    const response = await fetch('/api/albums');
+    
+    if(response.ok) {
+        const everyAlbum = await response.json()
+        dispatch(getAlbums(everyAlbum))
+        return everyAlbum;
+    }
+}

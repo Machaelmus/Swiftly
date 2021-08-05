@@ -2,6 +2,7 @@ from flask import Blueprint, request
 from app.models import db, User
 from app.models import album
 from app.models.album import Album
+from app.forms.create_album_form import CreateAlbumForm
 from flask_login import current_user
 from datetime import date
 
@@ -22,6 +23,7 @@ def editAlbum():
 
 @album_routes.route('/api/albums')
 def createAlbum():
+    form = CreateAlbumForm()
     return
 
 

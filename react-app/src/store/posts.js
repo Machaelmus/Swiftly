@@ -56,9 +56,6 @@ export const createOnePost = (post) => async (dispatch) => {
 
     if(response.ok) {
         const createdPost = await response.json()
-        // if(createdPost.errors) {
-        //     return createdPost;
-        // }
         dispatch(createPost(createdPost))
         return createdPost;
     }

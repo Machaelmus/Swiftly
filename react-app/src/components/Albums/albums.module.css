@@ -68,6 +68,7 @@
 }
 
 .eachAlbumBackground {
+    margin-bottom: 20px; 
     background-color: white;
     width: 400px;
     text-align: center;

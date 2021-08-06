@@ -40,7 +40,7 @@
 .optionsButton {
     border: none;
     position: absolute;
-    background-color: white;
+    background-color: transparent;
     align-self: flex-end;
     margin-right: 20px;
     margin-top: -15px;
@@ -52,7 +52,7 @@
     border-radius: 10px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);
     height: 65px;
-    text-align: center;
+    align-items: center;
     width: 80px;
     margin-top: 40px;
     position: absolute;

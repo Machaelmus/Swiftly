@@ -23,7 +23,7 @@ function UsersList() {
             <NavLink className={styles.allusersUsernames} to={`/users/${user.id}`}>{user.username}</NavLink>
           </div>
           <div className={styles.allusersFollowButtonContainer}>
-            <button className={styles.allusersFollowButton}>Follow</button>
+            {/* <button className={styles.allusersFollowButton}>View profile</button> */}
           </div>
         </div>
     );

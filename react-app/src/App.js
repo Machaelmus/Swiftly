@@ -13,6 +13,7 @@ import SinglePost from './components/SinglePost/SinglePost';
 import Home from './components/Home/Home';
 import Albums from './components/Albums/Albums';
 import SingleAlbum from './components/SingleAlbum/SingleAlbum';
+import About from './components/About/About';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -59,6 +60,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path='/album/:id' exact={true}>
           <SingleAlbum/>
+        </ProtectedRoute>
+        <ProtectedRoute path='/about'>
+          <About/>
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>

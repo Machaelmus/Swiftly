@@ -7,6 +7,7 @@ import styles from './Home.module.css';
 import PostContainer from '../PostContainer/PostContainer';
 import {AiOutlineHome, AiOutlineSearch} from 'react-icons/ai';
 import {IoPersonOutline} from 'react-icons/io5';
+import {BsBook} from 'react-icons/bs';
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -25,13 +26,24 @@ const Home = () => {
             <div className={styles.navigation}>
                 <div className={styles.navContain}>
                     <div className={styles.sideNavHome}>
-                    <AiOutlineHome/> <p className={styles.links}>Home</p>
+                    <Link to='/home'>
+                        <AiOutlineHome/> <p className={styles.links}>Home</p>
+                    </Link>
+                    </div>
+                    <div>
+                    <Link to='/albums'>
+                        <BsBook/><p className={styles.userStories}>Stories</p>
+                    </Link>
                     </div>
                     <div className={styles.sideNavFindUsers}>
-                    <AiOutlineSearch/> <p className={styles.links}>Find users</p>
+                    <Link to='/users'>
+                        <AiOutlineSearch/> <p className={styles.links}>Find users</p>
+                    </Link>
                     </div>
                     <div className={styles.sideNavProfile}>
-                    <IoPersonOutline/> <p className={styles.links}>Profile</p>
+                    <Link to={`/users/${sessionUser.id}`}>
+                        <IoPersonOutline/> <p className={styles.links}>Profile</p>
+                    </Link>
                     </div>
                     <button className={styles.sideNavPostButton}>Post</button>
                     <div className={styles.divForProfileStuff}>

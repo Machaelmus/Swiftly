@@ -76,7 +76,7 @@
     height: 100vh;
     width: 400px;
     background-color: white;
-    border-right: 1px solid lightgray;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.24);
     grid-area: navigation;
     position: fixed;
     top: 0;
@@ -240,27 +240,33 @@ button.optionsButton:hover {
 .sideNavHome, .sideNavStories, .sideNavLiked, .sideNavFindUsers, .sideNavProfile {
     font-weight: bold;
     font-size: 30px;
-    width: 200px;
+    display: flex;
 }
 
-.sideNavHome {
+a.sideNavLinks {
     display: flex;
     align-items: center;
+}
+
+
+.sideNavHome {
+    /* display: flex;
+    align-items: center; */
 }
 
 .sideNavStories {
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
 }
 
 .sideNavLiked {
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
 }
 
 .sideNavFindUsers {
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
 }
 
 .sideNavProfile {

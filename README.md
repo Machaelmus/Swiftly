@@ -13,6 +13,8 @@ The backend of Swiftly was created using Python and Flask, combined with the SQL
 # Components
 ## Posts
 ![](https://github.com/Machaelmus/Swiftly/blob/main/MakingAPostGIF.gif)
+Demonstration of a user creating a post
 
 ## Replies
 ![](https://github.com/Machaelmus/Swiftly/blob/main/MakingAReplyGIF.gif)
+Demonstration of a user creating a reply

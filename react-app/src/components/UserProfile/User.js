@@ -36,12 +36,12 @@ function User() {
             {/* Follow button and username */}
             <div className={styles.buttonAndUsername}>
               <p className={styles.profileUsername}>{user.username}</p>
-              <button className={styles.profileFollowButton}>Follow</button>
+              {/* <button className={styles.profileFollowButton}>Follow</button> */}
             </div>
             <div className={styles.userStats}>
               <p className={styles.userPostStat}>Posts</p>
-              <p className={styles.userFollowerStat}>Followers</p>
-              <p>Following</p>
+              <p className={styles.userFollowerStat}>Stories</p>
+              <p>Images</p>
             </div>
             {/* Handle and status */}
             <div className={styles.profileHandleAndStatusContainer}>
@@ -55,4 +55,3 @@ function User() {
   );
 }
 export default User;
-

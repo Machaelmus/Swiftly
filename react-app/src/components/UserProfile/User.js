@@ -55,22 +55,22 @@ function User() {
         <div className={styles.secondsidenav}>
           <div className={navstyles.navContain}>
               <div className={navstyles.sideNavHome}>
-              <Link to='/home'>
-                  <AiOutlineHome/> <p className={navstyles.links}>Home</p>
+              <Link className={navstyles.sideNavLinks} to='/home'>
+                  <AiOutlineHome /> <p className={navstyles.links}>Home</p>
               </Link>
               </div>
-              <div>
-              <Link to='/albums'>
-                  <BsBook/><p className={navstyles.userStories}>Stories</p>
+              <div className={navstyles.sideNavStories}>
+              <Link className={navstyles.sideNavLinks} to='/albums'>
+                  <BsBook/><p className={navstyles.links}>Stories</p>
               </Link>
               </div>
               <div className={navstyles.sideNavFindUsers}>
-              <Link to='/users'>
+              <Link className={navstyles.sideNavLinks} to='/users'>
                   <AiOutlineSearch/> <p className={navstyles.links}>Find users</p>
               </Link>
               </div>
               <div className={navstyles.sideNavProfile}>
-              <Link to={`/users/${user.id}`}>
+              <Link className={navstyles.sideNavLinks} to={`/users/${user.id}`}>
                   <IoPersonOutline/> <p className={navstyles.links}>Profile</p>
               </Link>
               </div>

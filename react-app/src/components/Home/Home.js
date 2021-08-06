@@ -26,22 +26,22 @@ const Home = () => {
             <div className={styles.navigation}>
                 <div className={styles.navContain}>
                     <div className={styles.sideNavHome}>
-                    <Link to='/home'>
+                    <Link className={styles.sideNavLinks} to='/home'>
                         <AiOutlineHome/> <p className={styles.links}>Home</p>
                     </Link>
                     </div>
-                    <div>
-                    <Link to='/albums'>
-                        <BsBook/><p className={styles.userStories}>Stories</p>
+                    <div className={styles.sideNavStories}>
+                    <Link className={styles.sideNavLinks} to='/albums'>
+                        <BsBook/><p className={styles.links}>Stories</p>
                     </Link>
                     </div>
                     <div className={styles.sideNavFindUsers}>
-                    <Link to='/users'>
+                    <Link className={styles.sideNavLinks} to='/users'>
                         <AiOutlineSearch/> <p className={styles.links}>Find users</p>
                     </Link>
                     </div>
                     <div className={styles.sideNavProfile}>
-                    <Link to={`/users/${sessionUser.id}`}>
+                    <Link className={styles.sideNavLinks} to={`/users/${sessionUser.id}`}>
                         <IoPersonOutline/> <p className={styles.links}>Profile</p>
                     </Link>
                     </div>

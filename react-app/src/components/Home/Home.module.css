@@ -240,27 +240,33 @@ button.optionsButton:hover {
 .sideNavHome, .sideNavStories, .sideNavLiked, .sideNavFindUsers, .sideNavProfile {
     font-weight: bold;
     font-size: 30px;
-    width: 200px;
+    display: flex;
 }
 
-.sideNavHome {
+a.sideNavLinks {
     display: flex;
     align-items: center;
+}
+
+
+.sideNavHome {
+    /* display: flex;
+    align-items: center; */
 }
 
 .sideNavStories {
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
 }
 
 .sideNavLiked {
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
 }
 
 .sideNavFindUsers {
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
 }
 
 .sideNavProfile {

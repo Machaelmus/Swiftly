@@ -41,7 +41,8 @@ const SingleAlbum = () => {
                 {images.map((image) => (
                     <div className={styles.eachImageContainer}>
                         <img alt='wow' className={styles.eachImageInAlbum} src={image.imageUrl}></img>
-                        <button onClick={deleteAnImage}>Remove Image</button>
+                        <br/>
+                        <button className={styles.deleteButtonForImages} onClick={deleteAnImage}>Remove Image</button>
                     </div>
                 ))}
             </div>

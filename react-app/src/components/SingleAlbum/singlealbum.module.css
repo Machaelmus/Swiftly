@@ -16,7 +16,15 @@
     justify-content: row;
     flex-wrap: wrap;
 }
-
+.deleteButtonForImages {
+    background-color: transparent;
+    color: black;
+    border: none;
+    margin-bottom: 35px;
+}
+.deleteButtonForImages:hover {
+    cursor: pointer;
+}
 .eachImageInAlbum {
     border-radius: 10px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.452);

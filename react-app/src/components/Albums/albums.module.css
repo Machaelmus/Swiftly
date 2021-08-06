@@ -41,11 +41,21 @@
 .albumsInputTitle {
     height: 40px;
     width: 220px;
+    border: none;
     margin-bottom: 10px;
+    background-color: rgb(235, 235, 235);
+}
+
+.albumsInputPhotoUrl:focus, .albumsInputTitle:focus, .albumsDescription:focus {
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.411);
 }
 
 .albumsDescription {
     resize: none;
+    border: none;
+    background-color: rgb(235, 235, 235);
     height: 70px;
     width: 221px;
     margin-bottom: 10px;

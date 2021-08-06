@@ -25,13 +25,17 @@ const SingleAlbum = () => {
 
     return (
         <div className={styles.singleAlbumContainer}>
-            <AddImageForm album={album}/>
-            <h1>{album?.title}</h1>
-            <p>{album?.description}</p>
-            <div>
+            <div className={styles.flexThis}>
+                <div>
+                    <h1 className={styles.eachAlbumTitle}>{album?.title}</h1>
+                    <p className={styles.eachAlbumDescription}>{album?.description}</p>
+                </div>
+                <AddImageForm album={album}/>
+            </div>
+            <div className={styles.wholeImageContainerInAlbum}>
                 {images.map((image) => (
-                    <div>
-                        <img src={image.imageUrl}></img>
+                    <div className={styles.eachImageContainer}>
+                        <img className={styles.eachImageInAlbum} src={image.imageUrl}></img>
                     </div>
                 ))}
             </div>

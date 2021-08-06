@@ -32,10 +32,10 @@ function UsersList() {
   return (
     <>
     <div className={styles.wholePageContainerForAllUsers}>
-      <h1 className={styles.usersToFollow}>Users to follow</h1>
       <Link to="/home">
         <h2 className={styles.returnHome}>Return</h2>
       </Link>
+      <h1 className={styles.usersToFollow}>Users to follow</h1>
       <div className={styles.wholeBigChungus}>{userComponents}</div>
     </div>
     </>

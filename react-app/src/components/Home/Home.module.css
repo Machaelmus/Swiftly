@@ -177,6 +177,10 @@
     background-color: var(--purpleHover);
 }
 
+.storiesContainer {
+    margin-top: 200px;
+}
+
 .editOpenDropdown:hover {
     cursor: pointer;
     color: var(--purpleTheme);

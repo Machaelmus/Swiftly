@@ -6,8 +6,12 @@ from app.models.album import Album
 def seed_albums():
     album1 = Album(
         userId=1, coverPhotoUrl='https://cdn.travelpulse.com/images/54aaedf4-a957-df11-b491-006073e71405/ee952e9e-f09c-49c2-bc5d-4303c880173a/630x355.jpg', title='Summer Vacation', description='My family and I took a summer vacation to Hawaii!', albumCreatedAt=date.today())
+    album2 = Album(
+        userId=1, coverPhotoUrl='https://www.purina.co.uk/sites/default/files/2020-12/Travelling%20with%20Dogs%20The%20Full%20ChecklistTEASER.jpg', title='My doggo!', description='Sir Phillip!', albumCreatedAt=date.today())
+        
 
     db.session.add(album1)
+    db.session.add(album2)
     db.session.commit()
 
 

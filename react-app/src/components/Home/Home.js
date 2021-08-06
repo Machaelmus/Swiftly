@@ -6,6 +6,7 @@ import CreatePost from '../CreatePostForm/CreatePost';
 import styles from './Home.module.css';
 import PostContainer from '../PostContainer/PostContainer';
 import {AiOutlineHome, AiOutlineSearch} from 'react-icons/ai';
+import { getAllAlbums } from '../../store/albums';
 import {IoPersonOutline} from 'react-icons/io5';
 import {BsBook} from 'react-icons/bs';
 
@@ -13,6 +14,7 @@ const Home = () => {
     const dispatch = useDispatch();
     const posts = useSelector(state => Object.values(state.posts));
     const sessionUser = useSelector(state => state.session.user)
+
     useEffect(() => {
         dispatch(getAllPosts())
     }, [dispatch]);

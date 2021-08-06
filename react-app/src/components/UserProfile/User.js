@@ -30,7 +30,7 @@ function User() {
       <div className={styles.wholeProfcontainer}>
         <div className={styles.profile}>
             <div className={styles.profileUserImageContainer}>
-              <img className={styles.profileUserImage} src={user.profileImage}></img>
+              <img alt='wow' className={styles.profileUserImage} src={user.profileImage}></img>
             </div>
             {/* Profile information */}
             <div className={styles.profileUsernameFollowButtonContainer}>
@@ -76,7 +76,7 @@ function User() {
               </div>
               <button className={navstyles.sideNavPostButton}>Post</button>
               <div className={navstyles.divForProfileStuff}>
-                  <img className={navstyles.navProfileImageForUser} src={user.profileImage}></img>
+                  <img alt='wow' className={navstyles.navProfileImageForUser} src={user.profileImage}></img>
                   <div>
                       <Link to={`/users/${user.id}`}>
                           <p className={navstyles.navProfileUsername}>{user.username}</p>

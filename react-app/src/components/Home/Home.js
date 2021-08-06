@@ -47,7 +47,7 @@ const Home = () => {
                     </div>
                     <button className={styles.sideNavPostButton}>Post</button>
                     <div className={styles.divForProfileStuff}>
-                        <img className={styles.navProfileImageForUser} src={sessionUser.profileImage}></img>
+                        <img alt='wow' className={styles.navProfileImageForUser} src={sessionUser.profileImage}></img>
                         <div>
                             <Link to={`/users/${sessionUser.id}`}>
                                 <p className={styles.navProfileUsername}>{sessionUser.username}</p>

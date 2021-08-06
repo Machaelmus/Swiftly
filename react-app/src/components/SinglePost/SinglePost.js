@@ -34,7 +34,7 @@ const SinglePost = () => {
                 <div className={styles.singlePostPageContainer}>
                     <div className={styles.singlePostContainer}>
                         <div className={styles.userImageContainer}>
-                            <img className={styles.userImage} src={post?.user.profileImage}></img>
+                            <img alt='wow' className={styles.userImage} src={post?.user.profileImage}></img>
                             <h1>{post?.user.username}</h1>
                         </div>
                         <p>{post?.timeOfPost}</p>

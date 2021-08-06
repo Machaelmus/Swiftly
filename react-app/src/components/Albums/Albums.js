@@ -1,11 +1,9 @@
 import React, {useEffect} from 'react';
-import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAllAlbums } from '../../store/albums';
 import CreateAlbumForm from '../CreateAlbumForm/CreateAlbumForm';
 import AllAlbums from '../AllAlbums/AllAlbums';
 import styles from './albums.module.css';
-import {BsArrowLeft} from 'react-icons/bs';
 
 const Albums = () => {
     const albums = useSelector(state => Object.values(state.albums))

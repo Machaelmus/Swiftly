@@ -53,7 +53,7 @@ const NavBar = () => {
                 {navOptions && (
                   <div className={styles.insideDropdown}>
                     <Link className={styles.profileSettingsLink} to={`/users/${sessionUser.id}`}>
-                      <p><IoSettingsOutline className={styles.logoTop}/>Profile & Settings</p>
+                      <p className={styles.profileSett}><IoSettingsOutline className={styles.logoTop}/>Profile & Settings</p>
                     </Link>
                     <Link to='/about' className={styles.profileSettingsLink}>
                       <p className={styles.themeButton}><GoLightBulb className={styles.logoTop}/>About</p>

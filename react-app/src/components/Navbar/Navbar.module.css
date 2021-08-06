@@ -20,24 +20,6 @@
     background-color: rgba(177, 177, 177, 0.431);
 }
 
-/*
-.navProfileDropDown {
-    background-color: rgba(211, 211, 211, 0.431);
-    height: 50px;
-    width: 50px;
-    border-radius: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.navProfileDropDown:hover, .navAddFriends:hover {
-    transition: all 0.3s ease;
-    cursor: pointer;
-    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.383);
-    background-color: rgba(177, 177, 177, 0.431);
-}
-*/
 .homeLogo {
     height: 20px;
     width: 20px;
@@ -53,10 +35,20 @@
     z-index: 50;
 }
 
-.profileSettingsLink:hover {
-    color: var(--purpleHover);
+.profileSett:hover{
+    background-image: linear-gradient(to left,#ffa154 0%, #FF7954 51%, #FFAB49 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
 }
-
+.themeButton:hover{
+    background-image: linear-gradient(to left,#ffa154 0%, #FF7954 51%, #FFAB49 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
 .logoTop {
     padding: 5px;
     margin-bottom: -10px;

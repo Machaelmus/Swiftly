@@ -29,7 +29,7 @@ const AddImageForm = () => {
                 <select className={styles.selectMenu} onChange={(e) => setSelect(e.target.value) }>
                     <option defaultValue='selected'>Choose an album</option>
                     {albums.map((album) => (
-                        <option value={select}>{album.title}</option>
+                        <option key={album.id} value={select}>{album.title}</option>
                         ))}
                 </select>
                 <label>Upload image</label>

@@ -6,7 +6,6 @@ import CreatePost from '../CreatePostForm/CreatePost';
 import styles from './Home.module.css';
 import PostContainer from '../PostContainer/PostContainer';
 import {AiOutlineHome, AiOutlineSearch} from 'react-icons/ai';
-import { getAllAlbums } from '../../store/albums';
 import {IoPersonOutline} from 'react-icons/io5';
 import {BsBook} from 'react-icons/bs';
 
@@ -47,7 +46,7 @@ const Home = () => {
                         <IoPersonOutline/> <p className={styles.links}>Profile</p>
                     </Link>
                     </div>
-                    <button className={styles.sideNavPostButton}>Post</button>
+                    {/* <button className={styles.sideNavPostButton}>Post</button> */}
                     <div className={styles.divForProfileStuff}>
                         <img alt='wow' className={styles.navProfileImageForUser} src={sessionUser.profileImage}></img>
                         <div>

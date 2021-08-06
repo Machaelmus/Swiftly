@@ -119,19 +119,19 @@ const PostContainer = ({post}) => {
                         <h1 className={styles.postUsernameYEH}>{post.user.username}</h1>
                     </Link>
                 </div>
-                    <div>
+                    <div className={styles.wholePostEntireContainer}>
                         <p className={styles.eachPostTime}>{post.timeOfPost}</p>
-                    <Link to={`/posts/${post.id}`}>
-                        <p className={styles.eachPostPost}>{post.post}</p>
-                    </Link>
-                    <div className={styles.likedPostContainer}>
-                        <Link className={styles.linkToCommentsOnPosts} to={`/posts/${post.id}`}>
-                        <div className={styles.commentCommentContainer}>
-                                <AiOutlineComment className={styles.commentOnPost}/>
-                                <p>Comment</p>
-                        </div>
+                        <Link to={`/posts/${post.id}`}>
+                            <p className={styles.eachPostPost}>{post.post}</p>
                         </Link>
-                    </div>
+                        <div className={styles.likedPostContainer}>
+                            <Link className={styles.linkToCommentsOnPosts} to={`/posts/${post.id}`}>
+                            <div className={styles.commentCommentContainer}>
+                                    <AiOutlineComment className={styles.commentOnPost}/>
+                                    <p>Comment</p>
+                            </div>
+                            </Link>
+                        </div>
                     </div>
             </div>
         </>

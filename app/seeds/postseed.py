@@ -5,11 +5,11 @@ from app.models.post import Post
 
 def seed_posts():
     post1 = Post(
-        userId=1, post='"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."', timeOfPost=date.today())
+        userId=10, post='Good morning to everyone! Especially to any dog with a very serious sounding human name like Reginald or Walter!', timeOfPost=date.today())
     post2 = Post(
-        userId=2, post='"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."', timeOfPost=date.today())
+        userId=2, post='I just did a triple-double 360 no-scope ultra-spin backflip-frontflip', timeOfPost=date.today())
     post3 = Post(
-        userId=5, post='"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."', timeOfPost=date.today())
+        userId=13, post='I hate it when I\'m cleaning my house and accidentally watch three seasons of a show...', timeOfPost=date.today())
 
     db.session.add(post1)
     db.session.add(post2)

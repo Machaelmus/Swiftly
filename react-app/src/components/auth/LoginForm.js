@@ -21,7 +21,7 @@ const LoginForm = () => {
 
   const demoLogin = async (e) => {
     e.preventDefault()
-    const demoUser = await dispatch(login('demo@aa.io', 'password'));
+    const demoUser = await dispatch(login('tree@branch.com', 'password'));
     if(demoUser) {
       setErrors(demoUser);
     }

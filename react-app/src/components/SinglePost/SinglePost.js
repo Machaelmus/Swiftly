@@ -17,7 +17,7 @@ const SinglePost = () => {
 
     useEffect(() => {
         dispatch(getOnePost(id))
-    }, [dispatch])
+    }, [dispatch, id])
 
     useEffect(() => {
         dispatch(getAllReplies())

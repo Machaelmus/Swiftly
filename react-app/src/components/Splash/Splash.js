@@ -9,7 +9,7 @@ const Splash = () => {
     const history = useHistory()
     const demoLogin = async (e) => {
         e.preventDefault()
-        await dispatch(login('demo@aa.io', 'password'));
+        await dispatch(login('tree@branch.com', 'password'));
         history.push('/home')
     }
 

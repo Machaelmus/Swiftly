@@ -1,9 +1,8 @@
 import React from 'react'
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {DiGithubFull} from 'react-icons/di';
 import {AiFillLinkedin} from 'react-icons/ai';
 import styles from './About.module.css';
-import {BsArrowLeft} from 'react-icons/bs';
 
 const About = () => {
     return (

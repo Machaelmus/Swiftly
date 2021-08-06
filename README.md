@@ -6,3 +6,6 @@ Swiftly is a social media website where users can create posts to share with any
 
 # The Swiftly Splash Page
 ![](https://github.com/Machaelmus/Swiftly/blob/main/SwiftlyHomePage.PNG)
+
+# Technologies used
+The backend of Swiftly was created using Python and Flask, combined with the SQLAlchemyORM! On the Frontend Swiftly was made with JavaScript and rendered with React! The single-page aspect of React and its ease-of-use were paramount in its selection. 

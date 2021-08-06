@@ -12,6 +12,7 @@ import Splash from './components/Splash/Splash';
 import SinglePost from './components/SinglePost/SinglePost';
 import Home from './components/Home/Home';
 import Albums from './components/Albums/Albums';
+import SingleAlbum from './components/SingleAlbum/SingleAlbum';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -53,8 +54,11 @@ function App() {
         <ProtectedRoute path='/home' exact={true} >
           <Home/>
         </ProtectedRoute>
-        <ProtectedRoute to='/albums' exact={true}>
+        <ProtectedRoute path='/albums' exact={true}>
           <Albums/>
+        </ProtectedRoute>
+        <ProtectedRoute path='/album/:id' exact={true}>
+          <SingleAlbum/>
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>

@@ -13,7 +13,7 @@ image_routes = Blueprint('images', __name__)
 @image_routes.route('/api/images')
 def getImages():
     allImages = Image.query.all()
-    return allImages.to_dict()
+    return {'images': [image.to_dict() for image in allImages]}
 
 
 @image_routes.route('/api/images', methods=['POST'])

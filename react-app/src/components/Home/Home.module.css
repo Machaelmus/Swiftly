@@ -181,6 +181,9 @@
     cursor: pointer;
     color: var(--purpleTheme);
 }
+.editOpenDropdown {
+    margin-left: 25px;
+}
 
 .commentCommentContainer:hover  {
     color: var(--purpleHover);

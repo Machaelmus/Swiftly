@@ -19,22 +19,22 @@ const AddImageForm = () => {
             albumId: album.id,
             imageUrl: imageUrl,
         }
-
         dispatch(createOneImage(imageInfo))
     }
 
     return (
         <div className={styles.addImageFormContainer}>
-            <h1>Add to story</h1>
+            <h1 className={styles.addToStory}>Add to story</h1>
             <form onSubmit={createAnImage} className={styles.addImageForm}>
-                <select onChange={(e) => setSelect(e.target.value) }>
+                <select className={styles.selectMenu} onChange={(e) => setSelect(e.target.value) }>
                     <option defaultValue='selected'>Choose an album</option>
                     {albums.map((album) => (
                         <option value={select}>{album.title}</option>
-                    ))}
+                        ))}
                 </select>
-                <input onChange={(e) => setImageUrl(e.target.value)} type='text' placeholder='Image URL'></input>
-                <button type='submit'>Add Image</button>
+                <label>Upload image</label>
+                <input className={styles.imageURLInput} onChange={(e) => setImageUrl(e.target.value)} type='text'></input>
+                <button className={styles.submitAddImage} type='submit'>Add Image</button>
             </form>
         </div>
     )

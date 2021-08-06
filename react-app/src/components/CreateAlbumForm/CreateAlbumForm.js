@@ -29,9 +29,12 @@ const CreateAlbumForm = () => {
             <h2 className={styles.albumsFormHeading}>Create an album</h2>
             <div className={styles.albumsFormBackground}>
                 <form onSubmit={createOneAlbum} className={styles.albumsForm}>
-                    <input onChange={(e) => setCoverPhotoUrl(e.target.value)} className={styles.albumsInputPhotoUrl} type='text' placeholder='Album Cover Photo'></input>
-                    <input onChange={(e) => setTitle(e.target.value)} className={styles.albumsInputTitle} type='text' placeholder='Title'></input>
-                    <textarea onChange={(e) => setDescription(e.target.value)} className={styles.albumsDescription} placeholder='Description'></textarea>
+                    <label className={styles.createAlbumLabel}>Photo URL</label>
+                    <input onChange={(e) => setCoverPhotoUrl(e.target.value)} className={styles.albumsInputPhotoUrl} type='text'></input>
+                    <label className={styles.createAlbumLabel}>Album Title</label>
+                    <input onChange={(e) => setTitle(e.target.value)} className={styles.albumsInputTitle} type='text' ></input>
+                    <label className={styles.createAlbumLabel}>Description</label>
+                    <textarea onChange={(e) => setDescription(e.target.value)} className={styles.albumsDescription}></textarea>
                     <button className={styles.albumsCreateSubmit} type='submit'>Create Album</button>
                 </form>
             </div>

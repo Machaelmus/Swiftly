@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { editOnePost, deleteOnePost } from '../../store/posts';
 import Modal from 'react-modal';
 import styles from '../Home/Home.module.css';
-import {BsThreeDots} from 'react-icons/bs'
+import {BsThreeDots} from 'react-icons/bs';
 import {AiOutlineComment} from 'react-icons/ai';
 
 // REACT-MODAL SETTINGS

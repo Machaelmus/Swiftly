@@ -1,0 +1,81 @@
+.aboutContainer {
+    margin-top: 80px;
+    padding: 20px;
+}
+.aboutAllContainer {
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.452);
+    padding: 20px;
+    background-color: white;
+    width: 440px;
+}
+.returnHome:hover {
+    color: var(--purpleHover);
+}
+a.returnHome {
+    margin: none;
+}
+.arrowLeft {
+    margin-top: 5px;
+    height: 40px;
+    width: 40px;
+}
+
+.flexEvenOnThis{
+    display: flex;
+    width: 20px;
+    margin: 0;
+    align-items: center;
+}
+
+.aboutHeading {
+    font-size: 40px;
+    text-align: center;
+}
+
+.flexOnThis {
+    margin-left: 45px;
+    display: flex;
+}
+.linksForSocials:hover {
+    text-decoration: underline;
+}
+.aboutDeveloperHeading {
+    font-weight: 500;
+    text-align: center;
+}
+
+.aboutGithubIconContainer {
+    display: flex;
+    align-items: center;
+}
+.aboutGithubIcon {
+    height: 70px;
+    width: 70px;
+    margin-right: 10px;
+    color: limegreen;
+}
+.aboutMyGitHubLink {
+margin-right: 50px;
+}
+.aboutLinkedInIconContainer {
+    display: flex;
+    align-items: center;
+}
+.aboutLinkedInIcon {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    color: rgb(25, 85, 141);
+}
+.aboutLinkedInLink {
+
+}
+
+.aboutDevNameSpan {
+    background: linear-gradient(to right,#ffa154 0%, #FF7954 51%, #FFAB49 100%);
+    background: -webkit-linear-gradient(to right,#ffa154 0%, #FF7954 51%, #FFAB49 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

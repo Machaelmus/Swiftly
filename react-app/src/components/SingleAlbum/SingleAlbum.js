@@ -17,7 +17,7 @@ const SingleAlbum = () => {
 
     useEffect(() => {
         dispatch(getSingleAlbum(id))
-    }, [dispatch])
+    }, [dispatch, id])
 
     useEffect(() => {
         dispatch(getAllImages())
@@ -27,7 +27,6 @@ const SingleAlbum = () => {
         e.preventDefault();
         dispatch(deleteOneImage(image.id))
     }
-
 
     return (
         <div className={styles.singleAlbumContainer}>

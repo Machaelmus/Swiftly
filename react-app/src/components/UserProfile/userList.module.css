@@ -5,6 +5,7 @@
 }
 
 .wholePageContainerForAllUsers {
+    margin-top: 120px;
     display: flex;
     flex-direction: column;
 }
@@ -46,7 +47,7 @@
 }
 
 .allusersUsernames:hover {
-    color:#FF7954; 
+    color:#FF7954;
 }
 
 .allusersFollowButtonContainer {

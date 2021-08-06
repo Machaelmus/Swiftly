@@ -1,6 +1,6 @@
 .albumContainer {
-    margin-top: 100px;
     display: grid;
+    margin-top: 100px; 
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
@@ -80,6 +80,29 @@
     border-radius: 40px;
 }
 
+.arrowContainer {
+    margin-top: 100px;
+    display: flex;
+    width: 200px;
+    align-items: center;
+    margin-left: 50px;
+}
+.arrowContainer:hover {
+    color: var(--purpleHover);
+    cursor: pointer;
+}
+
+.arrowLeft {
+    height: 40px;
+    width: 40px;
+    margin-top: 5px;
+}
+a.linkLink {
+    width: 10%;
+}
+.arrowHeading {
+
+}
 .albumsCreateSubmit:hover {
     transition: all 0.4s ease 0s;
     background-position: right center;

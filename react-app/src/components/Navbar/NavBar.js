@@ -4,7 +4,7 @@ import { NavLink, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import LogoutButton from '../auth/LogoutButton';
 import styles from './Navbar.module.css';
-import {AiOutlinePlus, AiOutlineMenu} from 'react-icons/ai';
+import {AiOutlinePlus, AiOutlineMenu, AiOutlineHome} from 'react-icons/ai';
 import {IoSettingsOutline } from 'react-icons/io5';
 import {GoLightBulb} from 'react-icons/go';
 
@@ -40,6 +40,9 @@ const NavBar = () => {
             <div className={styles.navUl}>
               <div className={styles.navLogo}></div>
               <h1 className={styles.swiftlyTextName}>Swiftly</h1>
+              <Link to="/home">
+                  <div className={styles.navGoHome}><AiOutlineHome className={styles.homeLogo}/></div>
+              </Link>
               <div className={styles.navRightSide}>
                 <img alt='wow' src={sessionUser.profileImage} className={styles.navUserImage}></img>
                 <p className={styles.navUsername}>{sessionUser.username}</p>
@@ -50,15 +53,14 @@ const NavBar = () => {
                 {navOptions && (
                   <div className={styles.insideDropdown}>
                     <Link className={styles.profileSettingsLink} to={`/users/${sessionUser.id}`}>
-                      <p><IoSettingsOutline className={styles.logoTop}/>Profile & Settings</p>
+                      <p className={styles.profileSett}><IoSettingsOutline className={styles.logoTop}/>Profile & Settings</p>
                     </Link>
-                    <p className={styles.themeButton}><GoLightBulb className={styles.logoTop}/>Dark Mode</p>
+                    <Link to='/about' className={styles.profileSettingsLink}>
+                      <p className={styles.themeButton}><GoLightBulb className={styles.logoTop}/>About</p>
+                    </Link>
                     <LogoutButton/>
                   </div>
                 )}
-                {/* <li className={styles.navLogout}>
-                  <LogoutButton />
-                </li> */}
               </div>
             </div>
           </nav>

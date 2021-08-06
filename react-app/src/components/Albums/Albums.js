@@ -16,6 +16,7 @@ const Albums = () => {
 
 
     return (
+        <>
         <div className={styles.albumContainer}>
 
             <div className={styles.create}>
@@ -34,6 +35,7 @@ const Albums = () => {
             </div>
 
         </div>
+        </>
     )
 }
 

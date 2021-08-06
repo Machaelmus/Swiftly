@@ -13,6 +13,7 @@ const Home = () => {
     const dispatch = useDispatch();
     const posts = useSelector(state => Object.values(state.posts));
     const sessionUser = useSelector(state => state.session.user)
+
     useEffect(() => {
         dispatch(getAllPosts())
     }, [dispatch]);
@@ -45,7 +46,7 @@ const Home = () => {
                         <IoPersonOutline/> <p className={styles.links}>Profile</p>
                     </Link>
                     </div>
-                    <button className={styles.sideNavPostButton}>Post</button>
+                    {/* <button className={styles.sideNavPostButton}>Post</button> */}
                     <div className={styles.divForProfileStuff}>
                         <img alt='wow' className={styles.navProfileImageForUser} src={sessionUser.profileImage}></img>
                         <div>

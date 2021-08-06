@@ -5,7 +5,12 @@
     background-color: white;
     padding: 20px;
     border-bottom: 1px solid rgb(175, 175, 175);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.281);
+}
+
+.bigDiv {
+    display: flex;
+    flex-direction: column-reverse;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.301); 
 }
 
 .homeHeadingContainer {
@@ -177,9 +182,16 @@
     background-color: var(--purpleHover);
 }
 
+.storiesContainer {
+    margin-top: 200px;
+}
+
 .editOpenDropdown:hover {
     cursor: pointer;
     color: var(--purpleTheme);
+}
+.editOpenDropdown {
+    margin-left: 25px;
 }
 
 .commentCommentContainer:hover  {

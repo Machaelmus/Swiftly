@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './userList.module.css';
 
 function UsersList() {
@@ -31,13 +31,10 @@ function UsersList() {
 
   return (
     <>
-    <div className={styles.wholePageContainerForAllUsers}>
-      <Link to="/home">
-        <h2 className={styles.returnHome}>Return</h2>
-      </Link>
-      <h1 className={styles.usersToFollow}>Users to follow</h1>
-      <div className={styles.wholeBigChungus}>{userComponents}</div>
-    </div>
+      <div className={styles.wholePageContainerForAllUsers}>
+        <h1 className={styles.usersToFollow}>Discover users</h1>
+        <div className={styles.wholeBigChungus}>{userComponents}</div>
+      </div>
     </>
   );
 }

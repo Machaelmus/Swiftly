@@ -4,6 +4,7 @@ import { getAllAlbums, deleteAnAlbum } from '../../store/albums';
 import CreateAlbumForm from '../CreateAlbumForm/CreateAlbumForm';
 import AllAlbums from '../AllAlbums/AllAlbums';
 import styles from './albums.module.css';
+import AddImageForm from '../AddImageForm/AddImageForm';
 
 const Albums = () => {
     const albums = useSelector(state => Object.values(state.albums))
@@ -20,6 +21,7 @@ const Albums = () => {
 
             <div className={styles.create}>
                 <CreateAlbumForm/>
+                <AddImageForm/>
             </div>
             {/* ========================== */}
             <div className={styles.list}>
@@ -30,8 +32,8 @@ const Albums = () => {
                         <AllAlbums key={album.id} album={album}/>
                     ))}
                 </div>
-            </div>
 
+            </div>
 
         </div>
     )

@@ -5,6 +5,39 @@
     align-items:flex-start;
     justify-content: center;
 }
+
+.wholeProfcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "secondsidenav profile something";
+  }
+
+.profile {
+    grid-area: profile;
+    display: flex;
+    margin-top: 100px;
+}
+
+.secondsidenav {
+    background-color: white;
+    width: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    grid-area: secondsidenav;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.24); 
+}
+
+.something {
+    grid-area: something;
+}
+
+
 .wholeInformationContainer {
     display: flex;
 }

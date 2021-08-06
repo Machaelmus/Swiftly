@@ -1,7 +1,7 @@
 const GET_ALBUMS = 'albums/GET_ALBUMS';
 const GET_ALBUM = 'albums/GET_ALBUM';
 const CREATE_ALBUM = 'albums/CREATE_ALBUM';
-const EDIT_ALBUM = 'albums/EDIT_ALBUM';
+// const EDIT_ALBUM = 'albums/EDIT_ALBUM';
 const DELETE_ALBUM = 'albums/DELETE_ALBUM';
 
 
@@ -20,10 +20,10 @@ const createAlbum = (album) => ({
     album,
 });
 
-const editAlbum = (album) => ({
-    type: EDIT_ALBUM,
-    album,
-});
+// const editAlbum = (album) => ({
+//     type: EDIT_ALBUM,
+//     album,
+// });
 
 const deleteAlbum = (album) => ({
     type: DELETE_ALBUM,

@@ -41,7 +41,7 @@ const NavBar = () => {
               <div className={styles.navLogo}></div>
               <h1 className={styles.swiftlyTextName}>Swiftly</h1>
               <div className={styles.navRightSide}>
-                <img src={sessionUser.profileImage} className={styles.navUserImage}></img>
+                <img alt='wow' src={sessionUser.profileImage} className={styles.navUserImage}></img>
                 <p className={styles.navUsername}>{sessionUser.username}</p>
                 <Link to="/users">
                   <div className={styles.navAddFriends}><AiOutlinePlus/></div>

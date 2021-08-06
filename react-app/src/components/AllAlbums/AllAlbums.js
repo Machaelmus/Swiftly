@@ -17,7 +17,7 @@ const AllAlbums = ({album}) => {
             <Link to={`/album/${album.id}`}>
                 <h2>{album.title}</h2>
             </Link>
-            <img src={album.coverPhotoUrl}></img>
+            <img alt='wow' src={album.coverPhotoUrl}></img>
             <p>{album.description}</p>
             <button className={styles.eachAlbumDelete} onClick={deleteOneAlbum}>Delete Album</button>
         </div>

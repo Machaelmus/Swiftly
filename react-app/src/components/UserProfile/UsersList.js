@@ -19,7 +19,7 @@ function UsersList() {
 
       <div className={styles.allusersContainer} key={user.id}>
           <div className={styles.allusersImageandUsername}>
-            <img className={styles.allusersProfileImage} src={user.profileImage}></img>
+            <img alt='wow' className={styles.allusersProfileImage} src={user.profileImage}></img>
             <NavLink className={styles.allusersUsernames} to={`/users/${user.id}`}>{user.username}</NavLink>
           </div>
           <div className={styles.allusersFollowButtonContainer}>

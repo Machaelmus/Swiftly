@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { createAnAlbum } from '../../store/albums';
 import styles from '../Albums/albums.module.css';
@@ -23,7 +23,7 @@ const CreateAlbumForm = () => {
         }
         dispatch(createAnAlbum(albumInfo))
     }
-    
+
     return (
         <div className={styles.albumsCreateFormContainer}>
             <h2 className={styles.albumsFormHeading}>Create an album</h2>

@@ -89,7 +89,7 @@ const ReplyBox = ({reply}) => {
             <div className={styles.repliesToSinglePostContainer}>
                 <div className={styles.profileImageForRepliesContainer}>
                     <div className={styles.replyAuthorAndProfileImage}>
-                        <img className={styles.replyUserImage} src={reply?.user.profileImage}></img>
+                        <img alt='wow' className={styles.replyUserImage} src={reply?.user.profileImage}></img>
                         <p className={styles.replyUsername}>{reply?.user.username}</p>
                     </div>
                     <br/>

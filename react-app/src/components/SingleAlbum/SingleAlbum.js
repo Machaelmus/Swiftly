@@ -13,7 +13,7 @@ const SingleAlbum = () => {
     const image = images.find((image) => image.id)
     const albums = useSelector(state => Object.values(state.albums));
     const album = albums.find((album) => album.id);
-    const sessionUser = useSelector(state => state.session.user);
+    // const sessionUser = useSelector(state => state.session.user);
 
     useEffect(() => {
         dispatch(getSingleAlbum(id))
@@ -41,7 +41,7 @@ const SingleAlbum = () => {
             <div className={styles.wholeImageContainerInAlbum}>
                 {images.map((image) => (
                     <div className={styles.eachImageContainer}>
-                        <img className={styles.eachImageInAlbum} src={image.imageUrl}></img>
+                        <img alt='wow' className={styles.eachImageInAlbum} src={image.imageUrl}></img>
                         <button onClick={deleteAnImage}>Remove Image</button>
                     </div>
                 ))}

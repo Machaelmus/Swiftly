@@ -114,7 +114,7 @@ const PostContainer = ({post}) => {
                 </div>
             )}
                 <div className={styles.userProfileImageAndUsernameContainer}>
-                    <img className={styles.postUserImageSrc} src={post.user.profileImage}></img>
+                    <img alt='wow' className={styles.postUserImageSrc} src={post.user.profileImage}></img>
                     <Link to={`/users/${post.user.id}`}>
                         <h1 className={styles.postUsernameYEH}>{post.user.username}</h1>
                     </Link>

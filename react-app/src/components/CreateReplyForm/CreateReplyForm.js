@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import { useDispatch, useSelector} from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { createOneReply } from '../../store/replies';
@@ -9,7 +9,7 @@ const CreateReplyForm = () => {
     const [replyText, setReplyText] = useState('');
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user)
-    const posts = useSelector(state => Object.values(state.posts))
+    // const posts = useSelector(state => Object.values(state.posts))
     const createReply = async (e) => {
         e.preventDefault();
 
@@ -25,7 +25,7 @@ const CreateReplyForm = () => {
     return (
         <div className={styles.createReplyDiv}>
             <div className={styles.createReplyPersonContainer}>
-                <img className={styles.createReplyImage} src={sessionUser.profileImage}></img>
+                <img alt='wow' className={styles.createReplyImage} src={sessionUser.profileImage}></img>
                 <h3 className={styles.createReplyUser}>{sessionUser.username}</h3>
             </div>
             <form className={styles.createReplyForm} onSubmit={createReply}>

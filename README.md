@@ -23,10 +23,15 @@ Demonstration of a user creating a post
 ![](https://github.com/Machaelmus/Swiftly/blob/main/MakingAReplyGIF.gif)\
 Demonstration of a user creating a reply
 
-## Albums
+## Stories
   - While on the main page or the profile page, a user can create a new story album. This album is meant to act as a visual story of an event containing a brief description, a title and images!
 ## 
 ![](https://github.com/Machaelmus/Swiftly/blob/main/SwiftlyAlbums.PNG)
+
+## Adding images to stories
+  - While on a specific story album, a user can add images to that album! 
+## 
+![](https://github.com/Machaelmus/Swiftly/blob/main/CreatingAnImage.gif)
 
 ## Profiles
   - While on the profile page, users can see their own profile and/or the profile of any other user on Swiftly.

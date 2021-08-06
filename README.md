@@ -12,9 +12,11 @@ The backend of Swiftly was created using Python and Flask, combined with the SQL
 
 # Components
 ## Posts
+  - While on the home page, a user can create a post for all to see. Users can interact with the post by replying to it!
 ![](https://github.com/Machaelmus/Swiftly/blob/main/MakingAPostGIF.gif)\
 Demonstration of a user creating a post
 
 ## Replies
+  - While on a specific post page, a user can interact with the post by making a reply.
 ![](https://github.com/Machaelmus/Swiftly/blob/main/MakingAReplyGIF.gif)\
 Demonstration of a user creating a reply

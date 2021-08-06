@@ -16,6 +16,12 @@ def getAlbums():
     return {'albums': [album.to_dict() for album in allAlbums]}
 
 
+@album_routes.route('/api/albums/<int:id>', methods=['GET'])
+def getOneAlbum(id):
+    oneAlbum = Album.query.get(id)
+    return oneAlbum.to_dict()
+
+
 @album_routes.route('/api/albums', methods=['POST'])
 def createAlbum():
     form = CreateAlbumForm()
@@ -33,19 +39,19 @@ def createAlbum():
         return newAlbum.to_dict()
 
 
-@album_routes.route('/api/albums/<int:id>')
-def editAlbum(id):
-    form = CreateAlbumForm()
-    form['csrf_token'].data = request.cookies['csrf_token']
-    if form.validate_on_submit():
-        albumToEdit = Album.query.filter(id == Album.id).one()
-        albumToEdit.userId = current_user.id,
-        albumToEdit.coverPhotoUrl = form.coverPhotoUrl.data,
-        albumToEdit.title = form.title.data,
-        albumToEdit.description = form.description.data,
-        albumToEdit.albumCreatedAt = date.today()
-        db.session.commit()
-        return albumToEdit.to_dict()
+# @album_routes.route('/api/albums/<int:id>')
+# def editAlbum(id):
+#     form = CreateAlbumForm()
+#     form['csrf_token'].data = request.cookies['csrf_token']
+#     if form.validate_on_submit():
+#         albumToEdit = Album.query.filter(id == Album.id).one()
+#         albumToEdit.userId = current_user.id,
+#         albumToEdit.coverPhotoUrl = form.coverPhotoUrl.data,
+#         albumToEdit.title = form.title.data,
+#         albumToEdit.description = form.description.data,
+#         albumToEdit.albumCreatedAt = date.today()
+#         db.session.commit()
+#         return albumToEdit.to_dict()
 
 
 @album_routes.route('/api/albums/<int:id>', methods=['DELETE'])

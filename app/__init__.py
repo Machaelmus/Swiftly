@@ -11,7 +11,7 @@ from .api.auth_routes import auth_routes
 from .api.post import post_routes
 from .api.reply import reply_routes
 from .api.album import album_routes
-
+from .api.image import image_routes
 
 from .seeds import seed_commands
 
@@ -38,6 +38,7 @@ app.register_blueprint(auth_routes, url_prefix='/api/auth')
 app.register_blueprint(post_routes)
 app.register_blueprint(reply_routes)
 app.register_blueprint(album_routes)
+app.register_blueprint(image_routes)
 db.init_app(app)
 Migrate(app, db)
 

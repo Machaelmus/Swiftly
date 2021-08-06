@@ -30,8 +30,8 @@ const Albums = () => {
                         <AllAlbums key={album.id} album={album}/>
                     ))}
                 </div>
-            </div>
 
+            </div>
 
         </div>
     )

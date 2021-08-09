@@ -74,7 +74,6 @@ function User() {
                   <IoPersonOutline/> <p className={navstyles.links}>Profile</p>
               </Link>
               </div>
-              <button className={navstyles.sideNavPostButton}>Post</button>
               <div className={navstyles.divForProfileStuff}>
                   <img alt='wow' className={navstyles.navProfileImageForUser} src={user.profileImage}></img>
                   <div>

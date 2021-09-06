@@ -2,7 +2,7 @@
     background-image: url('./660836.jpg');
     position: absolute;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     z-index: -178178781;
     top: 0;
     height: 100vh;
@@ -82,4 +82,33 @@
     transitioN: all 0.4s ease 0s;
     cursor: pointer;
     background-color: var(--purpleHover);
+}
+
+@media all and (max-width: 1550px) {
+    .backgroundImage {
+        height: 100vh;
+    }
+}
+
+@media all and (max-width: 751px) {
+    .splashHeading {
+        font-size: 25px;
+        width: 300px;
+        margin-left: -40px;
+    }
+    .splashJoin {
+        margin-left: -40px;
+    }
+    .splashButtons {
+        margin-top: -20px;
+        margin-left: 100px;
+    }
+    .splashLogin1 {
+        height: 45px;
+        width: 130px;
+    }
+    .splashSignup {
+        height: 45px;
+        width: 130px;
+    }
 }

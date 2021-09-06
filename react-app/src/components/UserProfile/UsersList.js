@@ -20,10 +20,12 @@ function UsersList() {
       <div className={styles.allusersContainer} key={user.id}>
           <div className={styles.allusersImageandUsername}>
             <img alt='wow' className={styles.allusersProfileImage} src={user.profileImage}></img>
-            <NavLink className={styles.allusersUsernames} to={`/users/${user.id}`}>{user.username}</NavLink>
+            <div>
+              <NavLink className={styles.allusersUsernames} to={`/users/${user.id}`}>{user.username}</NavLink>
+              <p className={styles.handleForUsers}>{user.handle}</p>
+            </div>
           </div>
           <div className={styles.allusersFollowButtonContainer}>
-            {/* <button className={styles.allusersFollowButton}>View profile</button> */}
           </div>
         </div>
     );

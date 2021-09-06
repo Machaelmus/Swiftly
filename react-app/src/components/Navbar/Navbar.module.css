@@ -214,3 +214,56 @@
     transition: all 0.4s ease 0s;
     background-color: var(--mediumGray);
 }
+
+@media all and (max-width: 1891px) {
+    .navLogo {
+        display: none;
+    }
+    .swiftlyTextName {
+        margin-left: 10px;
+    }
+    .navGoHome {
+        margin-right: -30px;
+    }
+}
+@media all and (max-width: 1741px) {
+    .navRightSide {
+        margin-left: -200px;
+    }
+}
+
+@media all and (max-width: 1541px) {
+    .navRightSide {
+        margin-left: -400px;
+    }
+}
+
+@media all and (max-width: 1341px) {
+    .navRightSide {
+        margin-left: -600px;
+    }
+}
+
+@media all and (max-width: 1141px) {
+    .navRightSide {
+        margin-left: -900px;
+    }
+}
+
+@media all and (max-width: 841px) {
+    .navRightSide {
+        margin-left: -1100px;
+    }
+}
+
+@media all and (max-width: 641px) {
+    .navRightSide {
+        margin-left: -1200px;
+    }
+    .navUsername {
+        display: none;
+    }
+    .navUserImage {
+        display: none;
+    }
+}

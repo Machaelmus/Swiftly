@@ -24,18 +24,26 @@
     color: var(--purpleHover);
 }
 .allusersContainer {
+    background-color: white;
+    padding: 5px;
     margin: 20px;
     display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.438);
+    border-radius: 20px;
     flex-direction: column;
-    width: 220px;
+    width: 250px;
 }
 .allusersProfileImage {
     margin-top: 10px;
     height: 70px;
     width: 70px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.411);
     border-radius: 100px;
     margin-bottom: 10px;
     margin-right: 10px;
+    margin-left: 20px;
 }
 .allusersImageandUsername {
     align-items: center;
@@ -49,9 +57,17 @@
 .allusersUsernames:hover {
     color:#FF7954;
 }
-
 .allusersFollowButtonContainer {
-    margin-bottom: 40px;
+    width: 220px;
+    font-weight: lighter;
+    display: flex;
+    height: 50px;
+
+    /* align-items: flex-start; */
+}
+.handleForUsers {
+    margin-top: -5px;
+    font-weight: lighter;
 }
 .allusersFollowButton {
     height: 35px;

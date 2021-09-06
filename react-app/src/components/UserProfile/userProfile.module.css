@@ -30,7 +30,7 @@
     left: 0;
     height: 100vh;
     grid-area: secondsidenav;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.24); 
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.24);
 }
 
 .something {
@@ -109,4 +109,24 @@
 .profileUserStatus {
     font-weight: lighter;
     font-size: 20px;
+}
+
+@media all and (max-width: 1500px) {
+    .profile {
+        margin-left: 200px;
+    }
+}
+
+@media all and (max-width: 1260px) {
+    .profile {
+        margin-left: 400px;
+    }
+    .secondsidenav {
+        width: 300px;
+    }
+}
+@media all and (max-width: 1207px) {
+    .profile {
+        margin-left: 300px;
+    }
 }

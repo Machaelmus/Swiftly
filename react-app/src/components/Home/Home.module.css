@@ -10,7 +10,7 @@
 .bigDiv {
     display: flex;
     flex-direction: column-reverse;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.301); 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.301);
 }
 
 .homeHeadingContainer {
@@ -260,27 +260,6 @@ a.sideNavLinks {
     align-items: center;
 }
 
-
-.sideNavHome {
-    /* display: flex;
-    align-items: center; */
-}
-
-.sideNavStories {
-    /* display: flex;
-    align-items: center; */
-}
-
-.sideNavLiked {
-    /* display: flex;
-    align-items: center; */
-}
-
-.sideNavFindUsers {
-    /* display: flex;
-    align-items: center; */
-}
-
 .sideNavProfile {
     display: flex;
     align-items: center;
@@ -343,4 +322,49 @@ a.sideNavLinks {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
+}
+
+@media all and (max-width: 1828px) {
+    .feed {
+        margin-left: 200px;
+    }
+}
+
+@media all and (max-width: 1528px) {
+    .feed {
+        margin-left: 400px;
+    }
+}
+@media all and (max-width: 1286px) {
+    .navigation {
+        width: 250px;
+    }
+    .navContain {
+        margin-left: 50px;
+    }
+    .sideNavHome, .sideNavStories, .sideNavLiked, .sideNavFindUsers, .sideNavProfile {
+        font-size: 25px;
+    }
+    .divForProfileStuff {
+        margin-left: -20px;
+    }
+    .feed {
+        margin-left: 200px;
+    }
+}
+
+@media all and (max-width: 1178px) {
+    .feed {
+        margin-left: 100px;
+    }
+    .navigation {
+        display: none;
+    }
+}
+
+@media all and (max-width: 1178px) {
+    .feed {
+        margin-left: 10px;
+    }
+
 }

@@ -101,20 +101,37 @@
 .replyOptionsDrop {
     background-color: white;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.315);
-    width: 60px;
-    height: 60px;
+    padding: 10px;
     display: flex;
     border-radius: 10px;
     margin-top: -110px;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     float: right;
 }
+.replyOptionsDrop > h4 {
+    margin: 0;
+}
 .openEditMenu {
-    background-color: white;
+    background-color: var(--purpleTheme);
+    height: 35px;
+    width: 90px;
+    margin: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    color: white;
 }
 
 .openEditMenu:hover {
     cursor: pointer;
+    background-color: var(--purpleHover);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.356);
 }
 
 .deleteReplyButton {
@@ -123,16 +140,14 @@
     font-weight: bold;
     font-size: 18px;
     background-color: white;
-    color: var(--purpleTheme);
-    border-radius: 20px;
+    border-radius: 5px;
     margin-top: 10px;
-    border: 2px solid var(--purpleTheme);
+    border: none;
 }
 
 .deleteReplyButton:hover {
     cursor: pointer;
     color: var(--purpleHover);
-    border-color: var(--purpleHover);
 }
 
 .modalEditReplyTextArea {
@@ -151,12 +166,13 @@
     color: white;
     font-weight: bold;
     font-size: 18px;
-    border-radius: 20px;
+    border-radius: 5px;
     margin-right: 10px;
 }
 .editReplyButtonInsideModal:hover {
     background-color: var(--purpleHover);
     cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.308);
 }
 .cancelEditReplyModalButton {
     height: 40px;
@@ -165,13 +181,15 @@
     background-color: white;
     font-weight: bold;
     font-size: 18px;
-    border-radius: 20px;
+    border-radius: 5px;
     margin-top: 10px;
-    border: 2px solid var(--purpleTheme);
+    border: none;
+    /* border: 2px solid var(--purpleTheme); */
 }
 
 .cancelEditReplyModalButton:hover {
     cursor: pointer;
-    border-color: var(--purpleHover);
-    color: var(--purpleHover);
+    background-color: var(--purpleHover);
+    color: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.308);
 }

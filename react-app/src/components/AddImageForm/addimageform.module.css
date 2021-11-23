@@ -41,7 +41,7 @@
 }
 
 .submitAddImage {
-    height: 50px;
+    height: 40px;
     width: 150px;
     border: none;
     background-image: linear-gradient(to right,#ffa154 0%, #FF7954 51%, #FFAB49 100%);
@@ -50,7 +50,7 @@
     font-size: 18px;
     transition: 0.4s;
     font-weight: 500;
-    border-radius: 40px;
+    border-radius: 5px;
 }
 
 .submitAddImage:hover {

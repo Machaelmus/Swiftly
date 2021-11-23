@@ -168,7 +168,7 @@
     border-radius: 10px;
     right: 40px;
     display: flex;
-    height: 130px;
+    height: 160px;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -240,7 +240,7 @@
 
 .navSplashLoginButton:hover {
     cursor: pointer;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.39); 
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.39);
     transition: all 0.4s ease 0s;
     background-color: var(--mediumGray);
 }

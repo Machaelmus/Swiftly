@@ -38,6 +38,9 @@ const CreateAlbumForm = () => {
                     <button className={styles.albumsCreateSubmit} type='submit'>Create Album</button>
                 </form>
             </div>
+            <div className={styles.albumsDiscoverContainer}>
+                <button className={styles.albumsDiscoverButton}>Discover more albums</button>
+            </div>
         </div>
     )
 }

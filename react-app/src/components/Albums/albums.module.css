@@ -146,3 +146,25 @@ a.linkLink {
     background-color: var(--purpleTheme);
     cursor: pointer;
 }
+
+.albumsDiscoverContainer {
+    margin-top: 20px;
+    margin-left: 50px;
+
+}
+.albumsDiscoverButton {
+    height: 40px;
+    width: 200px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    background-color: none;
+}
+
+.albumsDiscoverButton:hover {
+    background-color: var(--purpleTheme);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);
+    cursor: pointer;
+    color: white; 
+}

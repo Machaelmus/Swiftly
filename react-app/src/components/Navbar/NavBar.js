@@ -36,7 +36,7 @@ const NavBar = () => {
                       <button onClick={!!openTheNav} className={styles.navDropDownButtons}>My Profile</button>
                     </Link>
                     <Link to='/about'>
-                      <button className={styles.navDropDownButtons}>About</button>
+                      <button onClick={!!openTheNav} className={styles.navDropDownButtons}>About</button>
                     </Link>
                     <LogoutButton/>
                   </Menu>

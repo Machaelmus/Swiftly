@@ -1,0 +1,35 @@
+.allAlbumsPageContainer {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.allAlbumsContainer {
+    margin: 20px;
+}
+
+.allAlbumsTitle {
+    font-size: 40px;
+    margin: 0;
+}
+
+.allAlbumsPhoto {
+    height: 300px;
+    width: 600px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.281);
+}
+
+.allAlbumsDescription {
+    font-size: 20px;
+    font-weight: lighter;
+}
+.allAlbumsCreatedBy {
+    /* margin: 0;  */
+    font-weight: 500;
+}
+
+.allAlbumsCreatedBySpan {
+    font-weight: lighter;
+}

@@ -44,7 +44,8 @@
 
 .optionsButton {
     border: none;
-    float: right;
+    display: flex;
+    justify-content: flex-end;
     background-color: transparent;
     margin-top: -15px;
     margin-right: 20px;
@@ -53,15 +54,19 @@
 
 .optionsDrop {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);
-    height: 65px;
+    /* height: 80px; */
     align-items: center;
-    width: 80px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    /* width: 80px; */
+    padding: 10px;
     margin-top: 40px;
     position: absolute;
     left: 1290px;
-    font-size: 18px;
+    /* font-size: 18px; */
 }
 
 .optionsDropDownMenu {

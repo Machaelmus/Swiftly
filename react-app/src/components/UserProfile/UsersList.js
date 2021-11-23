@@ -4,6 +4,7 @@ import styles from './userList.module.css';
 
 function UsersList() {
   const [users, setUsers] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     async function fetchData() {
@@ -14,7 +15,19 @@ function UsersList() {
     fetchData();
   }, []);
 
-  const userComponents = users.map((user) => {
+  const userComponents = users.filter((value) => {
+    if(searchQuery.value === '') {
+      return value;
+    } else if (value.username.toLowerCase().includes(searchQuery.toLowerCase())) {
+      return value;
+    } else if (value.email.toLowerCase().includes(searchQuery.toLowerCase())) {
+      return value;
+    } else if (value.handle.toLowerCase().includes(searchQuery.toLowerCase())) {
+      return value;
+    } else if (value.status.toLowerCase().includes(searchQuery.toLowerCase())) {
+      return value;
+    }}).map((user) => {
+
     return (
 
       <div className={styles.allusersContainer} key={user.id}>
@@ -32,13 +45,21 @@ function UsersList() {
   });
 
   return (
+
     <>
       <div className={styles.wholePageContainerForAllUsers}>
         <h1 className={styles.usersToFollow}>Discover users</h1>
+        <div className={styles.usersSearchForm}>
+          <form className={styles.usersForm}>
+            <input onChange={(e) => setSearchQuery(e.target.value)} className={styles.usersSearchFormInput} placeholder='Search users'></input>
+          </form>
+        </div>
         <div className={styles.wholeBigChungus}>{userComponents}</div>
       </div>
     </>
+
   );
+
 }
 
 export default UsersList;

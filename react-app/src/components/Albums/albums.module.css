@@ -1,6 +1,6 @@
 .albumContainer {
     display: grid;
-    margin-top: 100px; 
+    margin-top: 100px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
@@ -120,10 +120,15 @@ a.linkLink {
     flex-direction: column;
 }
 .eachAlbumDelete {
-    margin-top: 20px;
-    background-color: transparent;
-    border: none;
+    /* margin-top: 15px; */
+    /* background-color: red; */
+    height: 35px;
+    width: 80px;
     font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
+    background: none; 
 }
 
 .albumTitleName {
@@ -133,6 +138,7 @@ a.linkLink {
 }
 
 .eachAlbumDelete:hover {
-    color: var(--purpleHover);
+    color: white;
+    background-color: var(--purpleTheme);
     cursor: pointer;
 }

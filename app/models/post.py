@@ -1,5 +1,5 @@
 from .db import db
-
+import datetime
 
 class Post(db.Model):
     __tablename__ = 'posts'
@@ -7,7 +7,7 @@ class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     userId = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     post = db.Column(db.Text, nullable=False)
-    timeOfPost = db.Column(db.Date, nullable=False)
+    timeOfPost = db.Column(db.DateTime, default=datetime.datetime.utcnow, nullable=False)
 
     # ========================================================================
 
@@ -23,7 +23,7 @@ class Post(db.Model):
             'id': self.id,
             'userId': self.userId,
             'post': self.post,
-            'timeOfPost': self.timeOfPost,
+            'timeOfPost': datetime.datetime.utcnow(),
             'user': self.postAuthor.to_dict(),
             # 'users': [a.to_dict() for a in self.postAuthor]
         }

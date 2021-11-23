@@ -26,7 +26,6 @@ const AllAlbums = ({album}) => {
     useEffect(() => {
         const clickOutside = (event) => {
             if(deleteAlbumDrop.current && !deleteAlbumDrop.current.contains(event.target)) {
-                console.log('Clicking outside the container')
                 setOpenOptions(false)
             }
         }
@@ -45,6 +44,7 @@ const AllAlbums = ({album}) => {
                 <button onClick={enableOptions} className={homestyles.optionsButton}><BsThreeDots className={homestyles.threeDots}/></button>
             {openOptions && (
                 <div className={homestyles.optionsDrop}>
+                    <h4>Options</h4>
                     <button className={styles.eachAlbumDelete} onClick={deleteOneAlbum}>Delete</button>
                 </div>
             )}

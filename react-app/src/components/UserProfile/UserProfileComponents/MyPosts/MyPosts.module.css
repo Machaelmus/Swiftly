@@ -1,0 +1,27 @@
+.wholeMyPostPageContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+
+.myPostsPostContainer {
+    background-color: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.295);
+    padding: 15px;
+    border-radius: 5px;
+}
+.myPostUsername {
+    font-weight: 500;
+}
+
+.myPostTimeOfPost {
+    font-weight: bold;
+}
+
+.myActualPost {
+    font-weight: lighter;
+}

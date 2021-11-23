@@ -1,0 +1,10 @@
+.myAlbumTitle {
+    font-size: 20px;
+    font-weight: 500;
+}
+.myAlbumTitle:hover {
+    color: var(--purpleTheme);
+}
+.myAlbumDescription {
+    font-weight: lighter;
+}

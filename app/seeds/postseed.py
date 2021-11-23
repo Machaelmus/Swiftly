@@ -10,10 +10,13 @@ def seed_posts():
         userId=2, post='I just did a triple-double 360 no-scope ultra-spin backflip-frontflip', timeOfPost=date.today())
     post3 = Post(
         userId=13, post='I hate it when I\'m cleaning my house and accidentally watch three seasons of a show...', timeOfPost=date.today())
+    post4 = Post(
+        userId=11, post='I am Groot...I am...Groot..I AM GROOOOOOOOOOOOOOOOOOOOOOOOOOOT!', timeOfPost=date.today())
 
     db.session.add(post1)
     db.session.add(post2)
     db.session.add(post3)
+    db.session.add(post4)
 
     db.session.commit()
 

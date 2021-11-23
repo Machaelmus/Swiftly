@@ -1,0 +1,18 @@
+.myReplyContainer {
+    background-color: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.329);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.myReplyUsername {
+    font-weight: 500;
+}
+
+.myReplyTimeOfReply {
+    font-weight: bold;
+}
+
+.myReplyReply {
+    font-weight: lighter;
+}

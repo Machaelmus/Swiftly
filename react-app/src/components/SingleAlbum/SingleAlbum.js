@@ -8,11 +8,11 @@ import styles from './singlealbum.module.css';
 
 const SingleAlbum = () => {
     const dispatch = useDispatch()
-    const {id} = useParams()
+    const { id } = useParams()
     const images = useSelector(state => Object.values(state.images));
     const image = images.find((image) => image.id)
     const albums = useSelector(state => Object.values(state.albums));
-    const album = albums.find((album) => album.id);
+    const album = albums.find((album) => album.id === +id);
     // const sessionUser = useSelector(state => state.session.user);
 
     useEffect(() => {
@@ -39,10 +39,14 @@ const SingleAlbum = () => {
             </div>
             <div className={styles.wholeImageContainerInAlbum}>
                 {images.map((image) => (
-                    <div className={styles.eachImageContainer}>
-                        <img alt='wow' className={styles.eachImageInAlbum} src={image.imageUrl}></img>
-                        <br/>
-                        <button className={styles.deleteButtonForImages} onClick={deleteAnImage}>Remove Image</button>
+                    <div>
+                        {image?.albumId === album?.id &&
+                            <div className={styles.eachImageContainer}>
+                                <img alt='wow' className={styles.eachImageInAlbum} src={image.imageUrl}></img>
+                                <br/>
+                                <button className={styles.deleteButtonForImages} onClick={deleteAnImage}>Remove Image</button>
+                            </div>
+                        }
                     </div>
                 ))}
             </div>

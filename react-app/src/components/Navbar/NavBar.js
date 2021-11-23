@@ -1,38 +1,18 @@
 
-import React, {useRef, useEffect, useState} from 'react';
+import React, { useRef, useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import LogoutButton from '../auth/LogoutButton';
 import styles from './Navbar.module.css';
-import {AiOutlinePlus, AiOutlineMenu, AiOutlineHome} from 'react-icons/ai';
-import {IoSettingsOutline } from 'react-icons/io5';
-import {GoLightBulb} from 'react-icons/go';
-
+import { Button, Wrapper, Menu } from 'react-aria-menubutton';
+import { AiOutlinePlus, AiOutlineMenu, AiOutlineHome } from 'react-icons/ai';
 
 const NavBar = () => {
   const navDropdown = useRef(null);
-  const [navOptions, setNavOptions] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
   const sessionUser = useSelector(state => state.session.user);
 
-  const enableNavOptions = () => {
-    if(navOptions) return;
-    setNavOptions(true);
-  }
-
-  useEffect(() => {
-    const clickOutsideNavOptions = (event) => {
-      if(navDropdown.current && !navDropdown.current.contains(event.target)) {
-        setNavOptions(false)
-      }
-    }
-    const body = document.getElementById('root')
-    body.addEventListener('click', clickOutsideNavOptions)
-    setNavOptions(false)
-    return () => {
-      body.removeEventListener('click', clickOutsideNavOptions)
-      setNavOptions(false)
-    }
-  }, [navDropdown])
+  const openTheNav = () => navOpen ? setNavOpen(true) : setNavOpen(false);
 
     if(sessionUser) {
         return (
@@ -49,18 +29,19 @@ const NavBar = () => {
                 <Link to="/users">
                   <div className={styles.navAddFriends}><AiOutlinePlus/></div>
                 </Link>
-                <div onClick={enableNavOptions} className={styles.navProfileDropDown}><AiOutlineMenu/></div>
-                {navOptions && (
-                  <div className={styles.insideDropdown}>
-                    <Link className={styles.profileSettingsLink} to={`/users/${sessionUser.id}`}>
-                      <p className={styles.profileSett}><IoSettingsOutline className={styles.logoTop}/>Profile & Settings</p>
+                <Wrapper onSelection={openTheNav}>
+                  <Button className={styles.navProfileDropDown}><AiOutlineMenu/></Button>
+                  <Menu className={styles.navDropDownMenu}>
+                    <Link to={`/users/${sessionUser.id}`}>
+                      <button onClick={!!openTheNav} className={styles.navDropDownButtons}>My Profile</button>
                     </Link>
-                    <Link to='/about' className={styles.profileSettingsLink}>
-                      <p className={styles.themeButton}><GoLightBulb className={styles.logoTop}/>About</p>
+                    <Link to='/about'>
+                      <button onClick={!!openTheNav} className={styles.navDropDownButtons}>About</button>
                     </Link>
                     <LogoutButton/>
-                  </div>
-                )}
+                  </Menu>
+                </Wrapper>
+
               </div>
             </div>
           </nav>

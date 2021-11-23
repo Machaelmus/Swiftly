@@ -43,17 +43,18 @@
 
 .createPostSubmit {
     height: 40px;
-    width: 150px;
+    width: 100px;
     margin-top: 10px;
-    border-radius: 20px;
+    border-radius: 5px;
     border: none;
     background-color: var(--purpleTheme);
     color: white;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .createPostSubmit:hover {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.253);
     cursor: pointer;
     background-color: var(--purpleHover);
 }

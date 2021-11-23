@@ -1,14 +1,11 @@
 
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import LogoutButton from '../auth/LogoutButton';
 import styles from './Navbar.module.css';
 import { Button, Wrapper, Menu } from 'react-aria-menubutton';
 import { AiOutlinePlus, AiOutlineMenu, AiOutlineHome } from 'react-icons/ai';
-import { IoSettingsOutline } from 'react-icons/io5';
-import { GoLightBulb } from 'react-icons/go';
-
 
 const NavBar = () => {
   const navDropdown = useRef(null);
@@ -16,25 +13,6 @@ const NavBar = () => {
   const sessionUser = useSelector(state => state.session.user);
 
   const openTheNav = () => navOpen ? setNavOpen(true) : setNavOpen(false);
-  // const enableNavOptions = () => {
-  //   if(navOptions) return;
-  //   setNavOptions(true);
-  // }
-
-  // useEffect(() => {
-  //   const clickOutsideNavOptions = (event) => {
-  //     if(navDropdown.current && !navDropdown.current.contains(event.target)) {
-  //       setNavOptions(false)
-  //     }
-  //   }
-  //   const body = document.getElementById('root')
-  //   body.addEventListener('click', clickOutsideNavOptions)
-  //   setNavOptions(false)
-  //   return () => {
-  //     body.removeEventListener('click', clickOutsideNavOptions)
-  //     setNavOptions(false)
-  //   }
-  // }, [navDropdown])
 
     if(sessionUser) {
         return (
@@ -54,9 +32,13 @@ const NavBar = () => {
                 <Wrapper onSelection={openTheNav}>
                   <Button className={styles.navProfileDropDown}><AiOutlineMenu/></Button>
                   <Menu className={styles.navDropDownMenu}>
-                      <button className={styles.navDropDownButtons}>My Profile</button>
+                    <Link to={`/users/${sessionUser.id}`}>
+                      <button onClick={!!openTheNav} className={styles.navDropDownButtons}>My Profile</button>
+                    </Link>
+                    <Link to='/about'>
                       <button className={styles.navDropDownButtons}>About</button>
-                      <LogoutButton/>
+                    </Link>
+                    <LogoutButton/>
                   </Menu>
                 </Wrapper>
 

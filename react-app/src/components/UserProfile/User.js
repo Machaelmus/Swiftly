@@ -63,10 +63,10 @@ function User() {
 
             </div>
         </div>
-        
+
         <div className={styles.something}>
           {setting === 'my-posts' &&
-            (<MyPosts/>)
+            (<MyPosts userId={userId}/>)
           }
           {setting === 'my-replies' &&
             (<MyReplies/>)

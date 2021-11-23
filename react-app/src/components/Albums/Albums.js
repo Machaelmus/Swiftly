@@ -7,7 +7,7 @@ import styles from './albums.module.css';
 
 const Albums = () => {
     const albums = useSelector(state => Object.values(state.albums))
-    const sessionUser = useSelector(state => state.session.user); 
+    const sessionUser = useSelector(state => state.session.user);
     const dispatch = useDispatch();
 
 

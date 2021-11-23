@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { createAnAlbum } from '../../store/albums';
+import { Link } from 'react-router-dom';
 import styles from '../Albums/albums.module.css';
 
 const CreateAlbumForm = () => {
@@ -39,7 +40,9 @@ const CreateAlbumForm = () => {
                 </form>
             </div>
             <div className={styles.albumsDiscoverContainer}>
-                <button className={styles.albumsDiscoverButton}>Discover more albums</button>
+                <Link to='/all-albums'>
+                    <button className={styles.albumsDiscoverButton}>Discover more albums</button>
+                </Link>
             </div>
         </div>
     )

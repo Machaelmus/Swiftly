@@ -160,11 +160,12 @@ a.linkLink {
     border: none;
     border-radius: 5px;
     background-color: none;
+    background-color: var(--purpleTheme);
+    color: white;
 }
 
 .albumsDiscoverButton:hover {
-    background-color: var(--purpleTheme);
+    background-color: var(--purpleHover);
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);
     cursor: pointer;
-    color: white; 
 }

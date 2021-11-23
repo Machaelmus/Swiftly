@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { createAnAlbum } from '../../store/albums';
+import { Link } from 'react-router-dom';
 import styles from '../Albums/albums.module.css';
 
 const CreateAlbumForm = () => {
@@ -37,6 +38,11 @@ const CreateAlbumForm = () => {
                     <textarea placeholder='Description' onChange={(e) => setDescription(e.target.value)} className={styles.albumsDescription}></textarea>
                     <button className={styles.albumsCreateSubmit} type='submit'>Create Album</button>
                 </form>
+            </div>
+            <div className={styles.albumsDiscoverContainer}>
+                <Link to='/all-albums'>
+                    <button className={styles.albumsDiscoverButton}>Discover more albums</button>
+                </Link>
             </div>
         </div>
     )

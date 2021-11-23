@@ -117,7 +117,7 @@
     height: 40px;
     width: 150px;
     margin-top: 10px;
-    border-radius: 20px;
+    border-radius: 5px;
     border: none;
     background: none;
     /* color: var(--purpleTheme); */
@@ -296,7 +296,7 @@ a.sideNavLinks {
     height: 50px;
     width: 200px;
     border: none;
-    border-radius: 40px;
+    border-radius: 5px;
     font-size: 20px;
     font-weight: bold;
     background-color: var(--purpleTheme);

@@ -38,6 +38,9 @@ const NavBar = () => {
                     <Link to='/about'>
                       <button onClick={!!openTheNav} className={styles.navDropDownButtons}>About</button>
                     </Link>
+                    <Link to='/all-albums'>
+                      <button onClick={!!openTheNav} className={styles.navDropDownButtons}>Albums</button>
+                    </Link>
                     <LogoutButton/>
                   </Menu>
                 </Wrapper>

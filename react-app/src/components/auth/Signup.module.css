@@ -60,13 +60,14 @@
     font-weight: bold;
     font-size: 18px;
     border: none;
-    border-radius: 20px;
+    border-radius: 5px;
     background-color: var(--purpleTheme);
     /* margin-bottom: 15px; */
 }
 
 .signupSubmit:hover {
     transition: all 0.4s;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.39); 
     background-color: var(--purpleHover);
     cursor: pointer;
 }

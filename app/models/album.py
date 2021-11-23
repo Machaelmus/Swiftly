@@ -22,5 +22,6 @@ class Album(db.Model):
             'coverPhotoUrl': self.coverPhotoUrl,
             'title': self.title,
             'description': self.description,
+            'user': self.albumOwner.to_dict(),
             'albumCreatedAt': self.albumCreatedAt,
         }

@@ -14,6 +14,7 @@ import Home from './components/Home/Home';
 import Albums from './components/Albums/Albums';
 import SingleAlbum from './components/SingleAlbum/SingleAlbum';
 import About from './components/About/About';
+import DiscoverAllAlbums from './components/DiscoverAllAlbums/DiscoverAllAlbums';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -57,6 +58,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path='/albums' exact={true}>
           <Albums/>
+        </ProtectedRoute>
+        <ProtectedRoute path='/all-albums' exact={true}>
+          <DiscoverAllAlbums/>
         </ProtectedRoute>
         <ProtectedRoute path='/album/:id' exact={true}>
           <SingleAlbum/>

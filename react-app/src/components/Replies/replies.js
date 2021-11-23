@@ -101,6 +101,7 @@ const ReplyBox = ({reply}) => {
                     <button className={styles.editReplyThreeDots} onClick={enableReplyOptions}><BsThreeDots/></button>
                         {openReplyOptions && (
                             <div className={styles.replyOptionsDrop}>
+                                <h4>Options</h4>
                                 <p className={styles.openEditMenu} onClick={openReplyModalOnClick}>Edit</p>
                                 <Modal style={editModalStyles} isOpen={openReplyModal} onRequestClose={closeReplyModalOnClick}>
                                     <button className={styles.deleteReplyButton} onClick={deleteReply}>Delete</button>

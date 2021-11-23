@@ -23,7 +23,7 @@ def addImage():
     if form.validate_on_submit():
         addedImage = Image(
             userId = current_user.id,
-            albumId = request.json['albumId'],
+            albumId = form.albumId.data,
             imageUrl = form.imageUrl.data,
         )
         db.session.add(addedImage)

@@ -35,7 +35,7 @@ const AddImageForm = () => {
                     ))}
                 </select> */}
                 <label>Upload image</label>
-                <input className={styles.imageURLInput} onChange={(e) => setImageUrl(e.target.value)} type='text'></input>
+                <input placeholder='Image URL' className={styles.imageURLInput} onChange={(e) => setImageUrl(e.target.value)} type='text'></input>
                 <button className={styles.submitAddImage} type='submit'>Add Image</button>
             </form>
         </div>

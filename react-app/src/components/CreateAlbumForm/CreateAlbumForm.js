@@ -30,11 +30,11 @@ const CreateAlbumForm = () => {
             <div className={styles.albumsFormBackground}>
                 <form onSubmit={createOneAlbum} className={styles.albumsForm}>
                     <label className={styles.createAlbumLabel}>Photo URL</label>
-                    <input onChange={(e) => setCoverPhotoUrl(e.target.value)} className={styles.albumsInputPhotoUrl} type='text'></input>
+                    <input placeholder='Cover Photo URL' onChange={(e) => setCoverPhotoUrl(e.target.value)} className={styles.albumsInputPhotoUrl} type='text'></input>
                     <label className={styles.createAlbumLabel}>Album Title</label>
-                    <input onChange={(e) => setTitle(e.target.value)} className={styles.albumsInputTitle} type='text' ></input>
+                    <input placeholder='Title' onChange={(e) => setTitle(e.target.value)} className={styles.albumsInputTitle} type='text' ></input>
                     <label className={styles.createAlbumLabel}>Description</label>
-                    <textarea onChange={(e) => setDescription(e.target.value)} className={styles.albumsDescription}></textarea>
+                    <textarea placeholder='Description' onChange={(e) => setDescription(e.target.value)} className={styles.albumsDescription}></textarea>
                     <button className={styles.albumsCreateSubmit} type='submit'>Create Album</button>
                 </form>
             </div>

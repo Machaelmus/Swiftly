@@ -24,7 +24,7 @@
 }
 .profileUserImageContainer {
     margin-top: 40px;
-    background-color: blue;
+    /* background-color: blue; */
     width: 180px;
     height: 180px;
     background-image: linear-gradient(to left,#ffa154 0%, #FF7954 51%, #FFAB49 100%);
@@ -45,6 +45,7 @@
 .userStats {
     display: flex;
     font-size: 18px;
+    margin-left: -15px;
 }
 
 .userPostStat, .userFollowerStat {
@@ -62,22 +63,7 @@
     font-size: 60px;
     margin-right: 20px;
 }
-.profileFollowButton {
-    margin-top: 5px;
-    height: 40px;
-    width: 150px;
-    border-radius: 40px;
-    color: white;
-    border: none;
-    font-size: 20px;
-    font-weight: 500;
-    background-color: var(--purpleTheme);
-}
-.profileFollowButton:hover {
-    background-color: var(--purpleHover);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
+
 .profileHandleAndStatusContainer {
     display: flex;
     align-items: center;
@@ -91,15 +77,16 @@
     font-weight: lighter;
     font-size: 20px;
 }
-.userPostStat {
-
-}
-
-.userFollowerStat {
-
-}
-
+.userPostStat,
+.userFollowerStat,
 .userRepliesStats {
+    height: 40px;
+    width: 80px;
+    /* padding: 20px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
 
 }
 
@@ -108,6 +95,8 @@
 .userRepliesStats:hover {
     background-color: var(--purpleTheme);
     color: white;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.342);
 
     /* font-weight: 500;  */
 }

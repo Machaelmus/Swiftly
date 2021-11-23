@@ -7,6 +7,7 @@ import styles from './albums.module.css';
 
 const Albums = () => {
     const albums = useSelector(state => Object.values(state.albums))
+    const sessionUser = useSelector(state => state.session.user); 
     const dispatch = useDispatch();
 
 
@@ -28,7 +29,11 @@ const Albums = () => {
                 <h1>Your albums</h1>
                 <div>
                     {albums.map((album) => (
-                        <AllAlbums key={album.id} album={album}/>
+                        <div>
+                            {album.userId === sessionUser.id &&
+                                <AllAlbums key={album.id} album={album}/>
+                            }
+                        </div>
                     ))}
                 </div>
 

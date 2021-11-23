@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import MyPosts from './UserProfileComponents/MyPosts/MyPosts';
+import MyAlbums from './UserProfileComponents/MyAlbums/MyAlbums';
+import MyReplies from './UserProfileComponents/MyReplies/MyReplies';
 import styles from './userProfile.module.css';
-import navstyles from '../Home/Home.module.css';
-import {AiOutlineHome, AiOutlineSearch} from 'react-icons/ai';
-import {IoPersonOutline} from 'react-icons/io5';
-import {BsBook} from 'react-icons/bs';
 
 function User() {
+  const [setting, setSetting] = useState('my-posts');
   const [user, setUser] = useState({});
   const { userId }  = useParams();
 
@@ -25,6 +25,18 @@ function User() {
     return null;
   }
 
+  const myPostsClickHandler = () => {
+    setSetting('my-posts');
+  };
+
+  const myRepliesClickHandler = () => {
+    setSetting('my-replies');
+  };
+
+  const myAlbumsClickHandler = () => {
+    setSetting('my-albums');
+  };
+
   return (
     <>
       <div className={styles.wholeProfcontainer}>
@@ -40,52 +52,29 @@ function User() {
                 <p className={styles.profileUsername}>{user.username}</p>
                 {/* <button className={styles.profileFollowButton}>Follow</button> */}
               </div>
-              <div className={styles.userStats}>
-                <p className={styles.userPostStat}>Posts</p>
-                <p className={styles.userFollowerStat}>Stories</p>
-                <p>Images</p>
-              </div>
-              {/* Handle and status */}
               <div className={styles.profileHandleAndStatusContainer}>
                 <p className={styles.profileUserHandle}>{user.handle}</p>
                 <p className={styles.profileUserStatus}>{user.status}</p>
               </div>
+              <div className={styles.userStats}>
+                <p onClick={myPostsClickHandler} className={styles.userPostStat}>Posts</p>
+                <p onClick={myAlbumsClickHandler} className={styles.userFollowerStat}>Stories</p>
+                <p onClick={myRepliesClickHandler} className={styles.userRepliesStats}>Replies</p>
+              </div>
+              {/* Handle and status */}
             </div>
         </div>
-        <div className={styles.secondsidenav}>
-          <div className={navstyles.navContain}>
-              <div className={navstyles.sideNavHome}>
-              <Link className={navstyles.sideNavLinks} to='/home'>
-                  <AiOutlineHome /> <p className={navstyles.links}>Home</p>
-              </Link>
-              </div>
-              <div className={navstyles.sideNavStories}>
-              <Link className={navstyles.sideNavLinks} to='/albums'>
-                  <BsBook/><p className={navstyles.links}>Stories</p>
-              </Link>
-              </div>
-              <div className={navstyles.sideNavFindUsers}>
-              <Link className={navstyles.sideNavLinks} to='/users'>
-                  <AiOutlineSearch/> <p className={navstyles.links}>Find users</p>
-              </Link>
-              </div>
-              <div className={navstyles.sideNavProfile}>
-              <Link className={navstyles.sideNavLinks} to={`/users/${user.id}`}>
-                  <IoPersonOutline/> <p className={navstyles.links}>Profile</p>
-              </Link>
-              </div>
-              <div className={navstyles.divForProfileStuff}>
-                  <img alt='wow' className={navstyles.navProfileImageForUser} src={user.profileImage}></img>
-                  <div>
-                      <Link to={`/users/${user.id}`}>
-                          <p className={navstyles.navProfileUsername}>{user.username}</p>
-                      </Link>
-                      <p className={navstyles.navProfileHandle}>{user.handle}</p>
-                  </div>
-              </div>
-          </div>
+        <div className={styles.something}>
+          {setting === 'my-posts' &&
+            (<MyPosts/>)
+          }
+          {setting === 'my-replies' &&
+            (<MyReplies/>)
+          }
+          {setting === 'my-albums' &&
+            (<MyAlbums/>)
+          }
         </div>
-        <div className={styles.something}></div>
       </div>
 
     {/* Whole page */}

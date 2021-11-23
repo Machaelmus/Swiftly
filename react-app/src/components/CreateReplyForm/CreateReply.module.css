@@ -47,13 +47,13 @@
 
 .createReplySubmitButton {
     height: 40px;
-    width: 150px;
+    width: 90px;
     border: none;
     background-color: var(--purpleTheme);
     color: white;
     font-size: 18px;
     font-weight: 500;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 .createReplySubmitButton:hover {
     background-color: var(--purpleHover);

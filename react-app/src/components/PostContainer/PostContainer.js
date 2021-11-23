@@ -28,8 +28,6 @@ const editModalStyles = {
     }
 }
 
-
-
 const PostContainer = ({post}) => {
     const editDeleteDropdown = useRef(null);
     // State for the first dropdown containing words "edit, delete"

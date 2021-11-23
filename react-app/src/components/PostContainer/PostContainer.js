@@ -126,7 +126,7 @@ const PostContainer = ({post}) => {
                             <Link className={styles.linkToCommentsOnPosts} to={`/posts/${post.id}`}>
                             <div className={styles.commentCommentContainer}>
                                     <AiOutlineComment className={styles.commentOnPost}/>
-                                    <p>Comment</p>
+                                    <p>Reply</p>
                             </div>
                             </Link>
                         </div>

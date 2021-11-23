@@ -1,4 +1,5 @@
 from .db import db
+import datetime
 
 class Reply(db.Model):
     __tablename__ = 'replies'
@@ -7,7 +8,7 @@ class Reply(db.Model):
     userId = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     postId = db.Column(db.Integer, db.ForeignKey('posts.id') , nullable=False)
     reply = db.Column(db.Text, nullable=False)
-    timeOfReply = db.Column(db.Date, nullable=False)
+    timeOfReply = db.Column(db.DateTime, default=datetime.datetime.utcnow, nullable=False)
 
     # Creates relationship between replies and posts
     replyToPost = db.relationship('Post', back_populates='postReplies')
@@ -22,6 +23,6 @@ class Reply(db.Model):
             'userId': self.userId,
             'postId': self.postId,
             'reply': self.reply,
-            'timeOfReply': self.timeOfReply,
+            'timeOfReply': datetime.datetime.utcnow(),
             'user': self.replyAuthor.to_dict(),
         }

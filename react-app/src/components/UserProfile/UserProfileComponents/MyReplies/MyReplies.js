@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAllReplies } from '../../../../store/replies';
+import './MyReplies.css';
 
 const MyReplies = () => {
     const dispatch = useDispatch();
@@ -16,9 +17,10 @@ const MyReplies = () => {
             {replies.map((reply) => (
                 <div>
                     {reply.userId === sessionUser.id &&
-                        <div>
-                            <p>{reply.user.username}</p>
-                            <p>{reply.reply}</p>
+                        <div className='myReplyContainer'>
+                            <p className='myReplyUsername'>{reply.user.username}</p>
+                            <p className='myReplyTimeOfReply'>{reply.timeOfReply}</p>
+                            <p className='myReplyReply'>{reply.reply}</p>
                         </div>
                     }
                 </div>

@@ -44,26 +44,26 @@ function User() {
             <div className={styles.profileUserImageContainer}>
               <img alt='wow' className={styles.profileUserImage} src={user.profileImage}></img>
             </div>
-            {/* Profile information */}
-            <div className={styles.profileUsernameFollowButtonContainer}>
 
-              {/* Follow button and username */}
+            <div className={styles.profileUsernameFollowButtonContainer}>
               <div className={styles.buttonAndUsername}>
                 <p className={styles.profileUsername}>{user.username}</p>
-                {/* <button className={styles.profileFollowButton}>Follow</button> */}
               </div>
+
               <div className={styles.profileHandleAndStatusContainer}>
                 <p className={styles.profileUserHandle}>{user.handle}</p>
                 <p className={styles.profileUserStatus}>{user.status}</p>
               </div>
+
               <div className={styles.userStats}>
                 <p onClick={myPostsClickHandler} className={styles.userPostStat}>Posts</p>
                 <p onClick={myAlbumsClickHandler} className={styles.userFollowerStat}>Stories</p>
                 <p onClick={myRepliesClickHandler} className={styles.userRepliesStats}>Replies</p>
               </div>
-              {/* Handle and status */}
+
             </div>
         </div>
+        
         <div className={styles.something}>
           {setting === 'my-posts' &&
             (<MyPosts/>)
@@ -75,12 +75,8 @@ function User() {
             (<MyAlbums/>)
           }
         </div>
-      </div>
 
-    {/* Whole page */}
-      {/* <div className={styles.wholeProfileContainer}> */}
-          {/* Profile image container */}
-      {/* </div> */}
+      </div>
     </>
   );
 }

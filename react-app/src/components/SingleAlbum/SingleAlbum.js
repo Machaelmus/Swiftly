@@ -33,13 +33,22 @@ const SingleAlbum = () => {
             <div className={styles.flexThis}>
                 <div>
                     <h1 className={styles.eachAlbumTitle}>{album?.title}</h1>
+                    {album?.images.length === 0 &&
+                        <p className={styles.eachAlbumImageCount}>There are <span className={styles.eachAlbumBoldedImageCount}>no</span> images in this album</p>
+                    }
+                    {album?.images.length === 1 &&
+                        <p className={styles.eachAlbumImageCount}>There is <span className={styles.eachAlbumBoldedImageCount}>one</span> image in this album</p>
+                    }
+                    {album?.images.length > 1 &&
+                        <p className={styles.eachAlbumImageCount}>There are <span className={styles.eachAlbumBoldedImageCount}>{album.images.length}</span> images in this album</p>
+                    }
                     <p className={styles.eachAlbumDescription}>{album?.description}</p>
                 </div>
                 <AddImageForm album={album}/>
             </div>
             <div className={styles.wholeImageContainerInAlbum}>
                 {images.map((image) => (
-                    <div>
+                    <div className={styles.eachWholeImageContainer}>
                         {image?.albumId === album?.id &&
                             <div className={styles.eachImageContainer}>
                                 <img alt='wow' className={styles.eachImageInAlbum} src={image.imageUrl}></img>

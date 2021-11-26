@@ -1,13 +1,13 @@
 import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
-import {useSelector, useDispatch} from 'react-redux'
-import {getAllPosts} from '../../store/posts';
+import { useSelector, useDispatch } from 'react-redux'
+import { getAllPosts } from '../../store/posts';
 import CreatePost from '../CreatePostForm/CreatePost';
 import styles from './Home.module.css';
 import PostContainer from '../PostContainer/PostContainer';
-import {AiOutlineHome, AiOutlineSearch} from 'react-icons/ai';
-import {IoPersonOutline} from 'react-icons/io5';
-import {BsBook} from 'react-icons/bs';
+import { AiOutlineHome, AiOutlineSearch } from 'react-icons/ai';
+import { IoPersonOutline } from 'react-icons/io5';
+import { BsBook } from 'react-icons/bs';
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -21,9 +21,7 @@ const Home = () => {
 
     return (
         <>
-        {/* CONTAINER */}
         <div className={styles.homeContainer}>
-            {/* NAVIGATION */}
             <div className={styles.navigation}>
                 <div className={styles.navContain}>
                     <div className={styles.sideNavHome}>
@@ -46,7 +44,6 @@ const Home = () => {
                         <IoPersonOutline/> <p className={styles.links}>Profile</p>
                     </Link>
                     </div>
-                    {/* <button className={styles.sideNavPostButton}>Post</button> */}
                     <div className={styles.divForProfileStuff}>
                         <img alt='wow' className={styles.navProfileImageForUser} src={sessionUser.profileImage}></img>
                         <div>
@@ -58,7 +55,6 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            {/* FEED */}
             <div className={styles.feed}>
                 <div className={styles.homeHeadingContainer}>
                     <h1 className={styles.homeHome}>Home</h1>
@@ -72,7 +68,6 @@ const Home = () => {
                     ))}
                 </div>
             </div>
-            {/* EXTRA */}
             <div className={styles.extra}></div>
         </div>
         </>

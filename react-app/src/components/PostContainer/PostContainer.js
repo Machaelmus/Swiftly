@@ -8,7 +8,6 @@ import styles from '../Home/Home.module.css';
 import { BsThreeDots } from 'react-icons/bs';
 import { AiOutlineComment } from 'react-icons/ai';
 
-// REACT-MODAL SETTINGS
 Modal.setAppElement('#root')
 const editModalStyles = {
     content: {
@@ -31,17 +30,13 @@ const editModalStyles = {
 
 const PostContainer = ({post}) => {
     const editDeleteDropdown = useRef(null);
-    // State for the first dropdown containing words "edit, delete"
     const [optionsOpen, setOptionsOpen] = useState(false);
     const openTheOptions = () => optionsOpen ? setOptionsOpen(true) : setOptionsOpen(false);
     const dispatch = useDispatch()
-    // State for editing a review
     const [editText, setEditText] = useState('');
     const sessionUser = useSelector(state => state.session.user);
-    // State for opening the react-modal itself
     const [open, setOpen] = useState(false);
 
-    // Edit Post Form dispatch function
     const editFormInfo = (e) => {
         e.preventDefault()
         const formInfo = {
@@ -53,16 +48,15 @@ const PostContainer = ({post}) => {
         setOpen(false);
     }
 
-    // Delete Post dispatch function
     const deletePostFunc = () => {
         dispatch(deleteOnePost(post.id))
     }
 
-    // Functions to change state of react-modal
     function openModalOnClick() {
         console.log('OPEN MODAL')
         setOpen(true);
     }
+    
     function closeModalOnClick() {
         setOpen(false);
     }

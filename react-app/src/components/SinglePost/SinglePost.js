@@ -1,11 +1,11 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import { getOnePost } from '../../store/posts';
 import styles from './singlepost.module.css';
 import { getAllReplies } from '../../store/replies';
 import CreateReplyForm from '../CreateReplyForm/CreateReplyForm';
-import {BsArrowLeft} from 'react-icons/bs';
+import { BsArrowLeft } from 'react-icons/bs';
 import ReplyBox from '../Replies/replies';
 
 const SinglePost = () => {

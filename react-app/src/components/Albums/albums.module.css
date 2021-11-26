@@ -91,6 +91,7 @@
     align-items: center;
     margin-left: 50px;
 }
+
 .arrowContainer:hover {
     color: var(--purpleHover);
     cursor: pointer;
@@ -101,12 +102,11 @@
     width: 40px;
     margin-top: 5px;
 }
+
 a.linkLink {
     width: 10%;
 }
-.arrowHeading {
 
-}
 .albumsCreateSubmit:hover {
     transition: all 0.4s ease 0s;
     background-position: right center;
@@ -123,9 +123,8 @@ a.linkLink {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.473);
     flex-direction: column;
 }
+
 .eachAlbumDelete {
-    /* margin-top: 15px; */
-    /* background-color: red; */
     height: 35px;
     width: 80px;
     font-size: 15px;
@@ -152,6 +151,7 @@ a.linkLink {
     margin-left: 50px;
 
 }
+
 .albumsDiscoverButton {
     height: 40px;
     width: 200px;
@@ -168,10 +168,4 @@ a.linkLink {
     background-color: var(--purpleHover);
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);
     cursor: pointer;
-}
-.allYourAlbumsCount {
-
-}
-.allYourAlbumsCountNumber  {
-    
 }

@@ -1,7 +1,6 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
-import {DiGithubFull} from 'react-icons/di';
-import {AiFillLinkedin} from 'react-icons/ai';
+import { DiGithubFull } from 'react-icons/di';
+import { AiFillLinkedin } from 'react-icons/ai';
 import styles from './About.module.css';
 
 const About = () => {

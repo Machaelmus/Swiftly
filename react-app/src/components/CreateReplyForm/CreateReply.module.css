@@ -55,6 +55,7 @@
     font-weight: 500;
     border-radius: 5px;
 }
+
 .createReplySubmitButton:hover {
     background-color: var(--purpleHover);
     cursor: pointer;

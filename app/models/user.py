@@ -27,15 +27,10 @@ class User(db.Model, UserMixin):
         return check_password_hash(self.password, password)
 
 
-    # ========================================================================
 
-    # Creates relationship between user and replies!
     userReplies = db.relationship('Reply', back_populates='replyAuthor')
-    # Creates relationship between users and posts!
     userPosts = db.relationship('Post', back_populates='postAuthor')
-    # Creates relationship between the user and albums!
     ownerOfAlbum = db.relationship('Album', back_populates='albumOwner')
-    # Creates relationship between the user and images!
     ownerOfImage = db.relationship('Image', back_populates='imageOwner')
 
 

@@ -27,7 +27,7 @@ const CreateAlbumForm = () => {
 
     return (
         <div className={styles.albumsCreateFormContainer}>
-            <h2 className={styles.albumsFormHeading}>Create an album</h2>
+            <h2 className={styles.albumsFormHeading}>Create a story album</h2>
             <div className={styles.albumsFormBackground}>
                 <form onSubmit={createOneAlbum} className={styles.albumsForm}>
                     <label className={styles.createAlbumLabel}>Photo URL</label>

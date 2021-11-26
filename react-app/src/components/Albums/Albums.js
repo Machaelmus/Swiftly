@@ -26,7 +26,7 @@ const Albums = () => {
             {/* ========================== */}
             <div className={styles.list}>
 
-                <h1>Your albums</h1>
+                <h1>Your story albums</h1>
                 <div>
                     {albums.map((album) => (
                         <div>

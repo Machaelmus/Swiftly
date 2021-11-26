@@ -21,6 +21,7 @@ const DiscoverAllAlbums = () => {
                         <h3 className='allAlbumsTitle'>{album.title}</h3>
                     </Link>
                     <p className='allAlbumsCreatedBy'>Album created by: <Link to={`/users/${album.user.id}`}><span className='allAlbumsCreatedBySpan'>{album.user.username}</span></Link></p>
+                    <p className='allAlbumsNumberOfImages'><span className='allAlbumsNumberOfImagesSpan'>{album?.images?.length}</span> images</p>
                     <img className='allAlbumsPhoto' src={album.coverPhotoUrl}/>
                     <p className='allAlbumsDescription'>{album.description}</p>
                 </div>

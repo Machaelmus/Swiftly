@@ -4,17 +4,23 @@
 .eachAlbumTitle {
     font-size: 50px;
     margin-left: 40px;
+    margin-bottom: -15px;
 }
 .eachAlbumDescription {
     font-size: 20px;
     margin-left: 40px;
 }
+.eachAlbumImageCount {
+    font-size: 20px;
+    margin-left: 40px;
+}
 .wholeImageContainerInAlbum {
     margin-top: 70px;
-    justify-content: space-around;
     display: flex;
-    justify-content: row;
-    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px;
+    flex-wrap:wrap-reverse;
 }
 .deleteButtonForImages {
     background-color: transparent;
@@ -22,14 +28,39 @@
     border: none;
     margin-bottom: 35px;
 }
-.deleteButtonForImages:hover {
-    cursor: pointer;
+.deleteButtonForImages{
+    height: 35px;
+    width: 120px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
 }
 .eachImageInAlbum {
     border-radius: 10px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.452);
 }
-
+.eachWholeImageContainer {
+    margin: 0;
+}
 .flexThis {
     display: flex;
+}
+.eachImageContainer {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.eachImageInAlbum {
+    height: 50%;
+    width: 50%;
+}
+.deleteButtonForImages:hover {
+    background-color: var(--purpleTheme);
+    cursor: pointer;
+    color: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.288);
+}
+.eachAlbumBoldedImageCount {
+    font-weight: bold;
 }

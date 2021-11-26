@@ -26,16 +26,14 @@ const Albums = () => {
             {/* ========================== */}
             <div className={styles.list}>
 
-                <h1>Your albums</h1>
-                <div>
-                    {albums.map((album) => (
-                        <div>
-                            {album.userId === sessionUser.id &&
-                                <AllAlbums key={album.id} album={album}/>
-                            }
-                        </div>
-                    ))}
-                </div>
+                <h1>Your story albums</h1>
+                {albums.map((album) => (
+                    <div>
+                        {album.userId === sessionUser.id &&
+                            <AllAlbums key={album.id} album={album}/>
+                        }
+                    </div>
+                ))}
 
             </div>
 

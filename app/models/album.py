@@ -23,5 +23,6 @@ class Album(db.Model):
             'title': self.title,
             'description': self.description,
             'user': self.albumOwner.to_dict(),
+            'images': [image.to_dict() for image in self.albumImages],
             'albumCreatedAt': self.albumCreatedAt,
         }

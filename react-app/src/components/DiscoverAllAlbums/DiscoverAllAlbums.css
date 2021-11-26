@@ -31,6 +31,7 @@
 }
 .allAlbumsCreatedBy {
     font-weight: 500;
+    margin-bottom: 0;
 }
 
 .allAlbumsCreatedBySpan {
@@ -39,4 +40,13 @@
 
 .allAlbumsCreatedBySpan:hover {
     color: var(--purpleTheme);
+}
+
+.allAlbumsNumberOfImages {
+    font-weight: lighter;
+    margin-top: 0;
+}
+
+.allAlbumsNumberOfImagesSpan {
+    font-weight: bold;
 }

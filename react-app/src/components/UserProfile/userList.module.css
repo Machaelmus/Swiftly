@@ -20,9 +20,11 @@
     margin-left: 30px;
     width: 80px;
 }
+
 .returnHome:hover {
     color: var(--purpleHover);
 }
+
 .allusersContainer {
     background-color: white;
     padding: 5px;
@@ -35,6 +37,7 @@
     flex-direction: column;
     width: 250px;
 }
+
 .allusersProfileImage {
     margin-top: 10px;
     height: 70px;
@@ -45,10 +48,12 @@
     margin-right: 10px;
     margin-left: 20px;
 }
+
 .allusersImageandUsername {
     align-items: center;
     display: flex;
 }
+
 .allusersUsernames {
     font-weight: lighter;
     font-size: 30px;
@@ -57,27 +62,18 @@
 .allusersUsernames:hover {
     color:#FF7954;
 }
+
 .allusersFollowButtonContainer {
     width: 220px;
     font-weight: lighter;
     display: flex;
     height: 50px;
-
-    /* align-items: flex-start; */
 }
+
 .handleForUsers {
     margin-top: -5px;
     font-weight: lighter;
 }
-/* .allusersFollowButton {
-    height: 35px;
-    width: 100px;
-    background-color: var(--purpleTheme);
-    color: white;
-    font-weight: 500;
-    border: none;
-    border-radius: 40px;
-} */
 
 .allusersFollowButton:hover {
     background-color: var(--purpleHover);
@@ -85,19 +81,19 @@
 }
 
 .usersSearchForm {
-    /* background-color: lightcoral; */
     width: 365px;
     height: 60px;
     display: flex;
 }
+
 .usersForm {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* background-color: lightblue; */
 }
+
 .usersSearchFormInput {
     background-color: rgb(255, 255, 255);
     border: none;
@@ -105,6 +101,7 @@
     height: 40px;
     border-radius: 5px;
 }
+
 .usersSearchFormInput:focus {
     outline: none;
     transition: all 0.4s ease;

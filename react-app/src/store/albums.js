@@ -1,7 +1,6 @@
 const GET_ALBUMS = 'albums/GET_ALBUMS';
 const GET_ALBUM = 'albums/GET_ALBUM';
 const CREATE_ALBUM = 'albums/CREATE_ALBUM';
-// const EDIT_ALBUM = 'albums/EDIT_ALBUM';
 const DELETE_ALBUM = 'albums/DELETE_ALBUM';
 
 
@@ -19,11 +18,6 @@ const createAlbum = (album) => ({
     type: CREATE_ALBUM,
     album,
 });
-
-// const editAlbum = (album) => ({
-//     type: EDIT_ALBUM,
-//     album,
-// });
 
 const deleteAlbum = (album) => ({
     type: DELETE_ALBUM,
@@ -59,20 +53,6 @@ export const createAnAlbum = (album) => async (dispatch) => {
     }
 }
 
-// export const editAnAlbum = (id, album) => async (dispatch) => {
-//     const response = await fetch(`/api/albums/${id}`, {
-//         method: 'PUT',
-//         headers: {'Content-Type': 'application/json'},
-//         body: JSON.stringify(album)
-//     })
-
-//     if(response.ok) {
-//         const editedAlbum = await response.json()
-//         dispatch(editAlbum(editedAlbum))
-//         return editedAlbum;
-//     }
-// }
-
 export const deleteAnAlbum = (id) => async (dispatch) => {
     const response = await fetch(`/api/albums/${id}`, {
         method: 'DELETE',
@@ -99,7 +79,6 @@ const albumsReducer = (state=initialState, action) => {
                 allAlbums[album.id] = album
             })
             return allAlbums;
-        // case EDIT_ALBUM:
         case CREATE_ALBUM:
             return {
                 ...state,

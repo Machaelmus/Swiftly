@@ -1,9 +1,9 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { deleteAnAlbum } from '../../store/albums';
 import styles from '../Albums/albums.module.css';
-import {BsThreeDots} from 'react-icons/bs';
+import { BsThreeDots } from 'react-icons/bs';
 import homestyles from '../Home/Home.module.css';
 
 

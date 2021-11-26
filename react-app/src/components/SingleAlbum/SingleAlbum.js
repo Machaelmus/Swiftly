@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { getSingleAlbum } from '../../store/albums';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
@@ -13,7 +13,6 @@ const SingleAlbum = () => {
     const image = images.find((image) => image.id)
     const albums = useSelector(state => Object.values(state.albums));
     const album = albums.find((album) => album.id === +id);
-    // const sessionUser = useSelector(state => state.session.user);
 
     useEffect(() => {
         dispatch(getSingleAlbum(id))

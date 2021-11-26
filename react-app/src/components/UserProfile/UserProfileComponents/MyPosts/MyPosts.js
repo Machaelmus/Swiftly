@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { getAllPosts } from '../../../../store/posts';
-import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import styles from './MyPosts.module.css';
 
 const MyPosts = ({userId}) => {
-    // const { id } = useParams();
     const sessionUser = useSelector(state => state.session.user);
     const posts = useSelector(state => Object.values(state.posts));
     const dispatch = useDispatch();
@@ -16,7 +14,6 @@ const MyPosts = ({userId}) => {
 
     return (
         <>
-        {/* <h1>My Posts</h1> */}
         <div className={styles.wholeMyPostPageContainer}>
             {posts.map((post) => (
                 <div>

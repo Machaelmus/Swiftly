@@ -10,12 +10,9 @@ class Reply(db.Model):
     reply = db.Column(db.Text, nullable=False)
     timeOfReply = db.Column(db.DateTime, default=datetime.datetime.utcnow, nullable=False)
 
-    # Creates relationship between replies and posts
     replyToPost = db.relationship('Post', back_populates='postReplies')
-    # Creates relationship between replies and users to determine the author
     replyAuthor = db.relationship('User', lazy='subquery', back_populates='userReplies')
 
-    # ========================================================================
 
     def to_dict(self):
         return {

@@ -27,9 +27,11 @@
     border: none;
     border-radius: 40px;
 }
+
 .returnReturn:hover {
     color: var(--purpleHover);
 }
+
 .repliesToSinglePostContainer {
     padding: 20px;
     background-color: white;
@@ -110,9 +112,11 @@
     align-items: center;
     float: right;
 }
+
 .replyOptionsDrop > h4 {
     margin: 0;
 }
+
 .openEditMenu {
     background-color: var(--purpleTheme);
     height: 35px;
@@ -158,6 +162,7 @@
     border-radius: 5px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);
 }
+
 .editReplyButtonInsideModal {
     height: 40px;
     width: 100px;
@@ -169,11 +174,13 @@
     border-radius: 5px;
     margin-right: 10px;
 }
+
 .editReplyButtonInsideModal:hover {
     background-color: var(--purpleHover);
     cursor: pointer;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.308);
 }
+
 .cancelEditReplyModalButton {
     height: 40px;
     color: var(--purpleTheme);
@@ -184,7 +191,6 @@
     border-radius: 5px;
     margin-top: 10px;
     border: none;
-    /* border: 2px solid var(--purpleTheme); */
 }
 
 .cancelEditReplyModalButton:hover {

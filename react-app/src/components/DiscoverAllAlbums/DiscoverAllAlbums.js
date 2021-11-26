@@ -1,11 +1,10 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { getAllAlbums } from '../../store/albums';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import './DiscoverAllAlbums.css';
 
 const DiscoverAllAlbums = () => {
-    // const users = useSelector(state)
     const dispatch = useDispatch();
     const albums = useSelector(state => Object.values(state.albums));
 
@@ -30,7 +29,6 @@ const DiscoverAllAlbums = () => {
                     {album.images.length > 1 &&
                         <p className='allAlbumsNumberOfImages'><span className='allAlbumsNumberOfImagesSpan'>{album?.images?.length}</span> images</p>
                     }
-                    {/* <p className='allAlbumsNumberOfImages'><span className='allAlbumsNumberOfImagesSpan'>{album?.images?.length}</span> images</p> */}
                     <img className='allAlbumsPhoto' src={album.coverPhotoUrl}/>
                     <p className='allAlbumsDescription'>{album.description}</p>
                 </div>

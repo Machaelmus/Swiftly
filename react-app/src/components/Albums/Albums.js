@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAllAlbums } from '../../store/albums';
 import CreateAlbumForm from '../CreateAlbumForm/CreateAlbumForm';
@@ -19,13 +19,10 @@ const Albums = () => {
     return (
         <>
         <div className={styles.albumContainer}>
-
             <div className={styles.create}>
                 <CreateAlbumForm/>
             </div>
-            {/* ========================== */}
             <div className={styles.list}>
-
                 <h1>Your story albums</h1>
                 {albums.map((album) => (
                     <div>
@@ -34,9 +31,7 @@ const Albums = () => {
                         }
                     </div>
                 ))}
-
             </div>
-
         </div>
         </>
     )
